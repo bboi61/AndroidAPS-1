@@ -7,7 +7,9 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.PorterDuff
 import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
@@ -663,7 +665,11 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         // temp target
         val tempTarget = treatmentsPlugin.tempTargetFromHistory
         if (tempTarget != null) {
-            overview_temptarget?.setTextColor(resourceHelper.gc(R.color.rig22Blue))
+            val drawable: Drawable = overview_temptarget.background
+//            val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
+//            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
+            drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
+            overview_temptarget?.setTextColor(resourceHelper.gc(R.color.white))
 //            overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
             overview_temptarget?.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
         } else {
@@ -672,11 +678,19 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
             if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
                 aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
+                val drawable: Drawable = overview_temptarget.background
+//                val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
+//                if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
+                drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
                 overview_temptarget?.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
-                overview_temptarget?.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+                overview_temptarget?.setTextColor(resourceHelper.gc(R.color.white))
 //                overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
             } else {
-                overview_temptarget?.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
+                val drawable: Drawable = overview_temptarget.background
+//                val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
+//                if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonDefault).let { drawableLeft[0]!!.setTint(it) }
+                drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
+                overview_temptarget?.setTextColor(resourceHelper.gc(R.color.white))
 //                overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
                 overview_temptarget?.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
             }
@@ -717,13 +731,22 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         overview_extended_llayout?.visibility = (extendedBolus != null && !pump.isFakingTempsByExtendedBoluses).toVisibility()
 
         // Active profile
+
         overview_activeprofile?.text = profileFunction.getProfileNameWithDuration()
         if (profile.percentage != 100 || profile.timeshift != 0) {
+            val drawable: Drawable = overview_activeprofile.background
+//            val drawableLeft: Array<Drawable?> = overview_activeprofile.compoundDrawables
+//            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
+            drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
 //            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
-            overview_activeprofile?.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+            overview_activeprofile?.setTextColor(resourceHelper.gc(R.color.white))
         } else {
-//            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
-            overview_activeprofile?.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
+            val drawable: Drawable = overview_activeprofile.background
+//            val drawableLeft: Array<Drawable?> = overview_activeprofile.compoundDrawables
+//            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonDefault).let { drawableLeft[0]!!.setTint(it) }
+            drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
+//            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.transparent))
+            overview_activeprofile?.setTextColor(resourceHelper.gc(R.color.white))
         }
 
         processButtonsVisibility()

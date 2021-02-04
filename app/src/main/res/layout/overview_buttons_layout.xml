@@ -35,7 +35,7 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_user_profil"
             android:text="Profile"
-            android:textColor="@color/white"
+            android:paddingBottom="1dp"
             android:textSize="10sp" /> />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_tt"
             android:text="TempTarget"
-            android:textColor="@color/white"
+            android:paddingBottom="1dp"
             android:textSize="10sp"  />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
