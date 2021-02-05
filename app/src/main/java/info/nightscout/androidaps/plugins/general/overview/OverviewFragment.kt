@@ -155,7 +155,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         // pre-process landscape mode
         skinProvider.activeSkin().preProcessLandscapeOverviewLayout(dm, view, resourceHelper.gb(R.bool.isTablet))
 
-        overview_pumpstatus?.setBackgroundColor(resourceHelper.gc(R.color.colorInitializingBorder))
+        overview_pumpstatus?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
 
         overview_notifications?.setHasFixedSize(false)
         overview_notifications?.layoutManager = LinearLayoutManager(view.context)
