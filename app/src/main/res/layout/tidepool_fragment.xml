@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tidepool_status"
+        android:id="@+id/status"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -16,53 +15,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/tidepool_login"
-        android:background="@color/black"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Login"
-        android:textColor="@color/rig22Blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tidepool_status" />
+        app:layout_constraintTop_toBottomOf="@+id/status" />
 
     <Button
-        android:id="@+id/tidepool_uploadnow"
-        android:background="@color/black"
+        android:id="@+id/uploadnow"
         android:layout_width="113dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="Upload now"
-        android:textColor="@color/rig22Blue"
-        app:layout_constraintStart_toEndOf="@+id/tidepool_login"
-        app:layout_constraintTop_toBottomOf="@+id/tidepool_status" />
+        app:layout_constraintStart_toEndOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
 
     <Button
-        android:id="@+id/tidepool_removeall"
-        android:background="@color/black"
+        android:id="@+id/removeall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="Remove all"
-        android:textColor="@color/rig22Blue"
-        app:layout_constraintStart_toEndOf="@+id/tidepool_uploadnow"
-        app:layout_constraintTop_toBottomOf="@+id/tidepool_status" />
+        app:layout_constraintStart_toEndOf="@+id/uploadnow"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
 
     <Button
-        android:id="@+id/tidepool_resertstart"
-        android:background="@color/black"
+        android:id="@+id/resertstart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="Reset start"
-        android:textColor="@color/rig22Blue"
-        app:layout_constraintStart_toEndOf="@+id/tidepool_removeall"
-        app:layout_constraintTop_toBottomOf="@+id/tidepool_status" />
+        app:layout_constraintStart_toEndOf="@+id/removeall"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
 
     <ScrollView
-        android:id="@+id/tidepool_logscrollview"
+        android:id="@+id/logscrollview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -70,15 +61,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tidepool_login"
+        app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintVertical_bias="0.023">
 
         <TextView
-            android:id="@+id/tidepool_log"
+            android:id="@+id/log"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="-- logs --"
-            android:textColor="@color/rig22Blue"/>
+            android:text="-- logs --" />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

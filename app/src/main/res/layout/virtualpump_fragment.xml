@@ -49,7 +49,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_basabasalrate"
+                    android:id="@+id/basabasalrate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -66,7 +66,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/listdelimiter" />
+                android:background="@color/list_delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_tempbasal"
+                    android:id="@+id/tempbasal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -110,7 +110,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/listdelimiter" />
+                android:background="@color/list_delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_extendedbolus"
+                    android:id="@+id/extendedbolus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -154,7 +154,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/listdelimiter" />
+                android:background="@color/list_delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +181,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_battery"
+                    android:id="@+id/battery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -199,7 +199,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/listdelimiter" />
+                android:background="@color/list_delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -226,7 +226,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_reservoir"
+                    android:id="@+id/reservoir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -244,7 +244,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/listdelimiter" />
+                android:background="@color/list_delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -271,7 +271,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_type"
+                    android:id="@+id/type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -289,7 +289,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/listdelimiter" />
+                android:background="@color/list_delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -316,7 +316,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/virtualpump_type_def"
+                    android:id="@+id/type_def"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

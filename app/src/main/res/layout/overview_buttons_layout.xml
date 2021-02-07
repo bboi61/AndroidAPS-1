@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/overview_buttons"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,7 +9,7 @@
     android:paddingTop="2dp">
 
     <info.nightscout.androidaps.utils.ui.SingleClickButton
-        android:id="@+id/overview_accepttempbutton"
+        android:id="@+id/accept_temp_button"
         style="?android:attr/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
         android:visibility="gone" />
 
     <LinearLayout
-        android:id="@+id/overview_buttons_layout"
+        android:id="@+id/buttons_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -52,7 +53,7 @@
             android:textSize="10sp"  />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_treatmentbutton"
+            android:id="@+id/treatment_button"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
@@ -62,11 +63,12 @@
             android:drawableTop="@drawable/icon_insulin_carbs"
             android:text="@string/overview_treatment_label"
             android:textColor="@color/white"
-            android:textSize="9sp"
-            android:visibility="gone" />
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_insulinbutton"
+            android:id="@+id/insulin_button"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
@@ -76,10 +78,11 @@
             android:drawableTop="@drawable/ic_bolus"
             android:text="@string/overview_insulin_label"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_carbsbutton"
+            android:id="@+id/carbs_button"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
@@ -89,7 +92,8 @@
             android:drawableTop="@drawable/ic_cp_bolus_carbs"
             android:text="carbs"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/overview_wizardbutton"
@@ -101,10 +105,11 @@
             android:drawableTop="@drawable/ic_calculator"
             android:text="@string/overview_calculator_label"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_calibrationbutton"
+            android:id="@+id/calibration_button"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
@@ -114,11 +119,12 @@
             android:drawableTop="@drawable/ic_calibration"
             android:text="@string/overview_calibration"
             android:textColor="@color/white"
-            android:textSize="9sp"
-            android:visibility="gone" />
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_cgmbutton"
+            android:id="@+id/cgm_button"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
@@ -128,17 +134,18 @@
             android:drawableTop="@drawable/ic_xdrip"
             android:text="@string/overview_cgm"
             android:textColor="@color/white"
-            android:textSize="9sp"
-            android:visibility="gone" />
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_quickwizardbutton"
+            android:id="@+id/quick_wizard_button"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_width="0px"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:drawableTop="@drawable/ic_quickwizard"
+            android:drawableTop="@drawable/ic_quick_wizard"
             android:text="@string/quickwizard"
             android:textColor="@color/white"
             android:textSize="9sp" />

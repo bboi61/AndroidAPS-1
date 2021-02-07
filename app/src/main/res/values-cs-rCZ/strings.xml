@@ -41,7 +41,7 @@
     <string name="description_source_glimp">Příjem glykémií z Glimpu.</string>
     <string name="description_source_mm640g">Příjem glykémií z Uploaderu 640G.</string>
     <string name="description_source_ns_client">Příjem glykémií z Nightscoutu</string>
-    <string name="description_source_xdrip">Příjem glykémií z xDripu.</string>
+    <string name="description_source_xdrip">Příjem glykémií z xDripu+.</string>
     <string name="description_treatments">Ukládá všechny ošetření do databáze</string>
     <string name="description_wear">Zobrazování stavu a řízení AndroidAPS z hodinek s WearOS</string>
     <string name="description_xdrip_status_line">Zobrazování informací o smyčce na xDrip+ watchface.</string>
@@ -118,7 +118,7 @@
     <string name="changeyourinput">Změňte zadání!</string>
     <string name="configbuilder_bgsource">Zdroj glykémie</string>
     <string name="configbuilder_bgsource_description">Odkud má získávat AndroidAPS glykémie?</string>
-    <string name="xdrip">xDrip</string>
+    <string name="xdrip">xDrip+</string>
     <string name="apsmode_title">Typ smyčky</string>
     <string name="closedloop">Uzavřená smyčka</string>
     <string name="openloop">Otevřená smyčka</string>
@@ -250,8 +250,8 @@
     <string name="mealbolus">Bolus</string>
     <string name="correctionbous">Korekce</string>
     <string name="actions">Akce</string>
-    <string name="ns_upload_only">Pouze nahrávání do NS (zakázaná synchronizace)</string>
-    <string name="ns_upload_only_summary">Pouze nahrávání do NS. Neplatí pro glykémie, pokud je NS vybrán jako zdroj glykémií. Neplatí pro profily, pokud je vybraný NS Profil.\n!!! VAROVÁNÍ!!! Vypnutí této možnosti může způsobit chybné chování a předávkování inzulínem, pokud je některá z vašich komponent (AAPS, NS, xDrip) špatně nastavena. Pečlivě sledujte, jestli data zobrazená AAPS odpovídají stavu pumpy!</string>
+    <string name="ns_upload_only">(NEBEZPEČNÉ ZAKÁZAT) Pouze odesílání do NS</string>
+    <string name="ns_upload_only_summary">Pouze nahrávání do NS. Neplatí pro glykémie, pokud je NS vybrán jako zdroj glykémií. Neplatí pro profily, pokud je vybraný NS Profil.\n!!! VAROVÁNÍ!!! Vypnutí této možnosti může způsobit chybné chování a předávkování inzulínem, pokud je některá z vašich komponent (AAPS, NS, xDrip+) špatně nastavena. Pečlivě sledujte, jestli data zobrazená v AAPS odpovídají stavu pumpy!</string>
     <string name="pumpNotInitialized">Pumpa není inicializována!</string>
     <string name="primefill">Plnění/doplňování</string>
     <string name="fillwarning">Prosím ujistěte se, že hodnota odpovídá specifikaci Vašeho setu!</string>
@@ -306,7 +306,7 @@
     <string name="smscommunicator_shortname">SMS</string>
     <string name="short_tabtitles">Krátké názvy modulů</string>
     <string name="always_use_shortavg">Vždy používat krátkodobý průměrný rozdíl glykémií místo rozdílu posledních 2 hodnot</string>
-    <string name="always_use_shortavg_summary">Výhodné, pokud data z xDripu obsahují velký šum.</string>
+    <string name="always_use_shortavg_summary">Výhodné, pokud data z xDripu+ obsahují velký šum.</string>
     <string name="profile">Profil</string>
     <string name="openapsama_max_daily_safety_multiplier_summary">Výchozí hodnota: 3 Toto je klíčová hodnota zabezpečení. Říká, že maximální nastavitelný bazál je trojnásobkem maximálního denního bazálu. Patrně to nebudete muset měnit, případně si přečtete o tématu \"3x max denní; 4x aktuální\".</string>
     <string name="openapsama_current_basal_safety_multiplier_summary">Výchozí hodnota: 4 Toto je druhá klíčová hodnota. Říká, že maximální hodnota dočasného bazálu nikdy nebude větší, než čtyřnásobek aktuálního bazálu. Je to proto, aby se lidé nedostali do nebezpečných hodnot dříve, než pochopí jak OpenAPS pracuje. Znovu, výchozí hodnota je 4 a většina lidí ji nikdy nebude muset změnit. Pokud nestačí, obvykle je problém někde jinde.</string>
@@ -320,9 +320,9 @@
     <string name="smscommunicator_invalidphonennumber">Špatné telefonní číslo</string>
     <string name="overview_calibration">Kalibrace</string>
     <string name="xdripnotinstalled">xDrip+ není nainstalován</string>
-    <string name="calibrationsent">Kalibrace odeslána do xDripu</string>
-    <string name="smscommunicator_calibrationsent">Kalibrace odeslána. Příjem musí být v xDripu povolený.</string>
-    <string name="smscommunicator_calibrationfailed">xDrip nepřijímá kalibrace</string>
+    <string name="calibrationsent">Kalibrace odeslána do xDripu+</string>
+    <string name="smscommunicator_calibrationsent">Kalibrace odeslána. Příjem musí být v xDripu+ povolený.</string>
+    <string name="smscommunicator_calibrationfailed">xDrip+ nepřijímá kalibrace</string>
     <string name="pumpsuspended">Pumpa pozastavena</string>
     <string name="executing">Provádím</string>
     <string name="virtualpump_settings">Nastavení virtuální pumpy</string>
@@ -425,8 +425,8 @@
     <string name="nav_about">O aplikaci</string>
     <string name="smscommunicator_missingsmspermission">Chybějící povolení SMS</string>
     <string name="smscommunicator_missingphonestatepermission">Chybí oprávnění pro zjišťování stavu telefonu</string>
-    <string name="xdripstatus_settings">Status z xDripu (hodinky)</string>
-    <string name="xdripstatus">Statusový řádek xDripu (hodinky)</string>
+    <string name="xdripstatus_settings">Status z xDripu+ (hodinky)</string>
+    <string name="xdripstatus">Stavová řádka xDrip+ (hodinky)</string>
     <string name="xdripstatus_shortname">XDS</string>
     <string name="wear_showbgi_title">Zobrazovat BGI</string>
     <string name="wear_showbgi_summary">Přidat BGI do stavové řádky</string>
@@ -435,10 +435,9 @@
     <string name="overview_extendedbolus_cancel_button">Zrušit prodloužený bolus</string>
     <string name="doprofileswitch">Proveďte přepnutí profilu</string>
     <string name="careportal_sensor_label">Senzor</string>
-    <string name="careportal_canula_label">Kanyla</string>
     <string name="careportal_insulin_label">Inzulín</string>
     <string name="careportal_pb_label">Baterie pumpy</string>
-    <string name="careportal_age_label">věk:</string>
+    <string name="careportal_age_label">stáří:</string>
     <string name="careportal_level_label">úroveň:</string>
     <string name="ns_alarmoptions">Nastavení alarmů</string>
     <string name="ns_alarms">Vytvořit oznámení z alarmů NS</string>
@@ -469,7 +468,7 @@
     <string name="mdtp_cancel">Zrušit</string>
     <string name="notloadedplugins">Všechny profily nenačteny!</string>
     <string name="valuesnotstored">Hodnoty nejsou uloženy!</string>
-    <string name="ns_localbroadcasts">Povolit vysílání do jiných aplikací (například xDrip). Nepovolujte, pokud máte instalovánu více než jednu instanci AAPS nebo NSClient!</string>
+    <string name="ns_localbroadcasts">Povolit vysílání do jiných aplikací (například xDrip+). Nepovolujte, pokud máte instalovánu více než jednu instanci AAPS nebo NSClient!</string>
     <string name="ns_localbroadcasts_title">Povolení odesílaní</string>
     <string name="careportal_newnstreatment_duration_min_label">Trvání [min]</string>
     <string name="openapssmb">OpenAPS SMB</string>
@@ -548,7 +547,6 @@
     <string name="maxiobset">Maximální IOB nastaveno správně</string>
     <string name="hasbgdata">Glykémie dostupné z vybraného zdroje</string>
     <string name="combo_programming_bolus">Programování pumpy pro bolus</string>
-    <string name="combo_refresh">Obnovit</string>
     <string name="combo_pump_state_label">Stav</string>
     <string name="combo_pump_activity_label">Aktivita</string>
     <string name="combo_no_pump_connection">Žádné spojení %1$d min</string>
@@ -619,8 +617,8 @@
     <string name="allow_automated_crash_reporting">Automatické odesílání chyb aplikace a statistiky používání vývojářům pomocí služby fabric.io.</string>
     <string name="g5appnotdetected">Prosím aktualizujte Dexcom aplikaci na podporovanou verzi</string>
     <string name="dexcom_app_not_installed">Aplikace Dexcom není nainstalována.</string>
-    <string name="start_activity_tt">Spustit Dočasný cíl Aktivita</string>
-    <string name="start_eating_soon_tt">Spustit Dočasný cíl Blížící se jídlo</string>
+    <string name="start_activity_tt">Spustit dočasný cíl Aktivita</string>
+    <string name="start_eating_soon_tt">Spustit dočasný cíl Před jídlem</string>
     <string name="temptargetshort">DoCíl</string>
     <string name="do_not_bolus_record_only">Nepouštět bolus, jen zaznamenat</string>
     <string name="category">Kategorie</string>
@@ -635,7 +633,7 @@
     <string name="overview_show_iob">Zbývající inzulín</string>
     <string name="overview_show_basals">Bazály</string>
     <string name="no_action_selected">Žádná akce nevybrána, nic se neprovede</string>
-    <string name="start_hypo_tt">Spustit dočas. cíl Hypo</string>
+    <string name="start_hypo_tt">Spustit dočasný cíl Hypoglykémie</string>
     <string name="closed_loop_disabled_on_dev_branch">Běží DEV verze. Uzavřená smyčka je zakázána.</string>
     <string name="engineering_mode_enabled">Expertní mód povolen</string>
     <string name="combo_actvity_reading_basal_profile">Načítám bazální profil</string>
@@ -839,7 +837,6 @@
     <string name="eb_formatter">%1$.2f / %2$.2f U %3$d min</string>
     <string name="enable_tbr_over_notification">Povolit oznamování konce dočasného bazálu\n(nastavení pumpy)</string>
     <string name="disable_tbr_over_notification">Zakázat oznamování konce dočasného bazálu\n(nastavení pumpy)</string>
-    <string name="refresh">Obnovit</string>
     <string name="description_pump_insight_local">Integrace pro pumpu Accu-Chek Insight</string>
     <string name="not_inserted">Není vloženo</string>
     <string name="short_status_last_connected">Poslední spoj: před %1$d min</string>
@@ -1064,8 +1061,6 @@
     <string name="insight_alert_notification_channel">Upozornění pumpy Insight</string>
     <!-- SMS Communicator & OTP Authenticator -->
     <string name="smscommunicator_code_from_authenticator_for" comment="This is continuation of sentence: To [ACTION] reply with code">z aplikace Authenticator pro: %1$s následováno kódem PIN</string>
-    <string name="smscommunicator_otp_enabled">Povolit Autentikátor</string>
-    <string name="smscommunicator_otp_enabled_summary">Ověření příkazů pomocí jednočasových hesel generovaných Google Authenticator nebo podobných 2FA aplikací.</string>
     <string name="smscommunicator_otp_pin">Další povinný kód PIN na konci tokenu</string>
     <string name="smscommunicator_otp_pin_summary">Další číslice, které by měly být zapamatovány a přidány na konec každého vygenerovaného jednorázového hesla</string>
     <string name="smscomunicator_tab_otp_label">Nastavení Autentikátoru</string>
@@ -1154,8 +1149,11 @@
     <string name="bolusadvisor">Poradce pro bolus</string>
     <string name="bolusadvisormessage">Máte vysokou glykémii. Namísto jídla doporučujeme vyčkat na lepší glykémii a připomenout, až bude čas na jídlo. Přejete si poslat korekční bolus a připomenout, až bude čas k jídlu? V tomto případě nebudou zapsané žádné sacharidy, a později opět musíte spustit kalkulátor, jakmile vám to připomeneme.</string>
     <string name="enablebolusadvisor">Povolit poradce s bolusem</string>
-    <string name="enablebolusadvisor_summary">Použij připomenutí, abys začal jíst později, namísto výsledku z kalkulátoru během vysoké glykémie (\"pre-bolus\")</string>
+    <string name="enablebolusadvisor_summary">Při vysoké glykémii použijte připomenutí, abyste začali jíst později, namísto výsledku z kalkulátoru („prebolus“)</string>
     <string name="time_to_eat">Čas k jídlu!\nSpusťte Bolusovou kalkulačku a proveďte výpočet znovu.</string>
     <string name="timetoeat">Čas k jídlu</string>
     <string name="fabric_upload_disabled">Nahrávání protokolů o pádech zakázáno!</string>
+    <string name="graph_menu_divider_header">Graf</string>
+    <string name="chart_menu">Možnosti grafu</string>
+    <string name="clear_filter">Vymazat filtr</string>
 </resources>
