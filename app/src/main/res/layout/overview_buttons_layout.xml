@@ -26,8 +26,8 @@
         android:orientation="horizontal"
         android:paddingStart="0dp">
 
-        <TextView
-            android:id="@+id/overview_activeprofile"
+        <!--       <TextView
+            android:id="@+id/activeprofile"
             style="?android:attr/buttonStyle"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
@@ -40,7 +40,7 @@
             android:textSize="10sp" />
 
         <TextView
-            android:id="@+id/overview_temptarget"
+            android:id="@+id/temptarget"
             android:background="@drawable/buttonshape"
             style="?android:attr/buttonStyle"
             android:layout_marginEnd="2dp"
@@ -50,7 +50,7 @@
             android:drawableTop="@drawable/ic_tt"
             android:text="TempTarget"
             android:paddingBottom="1dp"
-            android:textSize="10sp"  />
+            android:textSize="10sp"  /> -->
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/treatment_button"
@@ -96,7 +96,7 @@
             tools:ignore="SmallSp" />
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
-            android:id="@+id/overview_wizardbutton"
+            android:id="@+id/wizard_button"
             android:background="@drawable/buttonshape"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
@@ -150,7 +150,7 @@
             android:textColor="@color/white"
             android:textSize="9sp" />
 
-        <LinearLayout
+        <!--       <LinearLayout
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -176,7 +176,7 @@
                 android:text="Open Loop"
                 android:textSize="10sp" />
 
-        </LinearLayout>
+        </LinearLayout> -->
 
     </LinearLayout>
 

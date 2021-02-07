@@ -671,38 +671,60 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         }
 
         // temp target
+
+        // temp target
         val tempTarget = treatmentsPlugin.tempTargetFromHistory
         if (tempTarget != null) {
-            val drawable: Drawable = overview_temptarget.background
-//            val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
-//            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
-            drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
-            overview_temptarget?.setTextColor(resourceHelper.gc(R.color.white))
-//            overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
-            overview_temptarget?.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
+            binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+            binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
+            binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
         } else {
             // If the target is not the same as set in the profile then oref has overridden it
             val targetUsed = lastRun?.constraintsProcessed?.targetBG ?: 0.0
 
             if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
                 aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
-                val drawable: Drawable = overview_temptarget.background
-//                val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
-//                if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
-                drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
-                overview_temptarget?.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
-                overview_temptarget?.setTextColor(resourceHelper.gc(R.color.white))
-//                overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
+                binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
             } else {
-                val drawable: Drawable = overview_temptarget.background
-//                val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
-//                if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonDefault).let { drawableLeft[0]!!.setTint(it) }
-                drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
-                overview_temptarget?.setTextColor(resourceHelper.gc(R.color.white))
-//                overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
-                overview_temptarget?.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
+                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+                binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
             }
         }
+//        val tempTarget = treatmentsPlugin.tempTargetFromHistory
+//        if (tempTarget != null) {
+//            val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
+//            val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
+//            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
+//            drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
+//            binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
+//            overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
+//            binding.loopPumpStatusLayout.tempTarget?.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
+//        } else {
+            // If the target is not the same as set in the profile then oref has overridden it
+//            val targetUsed = lastRun?.constraintsProcessed?.targetBG ?: 0.0
+
+//            if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
+//                aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
+//                val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
+//                val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
+//                if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
+//                drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
+//                binding.loopPumpStatusLayout.tempTarget?.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
+//                binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
+//                overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
+//            } else {
+//                val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
+//                val drawableLeft: Array<Drawable?> = overview_temptarget.compoundDrawables
+//                if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonDefault).let { drawableLeft[0]!!.setTint(it) }
+//                drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
+//                binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
+//                overview_temptarget?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+//                binding.loopPumpStatusLayout.tempTarget?.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
+//            }
+//        }
 
         // Basal, TBR
         val activeTemp = treatmentsPlugin.getTempBasalFromHistory(System.currentTimeMillis())
@@ -740,23 +762,30 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
         // Active profile
 
-        overview_activeprofile?.text = profileFunction.getProfileNameWithDuration()
-        if (profile.percentage != 100 || profile.timeshift != 0) {
-            val drawable: Drawable = overview_activeprofile.background
+//        binding.loopPumpStatusLayout.activeProfile.text = profileFunction.getProfileNameWithDuration()
+//        if (profile.percentage != 100 || profile.timeshift != 0) {
+//            val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
 //            val drawableLeft: Array<Drawable?> = overview_activeprofile.compoundDrawables
 //            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonCritical).let { drawableLeft[0]!!.setTint(it) }
-            drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
+//            drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
 //            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
-            overview_activeprofile?.setTextColor(resourceHelper.gc(R.color.white))
-        } else {
-            val drawable: Drawable = overview_activeprofile.background
+//            binding.loopPumpStatusLayout.activeProfile?.setTextColor(resourceHelper.gc(R.color.white))
+//        } else {
+//            val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
 //            val drawableLeft: Array<Drawable?> = overview_activeprofile.compoundDrawables
 //            if (drawableLeft[0] != null) resourceHelper.gc(R.color.ribbonDefault).let { drawableLeft[0]!!.setTint(it) }
-            drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
+//            drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
 //            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.transparent))
-            overview_activeprofile?.setTextColor(resourceHelper.gc(R.color.white))
+//            binding.loopPumpStatusLayout.activeProfile?.setTextColor(resourceHelper.gc(R.color.white))
+//        }
+        binding.loopPumpStatusLayout.activeProfile.text = profileFunction.getProfileNameWithDuration()
+        if (profile.percentage != 100 || profile.timeshift != 0) {
+            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
+            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+        } else {
+            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
         }
-
         processButtonsVisibility()
 
         // iob

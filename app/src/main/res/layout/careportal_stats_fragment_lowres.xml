@@ -129,7 +129,7 @@
             android:paddingEnd="2dp"
             android:text="@string/cannula"
             android:textSize="14sp"
-            app:drawableStartCompat="@drawable/ic_cp_age_cannula" />
+            app:drawableStartCompat="@drawable/ic_cp_age_canula" />
 
         <TextView
             android:id="@+id/cannula_age"
