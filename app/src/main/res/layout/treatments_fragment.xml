@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context=".plugins.treatments.TreatmentsFragment">
 
@@ -10,7 +11,8 @@
     <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/defaultbackground"
+
+        android:layout_marginTop="2dp"
         app:alignContent="stretch"
         app:alignItems="stretch"
         app:flexDirection="row"
@@ -19,15 +21,14 @@
 
         <ImageView
             android:id="@+id/treatments"
-            android:background="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="6dp"
             android:paddingEnd="6dp"
             android:layout_weight="1"
             android:contentDescription="@string/bolus"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
+            android:scaleX="1"
+            android:scaleY="1"
             app:srcCompat="@drawable/ic_cp_bolus_carbs" />
 
         <ImageView
@@ -38,8 +39,8 @@
             android:contentDescription="@string/extended_bolus"
             android:paddingStart="6dp"
             android:paddingEnd="6dp"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
+            android:scaleX="1"
+            android:scaleY="1"
             app:srcCompat="@drawable/ic_actions_startextbolus" />
 
         <ImageView
@@ -50,9 +51,9 @@
             android:paddingEnd="6dp"
             android:layout_weight="1"
             android:contentDescription="@string/tempbasal_label"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
-            app:srcCompat="@drawable/ic_actions_starttempbasal" />
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/ic_cancelbasal" />
 
         <ImageView
             android:id="@+id/temp_targets"
@@ -62,8 +63,8 @@
             android:paddingEnd="6dp"
             android:layout_weight="1"
             android:contentDescription="@string/careportal_temporarytarget"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
+            android:scaleX="1"
+            android:scaleY="1"
             app:srcCompat="@drawable/ic_temptarget_high" />
 
         <ImageView
@@ -74,8 +75,8 @@
             android:paddingEnd="6dp"
             android:layout_weight="1"
             android:contentDescription="@string/careportal_profileswitch"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
+            android:scaleX="1"
+            android:scaleY="1"
             app:srcCompat="@drawable/ic_actions_profileswitch" />
 
         <ImageView
@@ -86,8 +87,8 @@
             android:paddingEnd="6dp"
             android:layout_weight="1"
             android:contentDescription="@string/careportal"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
+            android:scaleX="1"
+            android:scaleY="1"
             app:srcCompat="@drawable/ic_cp_note" />
 
     </com.google.android.flexbox.FlexboxLayout>
