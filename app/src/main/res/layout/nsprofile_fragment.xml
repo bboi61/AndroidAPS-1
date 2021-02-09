@@ -14,11 +14,13 @@
     <Button
         android:id="@+id/profileswitch"
         style="?android:attr/buttonStyle"
-        android:background="@color/black"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/ic_zahnrad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/activate_profile"
+        android:paddingRight="6dp"
         android:textColor="@color/rig22Blue" />
 
     <include
