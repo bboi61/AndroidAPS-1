@@ -24,7 +24,6 @@
               android:gravity="center_vertical|center_horizontal"
               android:text="Profile"
               android:textAppearance="?android:attr/textAppearanceSmall"
-              android:textColor="@color/colorLightGray"
               tools:ignore="HardcodedText" />
 
           <TextView
@@ -38,7 +37,6 @@
               android:gravity="center_vertical|center_horizontal"
               android:text="TempTarget"
               android:textAppearance="?android:attr/textAppearanceSmall"
-              android:textColor="@color/colorLightGray"
               tools:ignore="HardcodedText" />
 
       </LinearLayout>

@@ -5,5 +5,5 @@
         android:strokeColor="#fff" android:strokeWidth="0.65"/>
     <path android:fillColor="#00000000" android:fillType="nonZero"
         android:pathData="M16.018,10.97l3.106,3.828c-5.855,4.28 -9.624,10.97 -9.624,18.488c0,9.392 5.879,17.489 14.362,21.214c1.044,-2.204 2.403,-5.072 3.701,-7.812c-6.58,-2.457 -11.232,-8.502 -11.232,-15.57c-0,-4.953 2.286,-9.404 5.918,-12.47l2.839,3.499l5.145,-12.547l-14.215,1.37Z"
-        android:strokeColor="#00c03e" android:strokeWidth="0.42"/>
+        android:strokeColor="#0f0" android:strokeWidth="0.42"/>
 </vector>

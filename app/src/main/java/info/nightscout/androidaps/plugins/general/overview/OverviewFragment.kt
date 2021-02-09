@@ -702,7 +702,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
             if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
             drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
-//            binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
+            binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
 //            binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
             binding.loopPumpStatusLayout.tempTarget?.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
         } else {
@@ -716,14 +716,14 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                 if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
                 drawable.setColorFilter(resources.getColor(R.color.rig22Blue), PorterDuff.Mode.SRC_IN)
                 binding.loopPumpStatusLayout.tempTarget?.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
-//                binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
+                binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
 //                binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
             } else {
                 val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
                 val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
-                if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
-                drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
-//                binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
+                if (drawableLeft[0] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableLeft[0]!!.setTint(it) }
+                drawable.setColorFilter(resources.getColor(R.color.white2), PorterDuff.Mode.SRC_OUT)
+                binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
 //                binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
                 binding.loopPumpStatusLayout.tempTarget?.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
             }
@@ -776,8 +776,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         } else {
             val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
-            if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
-            drawable.setColorFilter(resources.getColor(R.color.ribbonDefault), PorterDuff.Mode.SRC_IN)
+            if (drawableLeft[0] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableLeft[0]!!.setTint(it) }
+            drawable.setColorFilter(resources.getColor(R.color.white2), PorterDuff.Mode.SRC_OUT)
 //            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.transparent))
             binding.loopPumpStatusLayout.activeProfile?.setTextColor(resourceHelper.gc(R.color.white))
         }
