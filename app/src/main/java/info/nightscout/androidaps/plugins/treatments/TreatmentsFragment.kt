@@ -103,12 +103,12 @@ class TreatmentsFragment : DaggerFragment() {
     }
 
     private fun setBackgroundColorOnSelected(selected: View) {
-        binding.treatments.setBackgroundColor(resourceHelper.gc(R.color.defaultbackground))
-        binding.extendedBoluses.setBackgroundColor(resourceHelper.gc(R.color.defaultbackground))
-        binding.tempBasals.setBackgroundColor(resourceHelper.gc(R.color.defaultbackground))
-        binding.tempTargets.setBackgroundColor(resourceHelper.gc(R.color.defaultbackground))
-        binding.profileSwitches.setBackgroundColor(resourceHelper.gc(R.color.defaultbackground))
-        binding.careportal.setBackgroundColor(resourceHelper.gc(R.color.defaultbackground))
+        binding.treatments.setBackgroundColor(resourceHelper.gc(R.color.black2))
+        binding.extendedBoluses.setBackgroundColor(resourceHelper.gc(R.color.black2))
+        binding.tempBasals.setBackgroundColor(resourceHelper.gc(R.color.black2))
+        binding.tempTargets.setBackgroundColor(resourceHelper.gc(R.color.black2))
+        binding.profileSwitches.setBackgroundColor(resourceHelper.gc(R.color.black2))
+        binding.careportal.setBackgroundColor(resourceHelper.gc(R.color.black2))
         selected.setBackgroundColor(resourceHelper.gc(R.color.tabBgColorSelected))
     }
 

@@ -156,7 +156,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         skinProvider.activeSkin().preProcessLandscapeOverviewLayout(dm, view, landscape, resourceHelper.gb(R.bool.isTablet), smallHeight)
         binding.nsclientLayout.visibility = config.NSCLIENT.toVisibility()
 
-        binding.loopPumpStatusLayout.pumpStatus.setBackgroundColor(resourceHelper.gc(R.color.colorInitializingBorder))
+        binding.loopPumpStatusLayout.pumpStatus.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
 
         binding.notifications.setHasFixedSize(false)
         binding.notifications.layoutManager = LinearLayoutManager(view.context)
@@ -721,7 +721,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             } else {
                 val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
                 val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
-                if (drawableLeft[0] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableLeft[0]!!.setTint(it) }
+                if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
                 drawable.setColorFilter(resources.getColor(R.color.white2), PorterDuff.Mode.SRC_OUT)
                 binding.loopPumpStatusLayout.tempTarget?.setTextColor(resourceHelper.gc(R.color.white))
 //                binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
@@ -776,7 +776,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         } else {
             val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
-            if (drawableLeft[0] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableLeft[0]!!.setTint(it) }
+            if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
             drawable.setColorFilter(resources.getColor(R.color.white2), PorterDuff.Mode.SRC_OUT)
 //            overview_activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.transparent))
             binding.loopPumpStatusLayout.activeProfile?.setTextColor(resourceHelper.gc(R.color.white))
