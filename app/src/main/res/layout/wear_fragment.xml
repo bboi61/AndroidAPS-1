@@ -14,7 +14,7 @@
         <Button
             android:id="@+id/resend"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"
@@ -28,7 +28,7 @@
         <Button
             android:id="@+id/opensettings"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"

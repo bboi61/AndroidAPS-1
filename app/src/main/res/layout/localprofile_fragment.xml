@@ -240,7 +240,7 @@
         <Button
             android:id="@+id/profileswitch"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
@@ -264,7 +264,7 @@
             <Button
                 android:id="@+id/reset"
                 style="?android:attr/buttonStyle"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/buttonshape_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -282,7 +282,7 @@
             <Button
                 android:id="@+id/save"
                 style="?android:attr/buttonStyle"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/buttonshape_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

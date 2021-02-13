@@ -29,7 +29,7 @@
         <!--       <TextView
             android:id="@+id/activeprofile"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -41,7 +41,7 @@
 
         <TextView
             android:id="@+id/temptarget"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             style="?android:attr/buttonStyle"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
@@ -55,7 +55,7 @@
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/treatment_button"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -70,7 +70,7 @@
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/insulin_button"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -84,7 +84,7 @@
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/carbs_button"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -97,7 +97,7 @@
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/wizard_button"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -111,7 +111,7 @@
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/calibration_button"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -126,7 +126,7 @@
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/cgm_button"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_marginEnd="2dp"
             android:layout_width="0px"
             android:layout_height="fill_parent"
@@ -141,7 +141,7 @@
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/quick_wizard_button"
             style="?android:attr/buttonStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:layout_width="0px"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
@@ -158,7 +158,7 @@
             <ImageView
                 android:id="@+id/overview_apsmode"
                 style="?android:attr/buttonStyle"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/buttonshape_2"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -168,7 +168,7 @@
             <TextView
                 android:id="@+id/overview_apsmode_text"
                 style="?android:attr/buttonStyle"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/buttonshape_2"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"

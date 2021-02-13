@@ -14,7 +14,7 @@
     <Button
         android:id="@+id/profileswitch"
         style="?android:attr/buttonStyle"
-        android:background="@drawable/buttonshape"
+        android:background="@drawable/buttonshape_2"
         android:drawableLeft="@drawable/ic_zahnrad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

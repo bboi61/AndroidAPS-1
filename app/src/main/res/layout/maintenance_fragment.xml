@@ -13,7 +13,7 @@
 
         <Button
             android:id="@+id/nav_logsettings"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:drawableLeft="@drawable/ic_zahnrad"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
 
        <Button
             android:id="@+id/log_send"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:drawableLeft="@drawable/ic_mail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
 
         <Button
             android:id="@+id/log_delete"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:drawableLeft="@drawable/ic_delete_logs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
 
         <Button
             android:id="@+id/nav_export"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:drawableLeft="@drawable/ic_export"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
 
         <Button
             android:id="@+id/nav_import"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:drawableLeft="@drawable/ic_import"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
 
         <Button
             android:id="@+id/nav_resetdb"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonshape_2"
             android:drawableLeft="@drawable/ic_resetdb"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
