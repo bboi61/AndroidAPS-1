@@ -491,7 +491,7 @@
         <Button
             android:id="@+id/refresh"
             style="@style/ButtonSmallFontStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@color/black_alpha_90"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
@@ -506,7 +506,7 @@
         <Button
             android:id="@+id/history"
             style="@style/ButtonSmallFontStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@color/black_alpha_90"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
@@ -520,7 +520,7 @@
         <Button
             android:id="@+id/stats"
             style="@style/ButtonSmallFontStyle"
-            android:background="@drawable/buttonshape"
+            android:background="@color/black_alpha_90"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
