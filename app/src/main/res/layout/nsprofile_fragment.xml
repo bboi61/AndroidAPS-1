@@ -16,12 +16,16 @@
         style="?android:attr/buttonStyle"
         android:background="@drawable/buttonshape_2"
         android:drawableLeft="@drawable/ic_zahnrad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/activate_profile"
         android:paddingRight="6dp"
-        android:textColor="@color/rig22Blue" />
+        android:textColor="@color/black" />
 
     <include
         android:id="@+id/profileviewer"

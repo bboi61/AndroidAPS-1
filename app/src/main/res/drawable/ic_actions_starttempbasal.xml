@@ -1,12 +1,4 @@
 <vector android:height="48dp" android:viewportHeight="64"
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#00000000"
-        android:pathData="M43.9923,8.738l12.957,0l0,46.7124l-12.957,0z"
-        android:strokeColor="#ffffff" android:strokeWidth="0.64"/>
-    <path android:fillColor="#00000000"
-        android:pathData="M7.0506,8.738l12.957,0l0,46.7124l-12.957,0z"
-        android:strokeColor="#ffffff" android:strokeWidth="0.64"/>
-    <path android:fillColor="#00000000"
-        android:pathData="M25.6786,8.55l12.957,0l0,46.7124l-12.957,0z"
-        android:strokeColor="#ffffff" android:strokeWidth="0.64"/>
+    <path android:fillColor="#fff" android:name="starttempbasal" android:pathData="m17.31 18.4v27.14h5.92v-27.14zm11.73 0.03v27.14h5.92v-27.14zm11.83 0v27.14h5.92v-27.14zm-4.66 -1.31v29.64h-8.22v-29.64zm-11.82 0.12v29.64h-8.22v-29.64zm23.44 0v29.64h-8.22v-29.64zm-15.83 -12.74c-15.18 0 -27.5 12.32 -27.5 27.5c0 15.18 12.32 27.5 27.5 27.5c15.18 0 27.5 -12.32 27.5 -27.5c0 -15.18 -12.32 -27.5 -27.5 -27.5z"/>
 </vector>

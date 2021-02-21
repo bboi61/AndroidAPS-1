@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:text="@string/openapsma_run"
-                android:textColor="@color/rig22Blue"/>
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 

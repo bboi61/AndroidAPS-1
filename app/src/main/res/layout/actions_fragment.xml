@@ -94,9 +94,9 @@
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/actions_extendedbolus"
                 style="@style/ButtonSmallFontStyle"
-                android:background="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/black"
                 android:drawableTop="@drawable/ic_actions_startextbolus"
                 android:paddingLeft="0dp"
                 android:paddingRight="0dp"

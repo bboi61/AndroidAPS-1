@@ -23,7 +23,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/resend_all_data"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/opensettings"
@@ -37,7 +37,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/open_settings_on_wear"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

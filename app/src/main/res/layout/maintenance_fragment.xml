@@ -23,7 +23,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/nav_logsettings"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
        <Button
             android:id="@+id/log_send"
@@ -37,7 +37,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/send_all_logs"
-           android:textColor="@color/rig22Blue" />
+           android:textColor="@color/black" />
 
         <Button
             android:id="@+id/log_delete"
@@ -51,7 +51,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/delete_logs"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/nav_export"
@@ -65,7 +65,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/nav_export"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/nav_import"
@@ -79,7 +79,7 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:text="@string/nav_import"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/nav_resetdb"
@@ -93,7 +93,7 @@
             android:layout_marginBottom="3dp"
             android:layout_weight="0.5"
             android:text="@string/nav_resetdb"
-            android:textColor="@color/rig22Blue" />
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
