@@ -1,4 +1,7 @@
-<vector android:height="64dp" android:viewportHeight="64"
-    android:viewportWidth="64" android:width="64dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#fff" android:name="actions_starttempbasal" android:pathData="m28.51 17.61v28.66h7.18v-28.66zm11.95 0v28.66h7.18v-28.66zm-24.15 0.09v28.66h7.18v-28.66zm20.02 -0.75v29.97h-8.45v-29.97zm-12.15 0.12v29.97h-8.45v-29.97zm24.1 0v29.97h-8.45v-29.97zm-16.28 -12.57c-15.18 0 -27.5 12.32 -27.5 27.5c0 15.18 12.32 27.5 27.5 27.5c15.18 0 27.5 -12.32 27.5 -27.5c0 -15.18 -12.32 -27.5 -27.5 -27.5z"/>
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#238AF3" android:pathData="M0.0001,32.0001a32.0001,32.0002 90.1219,1 0,64.0003 0a32.0001,32.0002 90.1219,1 0,-64.0003 0z"/>
+    <path android:fillColor="#ffffff" android:pathData="M39.8897,15.1133l8.5244,0l0,33.9102l-8.5244,0z"/>
+    <path android:fillColor="#ffffff" android:pathData="M15.586,15.1133l8.5244,0l0,33.9102l-8.5244,0z"/>
+    <path android:fillColor="#ffffff" android:pathData="M27.8413,14.9769l8.5244,0l0,33.9102l-8.5244,0z"/>
 </vector>
