@@ -1,8 +1,8 @@
 <vector android:height="48dp" android:viewportHeight="64"
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#238af3" android:name="&lt;Shape 419>" android:pathData="m32 0c17.66 0 32 14.34 32 32c0 17.66 -14.34 32 -32 32c-17.66 0 -32 -14.34 -32 -32c0 -17.66 14.34 -32 32 -32z"/>
-    <path android:fillColor="#fff" android:name="&lt;Shape 418>" android:pathData="m39.01 9.61c-0 0.05 0 0.1 -0 0.15c-0.73 5.91 2.77 9.5 7.68 8.4l0.14 -8.4l-7.81 -0.15z"/>
-    <path android:fillColor="#fff" android:name="&lt;Shape 417>" android:pathData="m36.7 9.61c-0.25 0.82 -0.39 1.71 -0.39 2.62c0 4.64 3.5 8.4 7.81 8.4c0.95 0 1.85 -0.18 2.69 -0.51v31.4c0 1.58 -1.2 2.87 -2.67 2.87h-24.3c-1.47 0 -2.67 -1.29 -2.67 -2.87v-39.04c0 -1.58 1.2 -2.87 2.67 -2.87h16.85z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 418>" android:pathData="m38.7 10.59c-0 0.05 0 0.09 -0 0.14c-0.7 5.65 2.65 9.08 7.34 8.03l0.13 -8.03l-7.47 -0.14z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 417>" android:pathData="m36.5 10.59c-0.24 0.79 -0.37 1.63 -0.37 2.51c0 4.43 3.35 8.03 7.47 8.03c0.9 0 1.77 -0.17 2.57 -0.49v30.02c0 1.51 -1.14 2.74 -2.55 2.74h-23.24c-1.41 0 -2.55 -1.23 -2.55 -2.74v-37.33c0 -1.51 1.14 -2.74 2.55 -2.74h16.12z"/>
     <path android:fillColor="#238af3" android:name="&lt;Shape 416>" android:pathData="m42.5 25.48c0 -0.42 -0.34 -0.77 -0.77 -0.77h-19.28c-0.42 0 -0.77 0.34 -0.77 0.77v1.54c0 0.42 0.34 0.77 0.77 0.77h19.28c0.42 0 0.77 -0.34 0.77 -0.77v-1.54z"/>
     <path android:fillColor="#238af3" android:name="&lt;Shape 415>" android:pathData="m42.5 32.9c0 -0.42 -0.34 -0.77 -0.77 -0.77h-19.28c-0.42 0 -0.77 0.34 -0.77 0.77v1.54c0 0.42 0.34 0.77 0.77 0.77h19.28c0.42 0 0.77 -0.34 0.77 -0.77v-1.54z"/>
     <path android:fillColor="#238af3" android:name="&lt;Shape 414>" android:pathData="m35.14 39.85c0 -0.43 -0.35 -0.77 -0.77 -0.77h-11.91c-0.43 0 -0.77 0.35 -0.77 0.77v1.55c0 0.43 0.35 0.77 0.77 0.77h11.91c0.43 0 0.77 -0.35 0.77 -0.77v-1.55z"/>
