@@ -769,7 +769,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.loopPumpStatusLayout.activeProfile.text = profileFunction.getProfileNameWithDuration()
         if (profile.percentage != 100 || profile.timeshift != 0) {
             val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
-            drawable.setColorFilter(resources.getColor(R.color.white, requireContext().theme), PorterDuff.Mode.SRC_IN)
+            drawable.setColorFilter(resources.getColor(R.color.high, requireContext().theme), PorterDuff.Mode.SRC_IN)
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
             if (drawableLeft[0] != null) resourceHelper.gc(R.color.black).let { drawableLeft[0]!!.setTint(it) }
 //            binding.loopPumpStatusLayout.activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))

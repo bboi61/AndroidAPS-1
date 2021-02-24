@@ -34,7 +34,7 @@
             android:layout_width="0px"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:drawableTop="@drawable/icon_insulin_carbs"
+            android:drawableTop="@drawable/treatments"
             android:text="@string/overview_treatment_label"
             android:textColor="@color/white"
             android:textSize="10sp"

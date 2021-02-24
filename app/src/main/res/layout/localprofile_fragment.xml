@@ -252,7 +252,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="@string/activate_profile"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -272,11 +272,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:drawableStart="@drawable/ic_local_reset"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="@string/reset"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/save"
@@ -290,11 +289,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:drawableStart="@drawable/ic_local_save"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="@string/save"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
         </LinearLayout>
 
     </LinearLayout>
