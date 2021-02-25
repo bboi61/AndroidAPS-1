@@ -11,6 +11,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Wartungszentrale"
+            android:textColor="@color/rig22Blue"
+            android:textSize="20sp"/>
+
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +30,8 @@
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_logsettings"
                 style="@style/ButtonSmallFontStyle"
-                android:background="@drawable/buttonshape_2"
+                android:background="@color/black"
+                android:drawableTop="@drawable/ic_zahnrad"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -39,7 +50,8 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/log_send"
-                android:background="@drawable/buttonshape_2"
+                android:background="@color/black"
+                android:drawableTop="@drawable/ic_mail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -57,7 +69,8 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/log_delete"
-                android:background="@drawable/buttonshape_2"
+                android:drawableTop="@drawable/ic_delete_logs"
+                android:background="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -75,7 +88,8 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_export"
-                android:background="@drawable/buttonshape_2"
+                android:background="@color/black"
+                android:drawableTop="@drawable/ic_export"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -93,7 +107,8 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_import"
-                android:background="@drawable/buttonshape_2"
+                android:background="@color/black"
+                android:drawableTop="@drawable/ic_import"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -111,7 +126,8 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_resetdb"
-                android:background="@drawable/buttonshape_2"
+                android:background="@color/black"
+                android:drawableTop="@drawable/ic_resetdb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
