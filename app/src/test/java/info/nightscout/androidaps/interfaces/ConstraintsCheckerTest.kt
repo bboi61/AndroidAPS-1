@@ -10,6 +10,7 @@ import info.nightscout.androidaps.TestBaseWithProfile
 import info.nightscout.androidaps.dana.DanaPump
 import info.nightscout.androidaps.danar.DanaRPlugin
 import info.nightscout.androidaps.danars.DanaRSPlugin
+import info.nightscout.androidaps.database.AppRepository
 import info.nightscout.androidaps.logging.UserEntryLogger
 import info.nightscout.androidaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
 import info.nightscout.androidaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
@@ -52,7 +53,7 @@ import java.util.*
     MainApp::class, ConfigBuilderPlugin::class, ConstraintChecker::class, SP::class, Context::class,
     OpenAPSAMAPlugin::class, OpenAPSSMBPlugin::class, TreatmentsPlugin::class, TreatmentService::class,
     VirtualPumpPlugin::class, DetailedBolusInfoStorage::class, GlimpPlugin::class, Profiler::class,
-    UserEntryLogger::class, IobCobCalculatorPlugin::class, LoggerUtils::class)
+    UserEntryLogger::class, IobCobCalculatorPlugin::class, LoggerUtils::class, AppRepository::class)
 class ConstraintsCheckerTest : TestBaseWithProfile() {
 
     @Mock lateinit var activePlugin: ActivePluginProvider
@@ -69,10 +70,12 @@ class ConstraintsCheckerTest : TestBaseWithProfile() {
     @Mock lateinit var uploadQueue: UploadQueue
     @Mock lateinit var uel: UserEntryLogger
     @Mock lateinit var loggerUtils: LoggerUtils
+    @Mock lateinit var databaseHelper: DatabaseHelperInterface
+    @Mock lateinit var repository: AppRepository
 
-    lateinit var danaPump: DanaPump
+    private lateinit var danaPump: DanaPump
 
-    lateinit var constraintChecker: ConstraintChecker
+    private lateinit var constraintChecker: ConstraintChecker
     private lateinit var safetyPlugin: SafetyPlugin
     private lateinit var objectivesPlugin: ObjectivesPlugin
     private lateinit var comboPlugin: ComboPlugin
@@ -123,12 +126,12 @@ class ConstraintsCheckerTest : TestBaseWithProfile() {
         danaPump = DanaPump(aapsLogger, sp, injector)
         hardLimits = HardLimits(aapsLogger, rxBus, sp, resourceHelper, context, nsUpload)
         objectivesPlugin = ObjectivesPlugin(injector, aapsLogger, resourceHelper, activePlugin, sp, Config(), uel)
-        comboPlugin = ComboPlugin(injector, aapsLogger, rxBus, resourceHelper, profileFunction, treatmentsInterface, sp, commandQueue, context)
+        comboPlugin = ComboPlugin(injector, aapsLogger, rxBus, resourceHelper, profileFunction, treatmentsInterface, sp, commandQueue, context, databaseHelper)
         danaRPlugin = DanaRPlugin(injector, aapsLogger, aapsSchedulers, rxBus, context, resourceHelper, constraintChecker, activePlugin, sp, commandQueue, danaPump, dateUtil, fabricPrivacy)
         danaRSPlugin = DanaRSPlugin(injector, aapsLogger, aapsSchedulers, rxBus, context, resourceHelper, constraintChecker, profileFunction, activePluginProvider, sp, commandQueue, danaPump, detailedBolusInfoStorage, fabricPrivacy, dateUtil)
-        insightPlugin = LocalInsightPlugin(injector, aapsLogger, rxBus, resourceHelper, treatmentsInterface, sp, commandQueue, profileFunction, nsUpload, context, uploadQueue, Config(), dateUtil)
-        openAPSSMBPlugin = OpenAPSSMBPlugin(injector, aapsLogger, rxBus, constraintChecker, resourceHelper, profileFunction, context, activePlugin, treatmentsInterface, iobCobCalculatorPlugin, hardLimits, profiler, sp)
-        openAPSAMAPlugin = OpenAPSAMAPlugin(injector, aapsLogger, rxBus, constraintChecker, resourceHelper, profileFunction, context, activePlugin, treatmentsInterface, iobCobCalculatorPlugin, hardLimits, profiler, fabricPrivacy)
+        insightPlugin = LocalInsightPlugin(injector, aapsLogger, rxBus, resourceHelper, treatmentsInterface, sp, commandQueue, profileFunction, nsUpload, context, uploadQueue, Config(), dateUtil, databaseHelper)
+        openAPSSMBPlugin = OpenAPSSMBPlugin(injector, aapsLogger, rxBus, constraintChecker, resourceHelper, profileFunction, context, activePlugin, treatmentsInterface, iobCobCalculatorPlugin, hardLimits, profiler, sp, dateUtil, repository)
+        openAPSAMAPlugin = OpenAPSAMAPlugin(injector, aapsLogger, rxBus, constraintChecker, resourceHelper, profileFunction, context, activePlugin, treatmentsInterface, iobCobCalculatorPlugin, hardLimits, profiler, fabricPrivacy, dateUtil, repository)
         safetyPlugin = SafetyPlugin(injector, aapsLogger, resourceHelper, sp, rxBus, constraintChecker, openAPSAMAPlugin, openAPSSMBPlugin, sensitivityOref1Plugin, activePlugin, hardLimits, BuildHelper(Config(), loggerUtils), treatmentsInterface, Config())
         val constraintsPluginsList = ArrayList<PluginBase>()
         constraintsPluginsList.add(safetyPlugin)

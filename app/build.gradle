@@ -100,6 +100,7 @@ def allCommitted = { ->
 
 tasks.matching { it instanceof Test }.all {
     testLogging.events = ["failed", "skipped", "started"]
+    // testLogging.events = ["failed", "skipped", "started", "standard_out"] use to display stdout in travis
     testLogging.exceptionFormat = "full"
 }
 
@@ -109,7 +110,7 @@ android {
     defaultConfig {
         multiDexEnabled true
         versionCode 1500
-        version "2.8.2.1-dev-b"
+        version "2.8.2.1-dev-c"
         buildConfigField "String", "VERSION", '"' + version + '"'
         buildConfigField "String", "BUILDVERSION", '"' + generateGitBuild() + '-' + generateDate() + '"'
         buildConfigField "String", "REMOTE", '"' + generateGitRemote() + '"'
@@ -177,12 +178,16 @@ dependencies {
     wearApp project(':wear')
 
     implementation project(':core')
+    implementation project(':automation')
+    implementation project(':combo')
     implementation project(':database')
     implementation project(':dana')
     implementation project(':danars')
     implementation project(':danar')
+    implementation project(':insight')
     implementation project(':rileylink')
     implementation project(':medtronic')
+    implementation project(':omnipod-common')
     implementation project(':omnipod-eros')
     implementation project(':omnipod-dash')
 

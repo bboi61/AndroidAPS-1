@@ -1,6 +1,6 @@
 package info.nightscout.androidaps.interfaces;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import java.util.List;
 
@@ -11,7 +11,6 @@ import info.nightscout.androidaps.data.NonOverlappingIntervals;
 import info.nightscout.androidaps.data.ProfileIntervals;
 import info.nightscout.androidaps.db.ExtendedBolus;
 import info.nightscout.androidaps.db.ProfileSwitch;
-import info.nightscout.androidaps.db.TempTarget;
 import info.nightscout.androidaps.db.TemporaryBasal;
 import info.nightscout.androidaps.db.Treatment;
 import info.nightscout.androidaps.plugins.treatments.TreatmentUpdateReturn;
@@ -42,6 +41,7 @@ public interface TreatmentsInterface {
     List<Treatment> getTreatmentsFromHistoryAfterTimestamp(long timestamp);
 
     long getLastBolusTime();
+
     long getLastBolusTime(boolean excludeSMB);
 
     // real basals (not faked by extended bolus)
@@ -60,7 +60,7 @@ public interface TreatmentsInterface {
 
     void removeTempBasal(TemporaryBasal temporaryBasal);
 
-    boolean isInHistoryExtendedBoluslInProgress();
+    boolean isInHistoryExtendedBolusInProgress();
 
     ExtendedBolus getExtendedBolusFromHistory(long time);
 
@@ -70,21 +70,13 @@ public interface TreatmentsInterface {
 
     boolean addToHistoryTreatment(DetailedBolusInfo detailedBolusInfo, boolean allowUpdate);
 
-    TempTarget getTempTargetFromHistory();
-
-    TempTarget getTempTargetFromHistory(long time);
-
-    Intervals<TempTarget> getTempTargetsFromHistory();
-
-    void addToHistoryTempTarget(TempTarget tempTarget);
-
     ProfileSwitch getProfileSwitchFromHistory(long time);
 
     ProfileIntervals<ProfileSwitch> getProfileSwitchesFromHistory();
 
     void addToHistoryProfileSwitch(ProfileSwitch profileSwitch);
 
-    void doProfileSwitch(@NotNull final ProfileStore profileStore, @NotNull final String profileName, final int duration, final int percentage, final int timeShift, final long date);
+    void doProfileSwitch(@NonNull final ProfileStore profileStore, @NonNull final String profileName, final int duration, final int percentage, final int timeShift, final long date);
 
     void doProfileSwitch(final int duration, final int percentage, final int timeShift);
 
