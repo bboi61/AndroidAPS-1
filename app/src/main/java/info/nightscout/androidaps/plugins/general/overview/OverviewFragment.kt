@@ -28,8 +28,12 @@ import dagger.android.HasAndroidInjector
 import dagger.android.support.DaggerFragment
 import info.nightscout.androidaps.Config
 import info.nightscout.androidaps.Constants
+import info.nightscout.androidaps.database.AppRepository
 import info.nightscout.androidaps.R
 import info.nightscout.androidaps.data.Profile
+import info.nightscout.androidaps.database.ValueWrapper
+import info.nightscout.androidaps.database.entities.TemporaryTarget
+import info.nightscout.androidaps.database.interfaces.end
 import info.nightscout.androidaps.databinding.OverviewFragmentBinding
 import info.nightscout.androidaps.dialogs.*
 import info.nightscout.androidaps.events.*
@@ -111,6 +115,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @Inject lateinit var config: Config
     @Inject lateinit var dateUtil: DateUtil
     @Inject lateinit var databaseHelper: DatabaseHelperInterface
+    @Inject lateinit var repository: AppRepository
     @Inject lateinit var uel: UserEntryLogger
 
     private val disposable = CompositeDisposable()
@@ -697,15 +702,18 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 //            }
 //        }
 
-        val tempTarget = treatmentsPlugin.tempTargetFromHistory
-        if (tempTarget != null) {
+//        val tempTarget = treatmentsPlugin.tempTargetFromHistory
+//        if (tempTarget != null) {
+
+        val tempTarget: ValueWrapper<TemporaryTarget> = repository.getTemporaryTargetActiveAt(dateUtil._now()).blockingGet()
+        if (tempTarget is ValueWrapper.Existing) {
             val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
             drawable.setColorFilter(resources.getColor(R.color.high, requireContext().theme), PorterDuff.Mode.SRC_IN)
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
             if (drawableLeft[0] != null) resourceHelper.gc(R.color.black).let { drawableLeft[0]!!.setTint(it) }
             binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.black))
 //            binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
-            binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
+            binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.value.lowTarget, tempTarget.value.highTarget, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.value.end, resourceHelper)
         } else {
             // If the target is not the same as set in the profile then oref has overridden it
             val targetUsed = lastRun?.constraintsProcessed?.targetBG ?: 0.0
