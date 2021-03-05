@@ -1,4 +1,10 @@
-<vector android:height="64dp" android:viewportHeight="64"
-    android:viewportWidth="64" android:width="64dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#fff" android:name="cancelextbolus" android:pathData="m13.79 16.44 5.09 5.09 5.01 -5.01 0.43 0.43 -5.01 5.01 5.64 5.64 -0.43 0.43 -5.64 -5.64 -5.71 5.71 -0.43 -0.43 5.71 -5.71 -5.09 -5.09 0.43 -0.43zm27.05 -1.79v0.8v33.11h6.44v0.8h-7.11v-33.91h-10.74v33.11h0.07v0.8h-15.54v-0.8h14.83v-33.91zm-10.21 -10.01c-15.18 0 -27.5 12.32 -27.5 27.5c0 15.18 12.32 27.5 27.5 27.5c15.18 0 27.5 -12.32 27.5 -27.5c0 -15.18 -12.32 -27.5 -27.5 -27.5z"/>
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#fff" android:name="&lt;Shape 230>" android:pathData="m31.91 54.92h-28.17v2.35h28.17v-2.35z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 229>" android:pathData="m31.91 4.17h-2.35v53.13h2.35v-53.13z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 228>" android:pathData="m51.39 4.17h-20.54v2.35h20.54v-2.35z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 227>" android:pathData="m51.36 4.17h-2.35v50.75h2.35v-50.75z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 226>" android:pathData="m61.9 54.96h-12.88v2.35h12.88v-2.35z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 225>" android:pathData="m24.83 20.71 -16.3 -13.8 -0.67 0.56 16.3 13.8 0.67 -0.56z"/>
+    <path android:fillColor="#fff" android:name="&lt;Shape 224>" android:pathData="m23.75 6.78 -16.3 13.8 0.67 0.56 16.3 -13.8 -0.67 -0.56z"/>
 </vector>
