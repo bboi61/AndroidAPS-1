@@ -73,6 +73,7 @@
     <color name="amber">#FEA300</color>
     <color name="transparent">#00000000</color>
     <color name="white2">#50FFFFFF</color>
+    <color name="white3">#30FFFFFF</color>
     <color name="smaragdgreen">#01C03E</color>
 
 </resources>
