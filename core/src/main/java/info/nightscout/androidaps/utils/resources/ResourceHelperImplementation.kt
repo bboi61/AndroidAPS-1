@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
 import android.util.DisplayMetrics
 import androidx.annotation.*
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.content.ContextCompat
 import info.nightscout.androidaps.core.R
 import javax.inject.Inject
@@ -52,4 +53,7 @@ class ResourceHelperImplementation @Inject constructor(private val context: Cont
     }
 
     override fun shortTextMode() : Boolean = !gb(R.bool.isTablet)
+
+    override fun getAttributeColor(context: Context?, attributeId: Int): Int =
+        (context ?: ContextThemeWrapper(this.context, R.style.AppTheme)).getThemeColor(attributeId)
 }

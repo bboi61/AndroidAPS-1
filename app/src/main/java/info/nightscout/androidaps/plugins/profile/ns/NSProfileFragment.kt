@@ -52,9 +52,9 @@ class NSProfileFragment : DaggerFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.profileviewer.closeLayout.close.visibility = View.GONE // not needed for fragment
+        binding.profileviewer.closeLayout.closeButton.visibility = View.GONE // not needed for fragment
 
-        binding.profileswitch.setOnClickListener {
+        binding.profileswitchNsprofile.setOnClickListener {
             val name = binding.spinner.selectedItem?.toString() ?: ""
             nsProfilePlugin.profile?.let { store ->
                 store.getSpecificProfile(name)?.let {
@@ -82,14 +82,14 @@ class NSProfileFragment : DaggerFragment() {
                 binding.profileviewer.basal.text = ""
                 binding.profileviewer.basaltotal.text = ""
                 binding.profileviewer.target.text = ""
-                binding.profileswitch.visibility = View.GONE
+                binding.profileswitchNsprofile.visibility = View.GONE
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 if (_binding == null) return
                 val name = binding.spinner.getItemAtPosition(position).toString()
 
-                binding.profileswitch.visibility = View.GONE
+                binding.profileswitchNsprofile.visibility = View.GONE
 
                 nsProfilePlugin.profile?.let { store ->
                     store.getSpecificProfile(name)?.let { profile ->
@@ -105,10 +105,10 @@ class NSProfileFragment : DaggerFragment() {
                         binding.profileviewer.basalGraph.show(profile)
                         if (profile.isValid("NSProfileFragment")) {
                             binding.profileviewer.invalidprofile.visibility = View.GONE
-                            binding.profileswitch.visibility = View.VISIBLE
+                            binding.profileswitchNsprofile.visibility = View.VISIBLE
                         } else {
                             binding.profileviewer.invalidprofile.visibility = View.VISIBLE
-                            binding.profileswitch.visibility = View.GONE
+                            binding.profileswitchNsprofile.visibility = View.GONE
                         }
                     }
                 }

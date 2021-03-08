@@ -11,28 +11,24 @@ import javax.inject.Singleton
 @Singleton
 class WarnColors @Inject constructor(val resourceHelper: ResourceHelper) {
 
-    private val normalColor = Color.WHITE
-    private val warnColor = Color.YELLOW
-    private val urgentColor = Color.RED
-
-    fun setColor(view: TextView?, value: Double, warnLevel: Double, urgentLevel: Double) =
+    fun setColor(view: TextView?, value: Double, warnLevel: Double, urgentLevel: Double, colorNormal: Int, colorWarning: Int, colorAlarm: Int) =
         view?.setTextColor(when {
-            value >= urgentLevel -> urgentColor
-            value >= warnLevel   -> warnColor
-            else                 -> normalColor
+            value >= urgentLevel -> colorAlarm
+            value >= warnLevel   -> colorWarning
+            else                 -> colorNormal
         })
 
-    fun setColorInverse(view: TextView?, value: Double, warnLevel: Double, urgentLevel: Double) =
+    fun setColorInverse(view: TextView?, value: Double, warnLevel: Double, urgentLevel: Double, colorNormal: Int, colorWarning: Int, colorAlarm: Int) =
         view?.setTextColor(when {
-            value <= urgentLevel -> urgentColor
-            value <= warnLevel   -> warnColor
-            else                 -> normalColor
+            value <= urgentLevel -> colorAlarm
+            value <= warnLevel   -> colorWarning
+            else                 -> colorNormal
         })
 
-    fun setColorByAge(view: TextView?, careportalEvent: CareportalEvent, warnThreshold: Double, urgentThreshold: Double) =
+    fun setColorByAge(view: TextView?, careportalEvent: CareportalEvent, warnThreshold: Double, urgentThreshold: Double, colorNormal: Int, colorWarning: Int, colorAlarm: Int) =
         view?.setTextColor(when {
-            careportalEvent.isOlderThan(urgentThreshold) -> resourceHelper.gc(R.color.low)
-            careportalEvent.isOlderThan(warnThreshold)   -> resourceHelper.gc(R.color.high)
-            else                                         -> Color.WHITE
+            careportalEvent.isOlderThan(urgentThreshold) -> colorAlarm
+            careportalEvent.isOlderThan(warnThreshold)   -> colorWarning
+            else                                         -> colorNormal
         })
 }

@@ -5,9 +5,9 @@ import android.app.NotificationManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
@@ -162,13 +162,17 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         skinProvider.activeSkin().preProcessLandscapeOverviewLayout(dm, view, landscape, resourceHelper.gb(R.bool.isTablet), smallHeight)
         binding.nsclientLayout.visibility = config.NSCLIENT.toVisibility()
 
-        binding.loopPumpStatusLayout.pumpStatus.setBackgroundColor(resourceHelper.gc(R.color.colorInitializingBorder))
+        binding.loopPumpStatusLayout.pumpStatus.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.informationBackground))
+        binding.loopPumpStatusLayout.pumpStatus.setTextColor(resourceHelper.getAttributeColor(context, R.attr.informationText))
 
         binding.notifications.setHasFixedSize(false)
         binding.notifications.layoutManager = LinearLayoutManager(view.context)
         axisWidth = if (dm.densityDpi <= 120) 3 else if (dm.densityDpi <= 160) 10 else if (dm.densityDpi <= 320) 35 else if (dm.densityDpi <= 420) 50 else if (dm.densityDpi <= 560) 70 else 80
-        binding.graphsLayout.bgGraph.gridLabelRenderer?.gridColor = resourceHelper.gc(R.color.graphgrid)
+        binding.graphsLayout.bgGraph.gridLabelRenderer?.gridColor = resourceHelper.getAttributeColor(context,R.attr.graphGrid )
+        binding.graphsLayout.bgGraph.setBackgroundColor(resourceHelper.getAttributeColor(context,R.attr.colorGraphBackground ))
         binding.graphsLayout.bgGraph.gridLabelRenderer?.reloadStyles()
+        binding.graphsLayout.bgGraph.gridLabelRenderer?.horizontalLabelsColor = resourceHelper.getAttributeColor(context,R.attr.graphHorizontalLabelText )
+        binding.graphsLayout.bgGraph.gridLabelRenderer?.verticalLabelsColor = resourceHelper.getAttributeColor(context,R.attr.graphVerticalLabelText )
         binding.graphsLayout.bgGraph.gridLabelRenderer?.labelVerticalWidth = axisWidth
         binding.graphsLayout.bgGraph.layoutParams?.height = resourceHelper.dpToPx(skinProvider.activeSkin().mainGraphHeight)
 
@@ -505,12 +509,14 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
                     val graph = GraphView(context)
                     graph.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, resourceHelper.dpToPx(skinProvider.activeSkin().secondaryGraphHeight)).also { it.setMargins(0, resourceHelper.dpToPx(15), 0, resourceHelper.dpToPx(10)) }
-                    graph.gridLabelRenderer?.gridColor = resourceHelper.gc(R.color.graphgrid)
+                    graph.gridLabelRenderer?.gridColor = resourceHelper.getAttributeColor(context,R.attr.graphGrid )
+                    graph.gridLabelRenderer?.horizontalLabelsColor = resourceHelper.getAttributeColor(context,R.attr.graphHorizontalLabelText )
+                    graph.gridLabelRenderer?.verticalLabelsColor = resourceHelper.getAttributeColor(context,R.attr.graphVerticalLabelText )
                     graph.gridLabelRenderer?.reloadStyles()
                     graph.gridLabelRenderer?.isHorizontalLabelsVisible = false
                     graph.gridLabelRenderer?.labelVerticalWidth = axisWidth
                     graph.gridLabelRenderer?.numVerticalLabels = 3
-                    graph.viewport.backgroundColor = Color.argb(20, 255, 255, 255) // 8% of gray
+                    graph.setBackgroundColor(resourceHelper.getAttributeColor(context,R.attr.colorGraphBackground ))
                     relativeLayout.addView(graph)
 
                     val label = TextView(context)
@@ -580,9 +586,9 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         // **** BG value ****
         if (lastBG != null) {
             val color = when {
-                lastBG.valueToUnits(units) < lowLine  -> resourceHelper.gc(R.color.low)
-                lastBG.valueToUnits(units) > highLine -> resourceHelper.gc(R.color.high)
-                else                                  -> resourceHelper.gc(R.color.inrange)
+                lastBG.valueToUnits(units) < lowLine  -> resourceHelper.getAttributeColor(context, R.attr.bgLow)
+                lastBG.valueToUnits(units) > highLine -> resourceHelper.getAttributeColor(context, R.attr.bgHigh)
+                else                                  -> resourceHelper.getAttributeColor(context, R.attr.bgInRange)
             }
 
             binding.infoLayout.bg.text = lastBG.valueToUnitsString(units)
@@ -681,9 +687,11 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         // temp target
         val tempTarget: ValueWrapper<TemporaryTarget> = repository.getTemporaryTargetActiveAt(dateUtil._now()).blockingGet()
         if (tempTarget is ValueWrapper.Existing) {
-            binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
-            binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
+            binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
+            binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonWarning))
             binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.value.lowTarget, tempTarget.value.highTarget, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.value.end, resourceHelper)
+            val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
+            if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning).let { drawableLeft[0]!!.setTint(it) }
         } else {
             // If the target is not the same as set in the profile then oref has overridden it
             val targetUsed = lastRun?.constraintsProcessed?.targetBG ?: 0.0
@@ -691,12 +699,16 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
                 aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
                 binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
-                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
-                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
+                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.tempTargetBackground))
+                val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
+                if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning).let { drawableLeft[0]!!.setTint(it) }
             } else {
-                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
-                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.defaultTextColor))
+                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonDefault))
                 binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
+                val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
+                if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.defaultTextColor).let { drawableLeft[0]!!.setTint(it) }
             }
         }
 
@@ -712,8 +724,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                 OKDialog.show(it, resourceHelper.gs(R.string.basal), fullText)
             }
         }
-        binding.infoLayout.baseBasal.setTextColor(activeTemp?.let { resourceHelper.gc(R.color.basal) }
-            ?: resourceHelper.gc(R.color.defaulttextcolor))
+        binding.infoLayout.baseBasal.setTextColor(activeTemp?.let { resourceHelper.getAttributeColor(context, R.attr.basal) }
+            ?: resourceHelper.getAttributeColor(context, R.attr.defaultTextColor))
 
         binding.infoLayout.baseBasalIcon.setImageResource(R.drawable.ic_cp_basal_no_tbr)
         val percentRate = activeTemp?.tempBasalConvertedToPercent(System.currentTimeMillis(), profile)
@@ -737,11 +749,15 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         // Active profile
         binding.loopPumpStatusLayout.activeProfile.text = profileFunction.getProfileNameWithDuration()
         if (profile.percentage != 100 || profile.timeshift != 0) {
-            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
-            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonWarning))
+            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
+            val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
+            if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning).let { drawableLeft[0]!!.setTint(it) }
         } else {
-            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
-            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
+            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonDefault))
+            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.getAttributeColor(context, R.attr.defaultTextColor))
+            val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
+            if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.defaultTextColor).let { drawableLeft[0]!!.setTint(it) }
         }
 
         processButtonsVisibility()
@@ -765,7 +781,9 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
         // Status lights
         binding.statusLightsLayout.statusLights.visibility = (sp.getBoolean(R.string.key_show_statuslights, true) || config.NSCLIENT).toVisibility()
-        statusLightHandler.updateStatusLights(binding.statusLightsLayout.cannulaAge, binding.statusLightsLayout.insulinAge, binding.statusLightsLayout.reservoirLevel, binding.statusLightsLayout.sensorAge, null, binding.statusLightsLayout.pbAge, binding.statusLightsLayout.batteryLevel)
+        statusLightHandler.updateStatusLights(binding.statusLightsLayout.cannulaAge, binding.statusLightsLayout.insulinAge, binding.statusLightsLayout.reservoirLevel, binding.statusLightsLayout.sensorAge, null, binding.statusLightsLayout.pbAge, binding.statusLightsLayout.batteryLevel , resourceHelper.getAttributeColor(context, R.attr.statuslightNormal),
+            resourceHelper.getAttributeColor(context, R.attr.statuslightWarning),
+            resourceHelper.getAttributeColor(context, R.attr.statuslightAlarm))
 
         // cob
         var cobText: String = resourceHelper.gs(R.string.value_unavailable_short)

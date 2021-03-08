@@ -1,7 +1,129 @@
 <resources>
-
-    <attr name="dialogTitleBackground" format="reference" />
-    <attr name="dialogTitleColor" format="reference" />
-    <attr name="dialogTitleIconTint" format="reference" />
-
+<attr name="fabmenubackground" format="reference|color" />
+<attr name="iconColor" format="reference|color" />
+<attr name="iconColorbottomAppbar" format="reference|color" />
+<attr name="iconColorToolbar" format="reference|color" />
+<attr name="iconColorDialog" format="reference|color" />
+<attr name="iobBorder" format="reference|color" />
+<attr name="cobBorder" format="reference|color" />
+<attr name="bgInRange" format="reference|color" />
+<attr name="bgLow" format="reference|color" />
+<attr name="bgHigh" format="reference|color" />
+<attr name="iobColor" format="reference|color" />
+<attr name="cobColor" format="reference|color" />
+<attr name="uamColor" format="reference|color" />
+<attr name="ztColor" format="reference|color" />
+<attr name="matButtonBackground" format="reference|color" />
+<attr name="color_val" format="reference|color" />
+<attr name="colorPrimaryDialog" format="reference|color" />
+<attr name="colorPrimaryDarkDialog" format="reference|color" />
+<attr name="colorAccentDialog" format="reference|color" />
+<attr name="colorGraphBackground" format="reference|color" />
+<!-- Top bar icons -->
+<attr name="iconSensor" format="reference|color" />
+<attr name="iconReservoir" format="reference|color" />
+<attr name="iconCanula" format="reference|color" />
+<attr name="iconBattery" format="reference|color" />
+<!-- Bottom bar icons -->
+<attr name="iconInsulin" format="reference|color" />
+<attr name="iconCarbs" format="reference|color" />
+<attr name="iconWizzard" format="reference|color" />
+<attr name="iconCgm" format="reference|color" />
+<attr name="iconTreatment" format="reference|color" />
+<!-- Fragment background for some themes default transparent  -->
+<attr name="fragmentbackground" format="reference|color" />
+<!-- Graph specific colors  -->
+<attr name="graphHorizontalLabelText" format="reference|color" />
+<attr name="graphVerticalLabelText" format="reference|color" />
+<attr name="inrangeBackground" format="reference|color" />
+<attr name="graphGrid" format="reference|color" />
+<!-- Dialog specific (cutom alert dialog) -->
+<attr name="dialogTitleBackground" format="reference" />
+<attr name="dialogTitleColor" format="reference" />
+<attr name="dialogTitleIconTint" format="reference" />
+<attr name="dialogUrgent" format="reference" />
+<!-- TDD Stats   -->
+<attr name="backgroundStatsColor" format="reference" />
+<!---Android Dark ans Light Theme Base colors-->
+<attr name="backgroundBaseColorDark" format="reference" />
+<attr name="backgroundBaseColorLight" format="reference" />
+<attr name="backgroundBaseColor" format="reference" />
+<!-- colors for statuslight handler    -->
+<attr name="statuslightNormal" format="reference|color" />
+<attr name="statuslightWarning" format="reference|color" />
+<attr name="statuslightAlarm" format="reference|color" />
+<!-- colors for statuslight handler    -->
+<attr name="splashBackground" format="reference|color" />
+<!-- colors for information background  -->
+<attr name="informationBackground" format="reference|color" />
+<attr name="informationText" format="reference|color" />
+<!-- colors for default cases ( near white ) -->
+<attr name="defaultColor" format="reference|color" />
+<!-- treatment -->
+<attr name="treatmentSheduled" format="reference|color" />
+<attr name="treatmentActive" format="reference|color" />
+<!-- filling dialog -->
+<attr name="actionsConfirm" format="reference|color" />
+<!-- local profil dialog -->
+<attr name="errorBackground" format="reference|color" />
+<attr name="okBackground" format="reference|color" />
+<attr name="defaultBackground" format="reference|color" />
+<!-- wizard dialog -->
+<attr name="totalBackground" format="reference|color" />
+<!-- Custom tabs background -->
+<attr name="tabBgColorSelected" format="reference|color" />
+<attr name="tabBgColor" format="reference|color" />
+<!-- Predictions -->
+<attr name="iobPred" format="reference|color" />
+<!---Deviation in Graph -->
+<attr name="deviationCsf" format="reference|color" />
+<attr name="deviationPlus" format="reference|color" />
+<attr name="deviationMinus" format="reference|color" />
+<attr name="deviationEqual" format="reference|color" />
+<!---Notification -->
+<attr name="notificationUrgent" format="reference|color" />
+<attr name="notificationNormal" format="reference|color" />
+<attr name="notificationLow" format="reference|color" />
+<attr name="notificationInfo" format="reference|color" />
+<attr name="notificationAnnouncement" format="reference|color" />
+<!---The pills for active profile and temp target -->
+<attr name="ribbonWarning" format="reference|color" />
+<attr name="ribbonTextWarning" format="reference|color" />
+<!---TDD Statistics -->
+<attr name="rowBackgroundEven" format="reference|color" />
+<attr name="rowBackgroundOdd" format="reference|color" />
+<attr name="rowTextColor" format="reference|color" />
+<!---Misc -->
+<attr name="carbsColor" format="reference|color" />
+<attr name="smbColor" format="reference|color" />
+<attr name="tempTargetConfirmation" format="reference|color" />
+<attr name="lightGreen" format="reference|color" />
+<attr name="prediction" format="reference|color" />
+<attr name="basal" format="reference|color" />
+<attr name="overviewShowDeviations" format="reference|color" />
+<attr name="overviewShowSensitivity" format="reference|color" />
+<attr name="activity" format="reference|color" />
+<attr name="bgi" format="reference|color" />
+<attr name="devslopepos" format="reference|color" />
+<attr name="devslopeneg" format="reference|color" />
+<attr name="bolus" format="reference|color" />
+<attr name="colorInsulinButton" format="reference|color" />
+<attr name="cobAlert" format="reference|color" />
+<attr name="info" format="reference|color" />
+<attr name="basebasal" format="reference|color" />
+<attr name="lightblue" format="reference|color" />
+<attr name="ribbonDefault" format="reference|color" />
+<attr name="tempTargetBackground" format="reference|color" />
+<attr name="defaultTextColor" format="reference|color" />
+<attr name="automationBgUrgent" format="reference|color" />
+<attr name="iobPredAS" format="reference|color" />
+<attr name="labelBackground" format="reference|color" />
+<attr name="examinedProfile" format="reference|color" />
+<attr name="spinnerBackground" format="reference|color" />
+<attr name="triggerConnectorBackground" format="reference|color" />
+<attr name="treatmentsRed" format="reference|color" />
+<attr name="profilViewerLabel" format="reference|color" />
+<attr name="metadataOk" format="reference|color" />
+<attr name="metadataTextWarning" format="reference|color" />
+<attr name="trendarrow" format="reference|color" />
 </resources>

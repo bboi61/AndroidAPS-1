@@ -86,7 +86,8 @@ class MedtronicFragment : DaggerFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.pumpStatus.setBackgroundColor(resourceHelper.gc(R.color.colorInitializingBorder))
+        binding.pumpStatus.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.informationBackground))
+        binding.pumpStatus.setTextColor(resourceHelper.getAttributeColor(context, R.attr.informationText))
 
         binding.rlStatus.text = resourceHelper.gs(RileyLinkServiceState.NotStarted.resourceId)
 
@@ -320,11 +321,16 @@ class MedtronicFragment : DaggerFragment() {
         } else {
             binding.pumpStateBattery.text = "{fa-battery-" + medtronicPumpStatus.batteryRemaining / 25 + "}  " + medtronicPumpStatus.batteryRemaining + "%" + String.format("  (%.2f V)", medtronicPumpStatus.batteryVoltage)
         }
-        warnColors.setColorInverse(binding.pumpStateBattery, medtronicPumpStatus.batteryRemaining.toDouble(), 25.0, 10.0)
+        warnColors.setColorInverse(binding.pumpStateBattery, medtronicPumpStatus.batteryRemaining.toDouble(), 25.0, 10.0, resourceHelper.getAttributeColor(context, R.attr.statuslightNormal),
+            resourceHelper.getAttributeColor(context, R.attr.statuslightWarning),
+            resourceHelper.getAttributeColor(context, R.attr.statuslightAlarm))
+
 
         // reservoir
         binding.reservoir.text = resourceHelper.gs(R.string.reservoirvalue, medtronicPumpStatus.reservoirRemainingUnits, medtronicPumpStatus.reservoirFullUnits)
-        warnColors.setColorInverse(binding.reservoir, medtronicPumpStatus.reservoirRemainingUnits, 50.0, 20.0)
+        warnColors.setColorInverse(binding.reservoir, medtronicPumpStatus.reservoirRemainingUnits, 50.0, 20.0, resourceHelper.getAttributeColor(context, R.attr.statuslightNormal),
+            resourceHelper.getAttributeColor(context, R.attr.statuslightWarning),
+            resourceHelper.getAttributeColor(context, R.attr.statuslightAlarm))
 
         medtronicPumpPlugin.rileyLinkService?.verifyConfiguration()
         binding.errors.text = medtronicPumpStatus.errorInfo

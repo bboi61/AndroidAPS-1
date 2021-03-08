@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/fragmentbackground"
     tools:context="info.nightscout.androidaps.plugins.pump.medtronic.MedtronicFragment">
 
 
@@ -45,7 +47,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,7 +81,6 @@
                     android:gravity="start"
                     android:paddingLeft="5dp"
                     android:text="{fa-bluetooth-b}"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
 
@@ -93,7 +94,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,7 +128,6 @@
                     android:gravity="start"
                     android:paddingLeft="5dp"
                     android:text="{fa-bluetooth-b}"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
 
@@ -147,7 +147,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +181,6 @@
                     android:gravity="start"
                     android:paddingLeft="5dp"
                     android:text=""
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
 
@@ -194,7 +193,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -227,7 +226,6 @@
                     android:layout_weight="1"
                     android:gravity="start"
                     android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -239,7 +237,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -272,7 +270,6 @@
                     android:layout_weight="1"
                     android:gravity="start"
                     android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -285,7 +282,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -318,7 +315,6 @@
                     android:layout_weight="1"
                     android:gravity="start"
                     android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -330,7 +326,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -363,7 +359,6 @@
                     android:layout_weight="1"
                     android:gravity="start"
                     android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -375,7 +370,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
 
             <LinearLayout
@@ -409,7 +404,6 @@
                     android:layout_weight="1"
                     android:gravity="start"
                     android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -422,7 +416,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -455,7 +449,6 @@
                     android:layout_weight="1"
                     android:gravity="start"
                     android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -467,7 +460,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -487,38 +480,47 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
-        <Button
+        <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/refresh"
             style="@style/ButtonSmallFontStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_actions_refill"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
+            android:textAlignment="center"
             android:text="@string/refresh" />
 
 
-        <Button
+        <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/history"
             style="@style/ButtonSmallFontStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_danarhistory"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
+            android:textAlignment="center"
             android:text="@string/pumphistory" />
 
-        <Button
+        <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/stats"
             style="@style/ButtonSmallFontStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_danarstats"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
+            android:textAlignment="center"
             android:text="RL Stats" />
 
 

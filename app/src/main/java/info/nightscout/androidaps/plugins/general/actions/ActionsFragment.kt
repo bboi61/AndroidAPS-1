@@ -298,10 +298,14 @@ class ActionsFragment : DaggerFragment() {
         tddStats?.visibility = pump.pumpDescription.supportsTDDs.toVisibility()
 
         if (!config.NSCLIENT) {
-            statusLightHandler.updateStatusLights(cannulaAge, insulinAge, reservoirLevel, sensorAge, sensorLevel, pbAge, batteryLevel)
+            statusLightHandler.updateStatusLights(cannulaAge, insulinAge, reservoirLevel, sensorAge, sensorLevel, pbAge, batteryLevel,resourceHelper.getAttributeColor(context, R.attr.statuslightNormal),
+                resourceHelper.getAttributeColor(context, R.attr.statuslightWarning),
+                resourceHelper.getAttributeColor(context, R.attr.statuslightAlarm))
             sensorLevelLabel?.text = if (activeBgSource.sensorBatteryLevel == -1) "" else resourceHelper.gs(R.string.careportal_level_label)
         } else {
-            statusLightHandler.updateStatusLights(cannulaAge, insulinAge, null, sensorAge, null, pbAge, null)
+            statusLightHandler.updateStatusLights(cannulaAge, insulinAge, null, sensorAge, null, pbAge, null, resourceHelper.getAttributeColor(context, R.attr.statuslightNormal),
+                resourceHelper.getAttributeColor(context, R.attr.statuslightWarning),
+                resourceHelper.getAttributeColor(context, R.attr.statuslightAlarm))
             sensorLevelLabel?.text = ""
             insulinLevelLabel?.text = ""
             pbLevelLabel?.text = ""
