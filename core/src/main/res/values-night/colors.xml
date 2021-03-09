@@ -49,6 +49,7 @@
     <color name="red">#FF0000</color>
     <color name="lightPastelRed">#66FC0000</color>
     <color name="notificationNormal">#ff5e55</color>
+    <color name="notificationUrgent">#ff5e55</color>
     <color name="notificationLow">#ff827c</color>
     <color name="metadataTextError">#FF5555</color>
 
@@ -125,4 +126,16 @@
 
     <!-- White colors -->
     <color name="tempTargetBackground">#FAFAE1</color>
+
+    /* Rig22 colors */
+
+    <color name="black">#000000</color>
+    <color name="black2">#212121</color>
+    <color name="rig22Blue">#238af3</color>
+    <color name="inrange">#238af3</color>
+    <color name="amber">#FEA300</color>
+    <color name="transparent">#00000000</color>
+    <color name="white2">#50FFFFFF</color>
+    <color name="white3">#30FFFFFF</color>
+    <color name="smaragdgreen">#01C03E</color>
 </resources>
