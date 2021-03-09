@@ -6,6 +6,7 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.graphics.Paint
+import android.graphics.PorterDuff
 import android.graphics.drawable.AnimationDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -685,30 +686,62 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         }
 
         // temp target
+
+        // temp target
+//        val tempTarget = treatmentsPlugin.tempTargetFromHistory
+//        if (tempTarget != null) {
+//            binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+//            binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
+//            binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.low, tempTarget.high, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.end(), resourceHelper)
+//        } else {
+        // If the target is not the same as set in the profile then oref has overridden it
+//            val targetUsed = lastRun?.constraintsProcessed?.targetBG ?: 0.0
+
+//            if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
+//                aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
+//                binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
+//                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+//                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
+//            } else {
+//                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
+//                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+//                binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
+//            }
+//        }
+
+//        val tempTarget = treatmentsPlugin.tempTargetFromHistory
+//        if (tempTarget != null) {
+
         val tempTarget: ValueWrapper<TemporaryTarget> = repository.getTemporaryTargetActiveAt(dateUtil._now()).blockingGet()
         if (tempTarget is ValueWrapper.Existing) {
-            binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
-            binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonWarning))
-            binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.value.lowTarget, tempTarget.value.highTarget, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.value.end, resourceHelper)
+            val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
+            drawable.setColorFilter(resources.getColor(R.color.ribbonWarning, requireContext().theme), PorterDuff.Mode.SRC_IN)
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
-            if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning).let { drawableLeft[0]!!.setTint(it) }
+            if (drawableLeft[0] != null) resourceHelper.gc(R.color.black).let { drawableLeft[0]!!.setTint(it) }
+            binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.black))
+//            binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.rig22Blue))
+            binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(tempTarget.value.lowTarget, tempTarget.value.highTarget, Constants.MGDL, units) + " " + DateUtil.untilString(tempTarget.value.end, resourceHelper)
         } else {
             // If the target is not the same as set in the profile then oref has overridden it
             val targetUsed = lastRun?.constraintsProcessed?.targetBG ?: 0.0
 
             if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
                 aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
+                val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
+                drawable.setColorFilter(resources.getColor(R.color.smaragdgreen, requireContext().theme), PorterDuff.Mode.SRC_IN)
+                val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
+                if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
                 binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
-                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
-                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.tempTargetBackground))
-                val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
-                if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning).let { drawableLeft[0]!!.setTint(it) }
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.white))
+//                binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
             } else {
-                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.defaultTextColor))
-                binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonDefault))
-                binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
+                val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
+                drawable.setColorFilter(resources.getColor(R.color.rig22Blue, requireContext().theme), PorterDuff.Mode.SRC_IN)
                 val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
-                if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.defaultTextColor).let { drawableLeft[0]!!.setTint(it) }
+                if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.white))
+//                binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+                binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(profile.targetLowMgdl, profile.targetHighMgdl, Constants.MGDL, units)
             }
         }
 
@@ -747,18 +780,32 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.infoLayout.extendedLayout.visibility = (extendedBolus != null && !pump.isFakingTempsByExtendedBoluses).toVisibility()
 
         // Active profile
+
         binding.loopPumpStatusLayout.activeProfile.text = profileFunction.getProfileNameWithDuration()
         if (profile.percentage != 100 || profile.timeshift != 0) {
-            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonWarning))
-            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
+            val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
+            drawable.setColorFilter(resources.getColor(R.color.ribbonWarning, requireContext().theme), PorterDuff.Mode.SRC_IN)
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
-            if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning).let { drawableLeft[0]!!.setTint(it) }
+            if (drawableLeft[0] != null) resourceHelper.gc(R.color.black).let { drawableLeft[0]!!.setTint(it) }
+//            binding.loopPumpStatusLayout.activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
+            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.black))
         } else {
-            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonDefault))
-            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.getAttributeColor(context, R.attr.defaultTextColor))
+            val drawable: Drawable = binding.loopPumpStatusLayout.activeProfile.background
+            drawable.setColorFilter(resources.getColor(R.color.rig22Blue, requireContext().theme), PorterDuff.Mode.SRC_IN)
             val drawableLeft: Array<Drawable?> = binding.loopPumpStatusLayout.activeProfile.compoundDrawables
-            if (drawableLeft[0] != null) resourceHelper.getAttributeColor(context, R.attr.defaultTextColor).let { drawableLeft[0]!!.setTint(it) }
+            if (drawableLeft[0] != null) resourceHelper.gc(R.color.white).let { drawableLeft[0]!!.setTint(it) }
+//            binding.loopPumpStatusLayout.activeprofile?.setBackgroundColor(resourceHelper.gc(R.color.transparent))
+            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.white))
         }
+//
+//        binding.loopPumpStatusLayout.activeProfile.text = profileFunction.getProfileNameWithDuration()
+//        if (profile.percentage != 100 || profile.timeshift != 0) {
+//            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.gc(R.color.ribbonWarning))
+//            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.ribbonTextWarning))
+//        } else {
+//            binding.loopPumpStatusLayout.activeProfile.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
+//            binding.loopPumpStatusLayout.activeProfile.setTextColor(resourceHelper.gc(R.color.ribbonTextDefault))
+//        }
 
         processButtonsVisibility()
 
