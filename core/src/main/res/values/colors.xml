@@ -170,5 +170,7 @@
     <color name="white2">#50FFFFFF</color>
     <color name="white3">#30FFFFFF</color>
     <color name="smaragdgreen">#01C03E</color>
+    <color name="buttonback">#fafafa</color>
+
 
 </resources>
