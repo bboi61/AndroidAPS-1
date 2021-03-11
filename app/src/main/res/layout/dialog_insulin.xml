@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/overview_insulin_label"
-                app:srcCompat="@drawable/ic_bolus" />
+                app:srcCompat="@drawable/ic_bolus_2" />
 
             <TextView
                 android:layout_width="match_parent"
