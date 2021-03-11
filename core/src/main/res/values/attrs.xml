@@ -93,6 +93,8 @@
 <attr name="rowBackgroundEven" format="reference|color" />
 <attr name="rowBackgroundOdd" format="reference|color" />
 <attr name="rowTextColor" format="reference|color" />
+<!---Loop Icon Color-->
+<attr name="loopPaused" format="reference|color" />
 <!---Misc -->
 <attr name="carbsColor" format="reference|color" />
 <attr name="smbColor" format="reference|color" />
@@ -115,6 +117,7 @@
 <attr name="ribbonDefault" format="reference|color" />
 <attr name="tempTargetBackground" format="reference|color" />
 <attr name="defaultTextColor" format="reference|color" />
+<attr name="defaultPillTextColor" format="reference|color" />
 <attr name="automationBgUrgent" format="reference|color" />
 <attr name="iobPredAS" format="reference|color" />
 <attr name="labelBackground" format="reference|color" />

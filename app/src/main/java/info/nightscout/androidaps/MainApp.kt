@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.net.wifi.WifiManager
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.j256.ormlite.android.apptools.OpenHelperManager
 import dagger.android.AndroidInjector
@@ -70,6 +71,7 @@ class MainApp : DaggerApplication() {
         disposable.add(compatDBHelper.dbChangeDisposable())
         registerActivityLifecycleCallbacks(activityMonitor)
         JodaTimeAndroid.init(this)
+        selectThemeMode()
         aapsLogger.debug("Version: " + BuildConfig.VERSION_NAME)
         aapsLogger.debug("BuildVersion: " + BuildConfig.BUILDVERSION)
         aapsLogger.debug("Remote: " + BuildConfig.REMOTE)
@@ -84,6 +86,14 @@ class MainApp : DaggerApplication() {
         nsUpload.uploadAppStart()
         Thread { keepAliveManager.setAlarm(this) }.start()
         doMigrations()
+    }
+
+    private fun selectThemeMode() {
+        if (sp.getBoolean(R.string.key_use_darkmode, true)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
     }
 
     private fun doMigrations() {

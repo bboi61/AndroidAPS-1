@@ -16,9 +16,9 @@ import info.nightscout.androidaps.data.DetailedBolusInfo
 import info.nightscout.androidaps.data.Profile
 import info.nightscout.androidaps.database.AppRepository
 import info.nightscout.androidaps.database.entities.TemporaryTarget
+import info.nightscout.androidaps.database.entities.TherapyEvent
 import info.nightscout.androidaps.database.transactions.InsertTemporaryTargetAndCancelCurrentTransaction
 import info.nightscout.androidaps.databinding.DialogInsulinBinding
-import info.nightscout.androidaps.db.CareportalEvent
 import info.nightscout.androidaps.db.Source
 import info.nightscout.androidaps.interfaces.ActivePluginProvider
 import info.nightscout.androidaps.interfaces.CommandQueueProvider
@@ -47,7 +47,6 @@ import kotlin.math.max
 class InsulinDialog : DialogFragmentWithDate() {
 
     @Inject lateinit var constraintChecker: ConstraintChecker
-    @Inject lateinit var resourceHelper: ResourceHelper
     @Inject lateinit var defaultValueHelper: DefaultValueHelper
     @Inject lateinit var profileFunction: ProfileFunction
     @Inject lateinit var commandQueue: CommandQueueProvider
@@ -204,7 +203,7 @@ class InsulinDialog : DialogFragmentWithDate() {
                     }
                     if (insulinAfterConstraints > 0) {
                         val detailedBolusInfo = DetailedBolusInfo()
-                        detailedBolusInfo.eventType = CareportalEvent.CORRECTIONBOLUS
+                        detailedBolusInfo.eventType = TherapyEvent.Type.CORRECTION_BOLUS.text
                         detailedBolusInfo.insulin = insulinAfterConstraints
                         detailedBolusInfo.context = context
                         detailedBolusInfo.source = Source.USER
