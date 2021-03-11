@@ -21,7 +21,8 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:textAlignment="center"
-            android:text="@string/resend_all_data" />
+            android:text="@string/resend_all_data"
+            android:textColor="@color/white"/>
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/opensettings"
@@ -34,7 +35,8 @@
             android:layout_marginTop="3dp"
             android:layout_weight="0.5"
             android:textAlignment="center"
-            android:text="@string/open_settings_on_wear" />
+            android:text="@string/open_settings_on_wear"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
