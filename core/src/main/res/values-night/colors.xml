@@ -44,10 +44,13 @@
     <color name="prediction">#ff00ff</color>
     <color name="devslopeneg">#FFFF00FF</color>
     <color name="colorSetExtendedButton">#FFDD7792</color>
+    <color name="pastellPurple">#CF8BFE</color>
 
     <!-- Red Colors -->
+    <color name="darkRed">#B92929</color>
     <color name="red">#FF0000</color>
     <color name="lightPastelRed">#66FC0000</color>
+    <color name="calibrationRed">#E83258</color>
     <color name="notificationNormal">#ff5e55</color>
     <color name="notificationUrgent">#ff5e55</color>
     <color name="notificationLow">#ff827c</color>
@@ -67,20 +70,21 @@
     <color name="notificationAnnouncement">#FF8C00</color>
     <color name="metadataTextWarning">#FF8C00</color>
     <color name="cob">#f0a30a</color>
-    <color name="carbs">#F2A370</color>
+    <color name="carbsOrange">#FEAD01</color>
+    <color name="midorange">#f0a30a</color>
 
     <!-- Green Colors -->
-    <color name="lightGreen">#7200FF00</color>
+    <color name="emerald">#25912e</color>
+    <color name="notificationInfo">#009705</color>
+    <color name="tempTargetConfirmation">#77dd77</color>
+    <color name="lightPastelGreen">#7200FF00</color>
+    <color name="calcGreen">#67e86a</color>
+    <color name="lightGreen">#00FF00</color>
     <color name="swampGreen">#c9bd60</color>
     <color name="activity">#d3f166</color>
     <color name="toastOk">#77dd77</color>
-    <color name="tempTargetConfirmation">#77dd77</color>
     <color name="metadataOk">#77dd77</color>
     <color name="info">#77dd77</color>
-    <color name="emerald">#25912e</color>
-    <color name="notificationInfo">#009705</color>
-    <color name="colorCalculatorButton">#67e86a</color>
-    <color name="lightgreen">#00FF00</color>
 
     <!-- Blue Colors -->
     <color name="blue_default">#007AFF</color>
@@ -88,7 +92,7 @@
     <color name="kobaltblue">#5F7BA6</color>
     <color name="bgi">#00EEEE</color>
     <color name="cyan">#00d2d2</color>
-    <color name="exercise">#67DFE8</color>
+    <color name="cyan_blue">#67DFE8</color>
     <color name="bolus">#1ea3e5</color>
     <color name="iobPredAS">#1ea3e5</color>
     <color name="basebasal">#3D15FF</color>
