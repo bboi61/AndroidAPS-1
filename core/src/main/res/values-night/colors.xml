@@ -52,7 +52,6 @@
     <color name="lightPastelRed">#66FC0000</color>
     <color name="calibrationRed">#E83258</color>
     <color name="notificationNormal">#ff5e55</color>
-    <color name="notificationUrgent">#ff5e55</color>
     <color name="notificationLow">#ff827c</color>
     <color name="metadataTextError">#FF5555</color>
 
