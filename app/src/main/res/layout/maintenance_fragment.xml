@@ -18,7 +18,6 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_logsettings"
-                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_zahnrad"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
