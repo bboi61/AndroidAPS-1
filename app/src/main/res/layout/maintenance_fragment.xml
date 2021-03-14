@@ -18,6 +18,7 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_logsettings"
+                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_zahnrad"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -37,6 +38,7 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/log_send"
+                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_mail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -55,6 +57,7 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/log_delete"
+                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_delete_logs"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -73,6 +76,7 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_export"
+                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_export"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -91,6 +95,7 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_import"
+                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_import"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -109,6 +114,7 @@
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/nav_resetdb"
+                style="@style/ButtonSmallFontStyle"
                 android:drawableTop="@drawable/ic_resetdb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
