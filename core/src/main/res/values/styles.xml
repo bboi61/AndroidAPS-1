@@ -16,7 +16,7 @@
         <item name="colorOnSurface">@color/black</item>
         <item name="scrimBackground">@color/white</item>
         <item name="android:textColorSecondary">@color/black</item>
-        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColor">@color/black_alpha_80</item>
         <!-- Misc. colors -->
         <item name="android:navigationBarColor">?attr/colorPrimary</item>
