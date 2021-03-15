@@ -205,7 +205,7 @@
         <!---windowBackground -->
         <item name="android:windowBackground">?attr/windowBackground</item>
         <item name="background">?attr/windowBackground</item>
-        <item name="windowBackground" >@color/background_dark</item>
+        <item name="windowBackground" >@color/black</item>
         <item name="objectivesBackground" >@color/darkgrayVariant</item>
         <item name="extendedBolus" >@color/cyan</item>
     </style>
