@@ -48,7 +48,7 @@
         <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
         <item name="actionOverflowMenuStyle">@style/Widget.MaterialComponents.PopupMenu.Overflow</item>
         <!-- Color of bg value -->
-        <item name="bgInRange">@color/rig22Blue</item>
+        <item name="bgInRange">@color/lightGreen</item>
         <item name="bgLow">@color/red</item>
         <item name="bgHigh">@color/lightyellow</item>
         <!-- Color of dialog -->
@@ -205,7 +205,9 @@
         <!---windowBackground -->
         <item name="android:windowBackground">?attr/windowBackground</item>
         <item name="background">?attr/windowBackground</item>
-        <item name="windowBackground" >@color/black</item>
+        <item name="windowBackground" >@color/background_dark</item>
+        <item name="objectivesBackground" >@color/darkgrayVariant</item>
+        <item name="extendedBolus" >@color/cyan</item>
     </style>
 
     <style name="Theme.MaterialComponents.DayNight.DarkActionBar" parent="Theme.MaterialComponents.DayNight.Bridge"/>
