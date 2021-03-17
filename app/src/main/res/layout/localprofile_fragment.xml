@@ -103,7 +103,6 @@
                 android:layout_weight="1"
                 android:text="@string/dia_short"
                 android:textAlignment="center"
-                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
@@ -115,7 +114,6 @@
                 android:layout_weight="1"
                 android:text="@string/ic_short"
                 android:textAlignment="center"
-                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
@@ -126,7 +124,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/isf_short"
-                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?attr/TitleAndLabelTextColor"
@@ -139,7 +136,6 @@
                 android:layout_weight="1"
                 android:text="@string/basal_short"
                 android:textAlignment="center"
-                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
@@ -151,7 +147,6 @@
                 android:layout_weight="1"
                 android:text="@string/target_short"
                 android:textAlignment="center"
-                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
