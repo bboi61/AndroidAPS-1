@@ -915,4 +915,5 @@ Unerwartetes Verhalten.</string>
     <string name="profile_max_daily_basal_value">Profil max. Basalwert</string>
     <string name="current_basal_value">Aktueller Basalwert</string>
     <string name="profile_carbs_ratio_value">Profil KH-Faktor</string>
+    <string name="colored_icons">Zeige Icons in Farbe</string>
 </resources>
