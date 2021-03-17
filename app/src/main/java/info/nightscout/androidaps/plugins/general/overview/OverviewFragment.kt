@@ -215,31 +215,31 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         //colorizing buttons
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.treatmentButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.white).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.white).let { drawableTop[1]!!.setTint(it) }
         }
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.insulinButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableTop[1]!!.setTint(it) }
         }
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.carbsButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.amber).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.amber).let { drawableTop[1]!!.setTint(it) }
         }
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.wizardButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.smaragdgreen).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.smaragdgreen).let { drawableTop[1]!!.setTint(it) }
         }
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.calibrationButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.red).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.red).let { drawableTop[1]!!.setTint(it) }
         }
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.cgmButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.red).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.red).let { drawableTop[1]!!.setTint(it) }
         }
         if (sp.getBoolean(R.string.key_colored_icons, false)) {
             val drawableTop: Array<Drawable?> = binding.buttonsLayout.quickWizardButton.compoundDrawables
-            if (drawableTop[0] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableTop[0]!!.setTint(it) }
+            if (drawableTop[1] != null) resourceHelper.gc(R.color.rig22Blue).let { drawableTop[1]!!.setTint(it) }
         }
     }
 
