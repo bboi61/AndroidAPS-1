@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ratio">#FFFFFF</color>
-
     <color name="defaulttextcolor">#FFFFFF</color>
 
-    <color name="activity_title_background">#121212</color>
-
-    <!---Graph Color for horizontal and vertical label text-->
-    <color name="graphHorizontalLabelText">#FFFFFF</color>
-    <color name="graphVerticalLabelText">#FFFFFF</color>
-
     <!---Theme based colors-->
-    <color name="colorAccent">#FFFFFF</color>
     <color name="iconColorbottomAppbar">#FFFFFF</color>
-    <color name="actionBarColor">#000000</color>
 
     <!-- TDD Stats   -->
     <color name="background_stats_color">#666666</color>
 
-    <!---Android Dark ans Light Theme Base colors-->
+    <!---Android Dark and Light Theme Base colors-->
     <color name="background_dark">#121212</color>
     <color name="background_light">#FFFFFF</color>
     <color name="splashBackground">#000000</color>
@@ -35,10 +25,6 @@
     <color name="secondaryTextColorDefault">#000000</color>
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
-
-    <!--    Dialogs-->
-    <color name="warningAlertHeaderText">#FF000000</color>
-    <color name="errorAlertHeaderText">#FF000000</color>
 
     <!-- Pink Colors -->
     <color name="prediction">#ff00ff</color>
@@ -75,6 +61,7 @@
     <!-- Green Colors -->
     <color name="emerald">#25912e</color>
     <color name="notificationInfo">#009705</color>
+    <color name="sensGreen">#008585</color>
     <color name="tempTargetConfirmation">#77dd77</color>
     <color name="lightPastelGreen">#7200FF00</color>
     <color name="calcGreen">#67e86a</color>
@@ -109,23 +96,19 @@
     <!-- Gray colors -->
     <color name="darkgray">#323232</color>
     <color name="darkgrayVariant">#424242</color>
+    <color name="ribbonDefault">#5a595b</color>
+    <color name="plastic_grey">#666666</color>
+    <color name="graphgrid">#757575</color>
+    <color name="mdtp_line_dark">#808080</color>
+    <color name="sphere_plastic_grey">#8c8c8c</color>
+    <color name="lightSandGray">#72000000</color>
+    <color name="sandGray">#c8666666</color>
+    <color name="treatment">#B2B2B2</color>
     <color name="gray">#BBBBBB</color>
     <color name="lightgray">#4dB1B1B1</color>
-    <color name="plastic">#EBEBEA</color>
-    <color name="plastic_grey">#666666</color>
-    <color name="sphere_plastic_grey">#8c8c8c</color>
     <color name="mdtp_button_selected">#33969696</color>
-    <color name="mdtp_line_dark">#808080</color>
-    <color name="importListAdditionalInfo">#BBBBBB</color>
-    <color name="treatment">#B2B2B2</color>
-    <color name="graphgrid">#757575</color>
     <color name="colorLightGray">#d8d8d8</color>
-    <color name="defaulttext">#BBBBBB</color>
-    <color name="sandGray">#c8666666</color>
-    <color name="lightSandGray">#72000000</color>
-    <color name="ribbonDefault">#5a595b</color>
-    <color name="ribbonTextWarning">#303030</color>
-    <color name="toastBorder">#666666</color>
+    <color name="plastic">#EBEBEA</color>
 
     <!-- White colors -->
     <color name="tempTargetBackground">#FAFAE1</color>

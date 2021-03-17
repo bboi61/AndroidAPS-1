@@ -95,6 +95,8 @@
 <attr name="rowTextColor" format="reference|color" />
 <!---Loop Icon Color-->
 <attr name="loopPaused" format="reference|color" />
+<!---Sensitivity Icon Color-->
+<attr name="sensitivityIconColor" format="reference|color" />
 <!---Bolus Icon Color-->
 <attr name="bolusIconColor" format="reference|color" />
 <!---Carbs Icon Color-->
@@ -113,7 +115,7 @@
 <attr name="temptargetIconColor" format="reference|color" />
 <attr name="temptargetIconColor1" format="reference|color" />
 <!---Start temp basal Icon Color-->
-<attr name="settempbasalIconColor" format="reference|color" />
+<attr name="tempbasalIconColor" format="reference|color" />
 <!---Cancel temp basal Icon Color-->
 <attr name="canceltempbasalIconColor" format="reference|color" />
 <!---Start extended bolus Icon Color-->
@@ -141,6 +143,8 @@
 <attr name="exerciseIconColor02" format="reference|color" />
 <!---Pump Battery Icon Color-->
 <attr name="pumpBatteryIconColor" format="reference|color" />
+<!---User Option Icon Color-->
+<attr name="userOptionsIconColor" format="reference|color" />
 <!---Therapy Event Announcement-->
 <attr name="therapyeventAnnouncement" format="reference|color" />
 <!---NS MBG Event-->
@@ -153,6 +157,11 @@
 <attr name="therapyeventAapsoffline" format="reference|color" />
 <!---Default Event-->
 <attr name="therapyeventDefault" format="reference|color" />
+<!---SMS Communicator -->
+<attr name="smsCommunicatorOK" format="reference|color" />
+<attr name="smsCommunicatorWrongLength" format="reference|color" />
+<attr name="smsCommunicatorWrongPin" format="reference|color" />
+<attr name="smsCommunicatorOtp" format="reference|color" />
 <!---Misc -->
 <attr name="carbsColor" format="reference|color" />
 <attr name="smbColor" format="reference|color" />
@@ -188,9 +197,13 @@
 <attr name="metadataTextWarning" format="reference|color" />
 <attr name="trendarrow" format="reference|color" />
 <attr name="profilSwitch" format="reference|color" />
+<attr name="automationSelectedItemBackground" format="reference|color" />
 <attr name="automationTitleText" format="reference|color" />
 <attr name="objectivesBackground" format="reference" />
 <attr name="extendedBolus" format="reference" />
+<attr name="TitleAndLabelTextColor" format="reference" />
+<attr name="tddStatsActivityBackgroundColor" format="reference" />
+<attr name="activity_title_background" format="reference" />
 <!-- Window background-->
 <attr name="windowBackground" format="reference|color" />
 </resources>
