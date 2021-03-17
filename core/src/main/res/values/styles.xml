@@ -66,8 +66,8 @@
         <!-- Fragment background for some themes default transparent  -->
         <item name="fragmentbackground">@color/transparent</item>
         <!-- Graph specific colors  -->
-        <item name="graphHorizontalLabelText">@color/graphHorizontalLabelText</item>
-        <item name="graphVerticalLabelText">@color/graphVerticalLabelText</item>
+        <item name="graphHorizontalLabelText">@color/sphere_plastic_grey</item>
+        <item name="graphVerticalLabelText">@color/sphere_plastic_grey</item>
         <item name="graphGrid">@color/graphgrid</item>
         <!-- Dialog specific colors  -->
         <item name="dialogTitleBackground">?attr/colorPrimary</item>
@@ -147,6 +147,26 @@
         <item name="settempbasalIconColor" >@color/pastellPurple</item>
         <!---Cancel temp basal Icon Color-->
         <item name="canceltempbasalIconColor" >@color/pastellPurple</item>
+        <!---Start extended bolus Icon Color-->
+        <item name="startextbolusIconColor" >@color/cyan_blue</item>
+        <!---Cancel extended bolus Icon Color-->
+        <item name="cancelextbolusIconColor" >@color/carbsOrange</item>
+        <!---BG check Icon Color-->
+        <item name="bgcheckIconColor" >@color/calibrationRed</item>
+        <!---Prime fill Icon Color-->
+        <item name="primefillIconColor" >@color/cyan_blue</item>
+        <!---CGM insert Icon Color-->
+        <item name="cgminsertIconColor" >@color/cyan_blue</item>
+        <!---Note Icon Color-->
+        <item name="noteIconColor" >@color/carbsOrange</item>
+        <!---Question Icon Color-->
+        <item name="questionIconColor" >@color/carbsOrange</item>
+        <!---History Icon Color-->
+        <item name="historyIconColor" >@color/cyan_blue</item>
+        <!---Stats Icon Color-->
+        <item name="statsIconColor" >@color/carbsOrange</item>
+        <!---Announcement Icon Color-->
+        <item name="announcementIconColor" >@color/pastellPurple</item>
         <!---Exercise Icon Color-->
         <item name="exerciseIconColor01" >@color/cyan_blue</item>
         <item name="exerciseIconColor02" >@color/lightGreen</item>
@@ -164,6 +184,11 @@
         <item name="therapyeventAapsoffline" >@color/lightSandGray</item>
         <!---Default  Event-->
         <item name="therapyeventDefault" >@color/gray</item>
+        <!---SMS Communicator -->
+        <item name="smsCommunicatorOK" >@color/lightGreen</item>
+        <item name="smsCommunicatorWrongLength" >@color/lightyellow</item>
+        <item name="smsCommunicatorWrongPin" >@color/red</item>
+        <item name="smsCommunicatorOtp" >@color/red</item>
         <!---Misc -->
         <item name="carbsColor" >@color/carbsOrange</item>
         <item name="tempTargetConfirmation" >@color/tempTargetConfirmation</item>
@@ -188,7 +213,7 @@
         <item name="defaultTextColor" >@color/defaulttextcolor</item>
         <item name="automationBgUrgent" >@color/red</item>
         <item name="iobPredAS" >@color/iobPredAS</item>
-        <item name="labelBackground" >@color/black</item>
+        <item name="labelBackground" >@color/sphere_plastic_grey</item>
         <item name="examinedProfile" >@color/red</item>
         <item name="spinnerBackground" >@color/black_alpha_40</item>
         <item name="triggerConnectorBackground" >@color/mdtp_line_dark</item>
@@ -199,12 +224,16 @@
         <item name="trendarrow" >@color/black</item>
         <item name="profilSwitch" >@color/black</item>
         <item name="automationTitleText" >@color/white</item>
+        <item name="automationSelectedItemBackground" >@color/gray</item>
         <item name="objectivesBackground" >@color/darkgrayVariant</item>
         <item name="extendedBolus" >@color/cyan</item>
+        <item name="TitleAndLabelTextColor" >@color/white</item>
+        <item name="tddStatsActivityBackgroundColor" >@color/transparent</item>
         <!---Round dialog corner only if sdk >= 28 -->
         <item name="android:dialogCornerRadius" ns2:targetApi="p">8dp</item>
         <!---windowBackground -->
         <item name="windowBackground" >?attr/colorSurface</item>
+        <item name="activity_title_background" >@color/background_light</item>
     </style>
 
     <style name="Theme.MaterialComponents.DayNight.DarkActionBar" parent="Theme.MaterialComponents.DayNight.Bridge"/>
@@ -231,10 +260,6 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="NavigationDrawer" />
 
     <!-- Text styles -->
     <style name="Text" parent="TextAppearance.AppCompat"/>
@@ -281,25 +306,13 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
     </style>
 
-    <style name="ButtonSmallFontStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="android:textSize">10sp</item>
-    </style>
-
-    <style name="TextViewStyleDark" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="TextViewStyleBright" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/white</item>
-    </style>
-
     <style name="section_header_label">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:paddingStart">15dp</item>
         <item name="android:paddingEnd">15dp</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="warning_label">
@@ -332,7 +345,6 @@
         <item name="android:paddingStart">60px</item>
         <item name="android:paddingEnd">60px</item>
         <item name="android:textSize">18sp</item>
-        <!-- <item name="android:textColor">#000000</item> -->
     </style>
 
     <style name="PodInfoListView" parent="@android:style/Widget.ListView">
@@ -345,8 +357,8 @@
     <style name="AppThemeWarningDialog" parent="AppTheme">
         <item name="alertDialogTheme">@style/AppThemeWarningDialogTheme</item>
         <item name="dialogTitleBackground">@color/warningAlertBackground</item>
-        <item name="dialogTitleColor">@color/warningAlertHeaderText</item>
-        <item name="dialogTitleIconTint">@color/warningAlertHeaderText</item>
+        <item name="dialogTitleColor">@color/black</item>
+        <item name="dialogTitleIconTint">@color/black</item>
     </style>
 
     <style name="AppThemeWarningDialogTheme" parent="Theme.AppCompat.Dialog.MinWidth">
@@ -357,8 +369,8 @@
     <style name="AppThemeErrorDialog" parent="AppTheme">
         <item name="alertDialogTheme">@style/AppThemeErrorDialogTheme</item>
         <item name="dialogTitleBackground">@color/red</item>
-        <item name="dialogTitleColor">@color/errorAlertHeaderText</item>
-        <item name="dialogTitleIconTint">@color/errorAlertHeaderText</item>
+        <item name="dialogTitleColor">@color/black</item>
+        <item name="dialogTitleIconTint">@color/black</item>
     </style>
 
     <style name="AppThemeErrorDialogTheme" parent="Theme.AppCompat.Dialog.MinWidth">
@@ -368,6 +380,10 @@
 
     <style name="ButtonMediumFontStyle">
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ButtonSmallFontStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textSize">10sp</item>
     </style>
 
     <!--    Buttons from MaterialDateTimePicker    -->
@@ -398,5 +414,4 @@
     </style>
 
     <style name="ProfileHelperAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
-
 </resources>

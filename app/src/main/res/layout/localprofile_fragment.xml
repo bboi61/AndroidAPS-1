@@ -105,6 +105,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
 
             <TextView
@@ -116,6 +117,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
 
             <TextView
@@ -127,6 +129,7 @@
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
 
             <TextView
@@ -138,6 +141,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
 
             <TextView
@@ -149,6 +153,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?attr/TitleAndLabelTextColor"
                 android:textStyle="bold" />
         </LinearLayout>
 

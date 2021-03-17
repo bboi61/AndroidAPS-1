@@ -153,6 +153,11 @@
 <attr name="therapyeventAapsoffline" format="reference|color" />
 <!---Default Event-->
 <attr name="therapyeventDefault" format="reference|color" />
+<!---SMS Communicator -->
+<attr name="smsCommunicatorOK" format="reference|color" />
+<attr name="smsCommunicatorWrongLength" format="reference|color" />
+<attr name="smsCommunicatorWrongPin" format="reference|color" />
+<attr name="smsCommunicatorOtp" format="reference|color" />
 <!---Misc -->
 <attr name="carbsColor" format="reference|color" />
 <attr name="smbColor" format="reference|color" />
@@ -188,9 +193,13 @@
 <attr name="metadataTextWarning" format="reference|color" />
 <attr name="trendarrow" format="reference|color" />
 <attr name="profilSwitch" format="reference|color" />
+<attr name="automationSelectedItemBackground" format="reference|color" />
 <attr name="automationTitleText" format="reference|color" />
 <attr name="objectivesBackground" format="reference" />
 <attr name="extendedBolus" format="reference" />
+<attr name="TitleAndLabelTextColor" format="reference" />
+<attr name="tddStatsActivityBackgroundColor" format="reference" />
+<attr name="activity_title_background" format="reference" />
 <!-- Window background-->
 <attr name="windowBackground" format="reference|color" />
 </resources>
