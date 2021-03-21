@@ -128,8 +128,7 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:text="@string/careportal"
-            android:textSize="16dp"
-            android:textColor="@color/rig22Blue"/>
+            android:textSize="16dp" />
 
         <include
             android:id="@+id/careportal_stats"
@@ -274,8 +273,7 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:text="@string/tools"
-            android:textSize="16dp"
-            android:textColor="@color/rig22Blue"/>
+            android:textSize="16dp" />
 
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
