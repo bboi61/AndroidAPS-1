@@ -1129,7 +1129,6 @@
     <string name="profile_carbs_ratio_value">Profile carbs ratio value</string>
     <string name="key_colored_icons" translatable="false">key_colored_icons</string>
     <string name="colored_icons">Show colored icons</string>
-
-
+    <string name="key_use_darkmode" translatable="false">Use dark mode</string>
 
 </resources>

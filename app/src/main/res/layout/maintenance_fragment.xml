@@ -125,6 +125,24 @@
                 app:layout_gravity="fill"
                 app:layout_row="2" />
 
+            <info.nightscout.androidaps.utils.ui.SingleClickButton
+                android:id="@+id/exportCsv"
+                style="@style/ButtonSmallFontStyle"
+                android:drawableTop="@drawable/ic_export"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:textAlignment="center"
+                android:text="@string/ue_export_to_csv"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="3" />
+
         </androidx.gridlayout.widget.GridLayout>
 
     </LinearLayout>
