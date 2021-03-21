@@ -93,10 +93,14 @@
 <attr name="rowBackgroundEven" format="reference|color" />
 <attr name="rowBackgroundOdd" format="reference|color" />
 <attr name="rowTextColor" format="reference|color" />
-<!---Loop Icon Color-->
+<!---Loop Paused Icon Color-->
 <attr name="loopPaused" format="reference|color" />
+<!---Loop Closed Icon Color-->
+<attr name="loopClosed" format="reference|color" />
 <!---Sensitivity Icon Color-->
 <attr name="sensitivityIconColor" format="reference|color" />
+<!---Refill Icon Color-->
+<attr name="refillIconColor" format="reference|color" />
 <!---Bolus Icon Color-->
 <attr name="bolusIconColor" format="reference|color" />
 <!---Carbs Icon Color-->
@@ -147,6 +151,12 @@
 <attr name="userOptionsIconColor" format="reference|color" />
 <!---Therapy Event Announcement-->
 <attr name="therapyeventAnnouncement" format="reference|color" />
+<!---Trashbin Icon Color-->
+<attr name="trashbinIconColor" format="reference|color" />
+<!---Target Hypo Icon Color-->
+<attr name="targetHypoBgIconColor" format="reference|color" />
+<!---Refresh Icon Color-->
+<attr name="refreshIconColor" format="reference|color" />
 <!---NS MBG Event-->
 <attr name="therapyeventNsmbg" format="reference|color" />
 <!---Finger Stick Event-->

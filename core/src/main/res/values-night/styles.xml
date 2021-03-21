@@ -21,7 +21,6 @@
         <!-- Misc. colors -->
         <item name="android:navigationBarColor">?attr/colorPrimary</item>
         <item name="android:actionBarTheme">@android:style/Theme.Material</item>
-        <item name="iconColor">@color/white</item>
         <item name="iconColorDialog">@color/white</item>
         <item name="iconColorbottomAppbar">@color/iconColorbottomAppbar</item>
         <item name="iconColorToolbar">@color/white</item>
@@ -127,9 +126,11 @@
         <item name="rowBackgroundEven" >@color/darkgray</item>
         <item name="rowBackgroundOdd" >@color/lightSandGray</item>
         <item name="rowTextColor" >@color/white</item>
-        <!-- Icon specific colors  -->
+        <!-- Icon specific colors begin -->
         <!---Loop Icon Color-->
         <item name="loopPaused" >@color/lightyellow</item>
+        <!---Loop Closed Icon Color-->
+        <item name="loopClosed" >@color/loopGreen</item>
         <!---Profile Switch Icon Color-->
         <item name="profileswitchIconColor" >@color/white</item>
         <!---Sensitivity Icon Color-->
@@ -180,6 +181,15 @@
         <item name="pumpBatteryIconColor" >@color/lightGreen</item>
         <!---User Option Icon Color-->
         <item name="userOptionsIconColor" >@color/calcGreen</item>
+        <!---Refill Icon Color-->
+        <item name="refillIconColor" >@color/calibrationRed</item>
+        <!---Trashbin Icon Color-->
+        <item name="trashbinIconColor" >@color/gray</item>
+        <!---Target Hypo Icon Color-->
+        <item name="targetHypoBgIconColor" >@color/red</item>
+        <!---Refresh Icon Color-->
+        <item name="refreshIconColor" >@color/white</item>
+        <!-- Icon specific colors end -->
         <!---Therapy Event Announcement-->
         <item name="therapyeventAnnouncement" >@color/notificationAnnouncement</item>
         <!---NS MBG Event-->
@@ -204,7 +214,7 @@
         <item name="prediction" >@color/prediction</item>
         <item name="basal" >@color/basal</item>
         <item name="overviewShowDeviations" >@color/red</item>
-        <item name="overviewShowSensitivity" >@color/black</item>
+        <item name="overviewShowSensitivity" >@color/gray</item>
         <item name="activity" >@color/activity</item>
         <item name="bgi" >@color/bgi</item>
         <item name="devslopepos" >@color/devslopepos</item>
@@ -334,5 +344,9 @@
 
     <style name="ButtonSmallFontStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- Custom Theme -->
+    <style name="CustomTheme">
     </style>
 </resources>
