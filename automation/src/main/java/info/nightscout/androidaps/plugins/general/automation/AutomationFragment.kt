@@ -20,6 +20,7 @@ import dagger.android.support.DaggerFragment
 import info.nightscout.androidaps.automation.R
 import info.nightscout.androidaps.automation.databinding.AutomationEventItemBinding
 import info.nightscout.androidaps.automation.databinding.AutomationFragmentBinding
+import info.nightscout.androidaps.database.entities.UserEntry.*
 import info.nightscout.androidaps.logging.UserEntryLogger
 import info.nightscout.androidaps.plugins.bus.RxBusWrapper
 import info.nightscout.androidaps.plugins.general.automation.dialogs.EditEventDialog
@@ -165,7 +166,7 @@ class AutomationFragment : DaggerFragment(), OnStartDragListener {
         @SuppressLint("ClickableViewAccessibility")
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val event = automationPlugin.at(position)
-            holder.binding.rootLayout.setBackgroundColor(if (event.areActionsValid()) resourceHelper.getAttributeColor(context, R.attr.ribbonDefault) else resourceHelper.getAttributeColor(context, R.attr.automationBgUrgent) )
+            holder.binding.rootLayout.setBackgroundColor(resourceHelper.gc(if (event.areActionsValid()) R.color.ribbonDefault else R.color.errorAlertBackground))
             holder.binding.eventTitle.text = event.title
             holder.binding.enabled.isChecked = event.isEnabled
             holder.binding.enabled.isEnabled = !event.readOnly
@@ -216,7 +217,7 @@ class AutomationFragment : DaggerFragment(), OnStartDragListener {
             holder.binding.iconTrash.setOnClickListener {
                 OKDialog.showConfirmation(requireContext(), resourceHelper.gs(R.string.removerecord) + " " + automationPlugin.at(position).title,
                     {
-                        uel.log("AUTOM REMOVED", automationPlugin.at(position).title)
+                        uel.log(Action.AUTOMATION_REMOVED, automationPlugin.at(position).title)
                         automationPlugin.removeAt(position)
                         notifyItemRemoved(position)
                     }, {
@@ -238,12 +239,12 @@ class AutomationFragment : DaggerFragment(), OnStartDragListener {
         override fun onItemDismiss(position: Int) {
             activity?.let { activity ->
                 OKDialog.showConfirmation(activity, resourceHelper.gs(R.string.removerecord) + " " + automationPlugin.at(position).title,
-                    {
-                        uel.log("AUTOM REMOVED", automationPlugin.at(position).title)
+                    Runnable {
+                        uel.log(Action.AUTOMATION_REMOVED, automationPlugin.at(position).title)
                         automationPlugin.removeAt(position)
                         notifyItemRemoved(position)
                         rxBus.send(EventAutomationDataChanged())
-                    }, { rxBus.send(EventAutomationUpdateGui()) })
+                    }, Runnable { rxBus.send(EventAutomationUpdateGui()) })
             }
         }
 
@@ -251,9 +252,9 @@ class AutomationFragment : DaggerFragment(), OnStartDragListener {
 
             val binding = AutomationEventItemBinding.bind(view)
 
-            override fun onItemSelected() = itemView.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.automationSelectedItemBackground))
+            override fun onItemSelected() = itemView.setBackgroundColor(Color.LTGRAY)
 
-            override fun onItemClear() = itemView.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonDefault))
+            override fun onItemClear() = itemView.setBackgroundColor(resourceHelper.gc(R.color.ribbonDefault))
         }
     }
 }
