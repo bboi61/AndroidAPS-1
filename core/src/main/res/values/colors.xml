@@ -85,7 +85,7 @@
 
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="primaryColorDefault">@color/gray</color>
+    <color name="primaryColorDefault">@color/sphere_plastic_grey</color>
     <color name="primaryDarkColorDefault">@color/graphgrid</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
     <color name="secondaryColorDefault">@color/blue_default</color>
