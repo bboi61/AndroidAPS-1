@@ -160,7 +160,7 @@
         <!---Cancel temp basal Icon Color-->
         <item name="canceltempbasalIconColor" >@color/pastellPurple</item>
         <!---Start extended bolus Icon Color-->
-        <item name="startextbolusIconColor" >@color/cyan_blue</item>
+        <item name="startextbolusIconColor" >@color/white</item>
         <!---Cancel extended bolus Icon Color-->
         <item name="cancelextbolusIconColor" >@color/carbsOrange</item>
         <!---BG check Icon Color-->
