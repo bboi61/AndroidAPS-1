@@ -38,6 +38,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/loop"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -151,6 +152,7 @@
                     android:paddingEnd="10dp"
                     android:drawableTop="@drawable/ic_loop_disabled"
                     android:text="@string/disableloop"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -197,6 +199,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:text="@string/resumeloop"
+                android:textColor="@color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="11sp"
                 android:visibility="gone" />
@@ -219,6 +222,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration1h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -233,6 +237,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration2h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -248,6 +253,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration3h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -263,6 +269,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration10h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -307,6 +314,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:text="@string/reconnect"
+                android:textColor="@color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="11sp"
                 android:visibility="gone" />
@@ -329,6 +337,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration15m"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -343,6 +352,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration30m"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -357,6 +367,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration1h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -371,6 +382,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration2h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
@@ -385,6 +397,7 @@
                     android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration3h"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="11sp" />
 
