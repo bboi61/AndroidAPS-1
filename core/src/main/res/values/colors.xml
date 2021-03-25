@@ -45,7 +45,7 @@
 
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="primaryColorDefault">@color/sphere_plastic_grey</color>
+    <color name="primaryColorDefault">@color/gray</color>
     <color name="primaryDarkColorDefault">@color/graphgrid</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
     <color name="secondaryColorDefault">@color/blue_default</color>
@@ -149,11 +149,13 @@
     /* Rig22 colors */
     <color name="black2">#212121</color>
     <color name="rig22Blue">#238af3</color>
+    <color name="rig22rose">#F7806A</color>
     <color name="inrange">#238af3</color>
     <color name="amber">#FEA300</color>
     <color name="white">#FFFFFF</color>
     <color name="white2">#50FFFFFF</color>
     <color name="white3">#30FFFFFF</color>
     <color name="smaragdgreen">#01C03E</color>
+
     <!-- Custom Theme Colors -->
 </resources>

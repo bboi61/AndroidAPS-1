@@ -1,10 +1,10 @@
 <vector android:height="48dp" android:viewportHeight="64"
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#fff" android:pathData="M1.983,57.459h28.004v1.196h-28.004z"/>
-    <path android:fillColor="#fff" android:pathData="M28.711,5.345h1.196v53.31h-1.196z"/>
-    <path android:fillColor="#fff" android:pathData="M29.987,5.345h20.419v1.196h-20.419z"/>
-    <path android:fillColor="#fff" android:pathData="M49.21,6.541h1.196v50.918h-1.196z"/>
-    <path android:fillColor="#fff" android:pathData="M49.21,57.459h12.806v1.196h-12.806z"/>
-    <path android:fillColor="#fff" android:pathData="M21.104,19.469l-14.484,-13.189l-0.591,0.538l14.484,13.19l0.591,-0.539Z"/>
-    <path android:fillColor="#fff" android:pathData="M20.145,6.153l-14.484,13.19l0.591,0.538l14.484,-13.189l-0.591,-0.539Z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M1.983,57.459h28.004v1.196h-28.004z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M28.711,5.345h1.196v53.31h-1.196z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M29.987,5.345h20.419v1.196h-20.419z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M49.21,6.541h1.196v50.918h-1.196z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M49.21,57.459h12.806v1.196h-12.806z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M21.104,19.469l-14.484,-13.189l-0.591,0.538l14.484,13.19l0.591,-0.539Z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M20.145,6.153l-14.484,13.19l0.591,0.538l14.484,-13.189l-0.591,-0.539Z"/>
 </vector>

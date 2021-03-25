@@ -2,14 +2,14 @@
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M46.551,7.589h13.924v54.389h-13.924z"
-        android:strokeColor="#fff" android:strokeWidth="0.47"/>
+        android:strokeColor="?attr/canceltempbasalIconColor" android:strokeWidth="0.47"/>
     <path android:fillColor="#00000000"
         android:pathData="M28.545,29.92h13.924v32.059h-13.924z"
-        android:strokeColor="#fff" android:strokeWidth="0.37"/>
+        android:strokeColor="?attr/canceltempbasalIconColor" android:strokeWidth="0.37"/>
     <path android:fillColor="#00000000"
         android:pathData="M9.759,29.92h13.924v32.059h-13.924z"
-        android:strokeColor="#fff" android:strokeWidth="0.37"/>
-    <path android:fillColor="#fff" android:pathData="M47.622,8.474h11.782v21.445h-11.782z"/>
-    <path android:fillColor="#fff" android:pathData="M27.054,22.737l-15.514,-14.127l-0.633,0.577l15.514,14.127l0.633,-0.577Z"/>
-    <path android:fillColor="#fff" android:pathData="M26.027,8.474l-15.514,14.128l0.633,0.576l15.514,-14.127l-0.633,-0.577Z"/>
+        android:strokeColor="?attr/canceltempbasalIconColor" android:strokeWidth="0.37"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M47.622,8.474h11.782v21.445h-11.782z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M27.054,22.737l-15.514,-14.127l-0.633,0.577l15.514,14.127l0.633,-0.577Z"/>
+    <path android:fillColor="?attr/canceltempbasalIconColor" android:pathData="M26.027,8.474l-15.514,14.128l0.633,0.576l15.514,-14.127l-0.633,-0.577Z"/>
 </vector>

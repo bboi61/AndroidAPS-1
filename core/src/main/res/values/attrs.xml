@@ -107,6 +107,9 @@
 <attr name="sensitivityIconColor" format="reference|color" />
 <!---Refill Icon Color-->
 <attr name="refillIconColor" format="reference|color" />
+<!-- overviewfragment Button -->
+<!---Bolus Icon Color-->
+<attr name="treatmentIconColor" format="reference|color" />
 <!---Bolus Icon Color-->
 <attr name="bolusIconColor" format="reference|color" />
 <!---Carbs Icon Color-->

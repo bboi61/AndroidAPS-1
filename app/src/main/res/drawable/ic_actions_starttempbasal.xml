@@ -2,11 +2,11 @@
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M46.416,14.569h15.576v36.469h-15.576z"
-        android:strokeColor="#fff" android:strokeWidth="0.56"/>
+        android:strokeColor="?attr/tempbasalIconColor" android:strokeWidth="0.56"/>
     <path android:fillColor="#00000000"
         android:pathData="M2.008,14.569h15.576v36.469h-15.576z"
-        android:strokeColor="#fff" android:strokeWidth="0.56"/>
+        android:strokeColor="?attr/tempbasalIconColor" android:strokeWidth="0.56"/>
     <path android:fillColor="#00000000"
         android:pathData="M24.401,14.422h15.576v36.469h-15.576z"
-        android:strokeColor="#fff" android:strokeWidth="0.56"/>
+        android:strokeColor="?attr/tempbasalIconColor" android:strokeWidth="0.56"/>
 </vector>

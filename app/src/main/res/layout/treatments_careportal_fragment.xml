@@ -19,7 +19,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:drawableStart="@drawable/ic_refresh"
-            android:text="@string/nav_refreshtreatments" />
+            android:text="@string/nav_refreshtreatments"
+            android:textColor="@color/white"/>
 
         <info.nightscout.androidaps.utils.ui.SingleClickButton
             android:id="@+id/remove_androidaps_started_events"
@@ -29,7 +30,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:drawableStart="@drawable/ic_remove"
-            android:text="@string/careportal_removestartedevents" />
+            android:text="@string/careportal_removestartedevents"
+            android:textColor="@color/white"/>
 
         <CheckBox
             android:id="@+id/show_invalidated"

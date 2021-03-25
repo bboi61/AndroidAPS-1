@@ -216,7 +216,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.loopPumpStatusLayout.activeProfile.setOnLongClickListener(this)
 
             //colorizing buttons
-/*            if (sp.getBoolean(R.string.key_colored_icons, true)) {
+/*           if (sp.getBoolean(R.string.key_colored_icons, false)) {
                 val drawableTop: Array<Drawable?> = binding.buttonsLayout.treatmentButton.compoundDrawables
                 if (drawableTop[1] != null) resourceHelper.gc(R.color.white).let { drawableTop[1]!!.setTint(it) }
             }
