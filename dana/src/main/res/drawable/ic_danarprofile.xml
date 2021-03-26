@@ -2,16 +2,16 @@
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:name="&lt;Shape 940>"
         android:pathData="m37.39 16.79h-8.56v33.85h8.56v-33.85z"
-        android:strokeColor="#fff" android:strokeLineCap="round"
+        android:strokeColor="?attr/danarprofileIconColor" android:strokeLineCap="round"
         android:strokeLineJoin="round" android:strokeWidth="0.56"/>
     <path android:name="&lt;Shape 939>"
         android:pathData="m25.49 24.09h-8.56v26.55h8.56v-26.55z"
-        android:strokeColor="#fff" android:strokeLineCap="round"
+        android:strokeColor="?attr/danarprofileIconColor" android:strokeLineCap="round"
         android:strokeLineJoin="round" android:strokeWidth="0.56"/>
     <path android:name="&lt;Shape 938>"
         android:pathData="m49.3 28.78h-8.58v21.87h8.58v-21.87z"
-        android:strokeColor="#fff" android:strokeLineCap="round"
+        android:strokeColor="?attr/danarprofileIconColor" android:strokeLineCap="round"
         android:strokeLineJoin="round" android:strokeWidth="0.56"/>
-    <path android:fillColor="#fff" android:name="&lt;Shape 937>" android:pathData="m12.9 55.53c5.34 5.11 12.51 7.89 19.92 7.75c15.42 -0.31 27.7 -13.01 27.4 -28.34c-0.05 -2.43 -0.41 -4.84 -1.09 -7.17l-0.54 0.15c0.66 2.29 1.02 4.65 1.07 7.03c0.29 15.03 -11.74 27.48 -26.86 27.78c-7.26 0.14 -14.29 -2.59 -19.52 -7.59l-0.39 0.4z"/>
-    <path android:fillColor="#fff" android:name="&lt;Shape 936>" android:pathData="m59.32 28.93c-2.76 -12.88 -14.21 -22.09 -27.47 -22.09c-15.5 0 -28.08 12.5 -28.08 27.89c0 7.9 3.38 15.44 9.29 20.73l0.38 -0.41c-5.8 -5.18 -9.11 -12.57 -9.11 -20.31c0 -15.08 12.33 -27.33 27.52 -27.33c13 0 24.22 9.03 26.92 21.65l0.55 -0.12z"/>
+    <path android:fillColor="?attr/danarprofileIconColor" android:name="&lt;Shape 937>" android:pathData="m12.9 55.53c5.34 5.11 12.51 7.89 19.92 7.75c15.42 -0.31 27.7 -13.01 27.4 -28.34c-0.05 -2.43 -0.41 -4.84 -1.09 -7.17l-0.54 0.15c0.66 2.29 1.02 4.65 1.07 7.03c0.29 15.03 -11.74 27.48 -26.86 27.78c-7.26 0.14 -14.29 -2.59 -19.52 -7.59l-0.39 0.4z"/>
+    <path android:fillColor="?attr/danarprofileIconColor" android:name="&lt;Shape 936>" android:pathData="m59.32 28.93c-2.76 -12.88 -14.21 -22.09 -27.47 -22.09c-15.5 0 -28.08 12.5 -28.08 27.89c0 7.9 3.38 15.44 9.29 20.73l0.38 -0.41c-5.8 -5.18 -9.11 -12.57 -9.11 -20.31c0 -15.08 12.33 -27.33 27.52 -27.33c13 0 24.22 9.03 26.92 21.65l0.55 -0.12z"/>
 </vector>

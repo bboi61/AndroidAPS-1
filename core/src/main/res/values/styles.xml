@@ -156,40 +156,59 @@
         <!--  overviewfragment Button End -->
         <!-- action tab -->
         <!---Profile Switch Icon Color-->
-        <item name="profileswitchIconColor" >@color/white</item>
+        <item name="profileswitchIconColor" >@color/black</item>
         <!---Temp target Icon Color-->
-        <item name="temptargetIconColor" >@color/white</item>
-        <item name="temptargetIconColor1" >@color/white</item>
+        <item name="temptargetIconColor" >@color/black</item>
+        <item name="temptargetIconColor1" >@color/black</item>
         <!---Start temp basal Icon Color-->
-        <item name="tempbasalIconColor" >@color/white</item>
+        <item name="tempbasalIconColor" >@color/black</item>
         <!---Cancel temp basal Icon Color-->
-        <item name="canceltempbasalIconColor" >@color/white</item>
+        <item name="canceltempbasalIconColor" >@color/black</item>
         <!---Start extended bolus Icon Color-->
-        <item name="startextbolusIconColor" >@color/white</item>
+        <item name="startextbolusIconColor" >@color/black</item>
         <!---Cancel extended bolus Icon Color-->
-        <item name="cancelextbolusIconColor" >@color/white</item>
+        <item name="cancelextbolusIconColor" >@color/black</item>
         <!---BG check Icon Color-->
-        <item name="bgcheckIconColor" >@color/white</item>
+        <item name="bgcheckIconColor" >@color/black</item>
         <!---Prime fill Icon Color-->
-        <item name="primefillIconColor" >@color/white</item>
+        <item name="primefillIconColor" >@color/black</item>
         <!---CGM insert Icon Color-->
-        <item name="cgminsertIconColor" >@color/white</item>
+        <item name="cgminsertIconColor" >@color/black</item>
         <!---Pump Battery Icon Color-->
-        <item name="pumpBatteryIconColor" >@color/white</item>
+        <item name="pumpBatteryIconColor" >@color/black</item>
         <!---Note Icon Color-->
-        <item name="noteIconColor" >@color/white</item>
+        <item name="noteIconColor" >@color/black</item>
         <!---Question Icon Color-->
-        <item name="questionIconColor" >@color/white</item>
+        <item name="questionIconColor" >@color/black</item>
         <!---Exercise Icon Color-->
-        <item name="exerciseIconColor01" >@color/white</item>
+        <item name="exerciseIconColor01" >@color/black</item>
         <!---Announcement Icon Color-->
-        <item name="announcementIconColor" >@color/white</item>
+        <item name="announcementIconColor" >@color/black</item>
         <!---History Icon Color-->
-        <item name="historyIconColor" >@color/white</item>
+        <item name="historyIconColor" >@color/black</item>
         <!---Stats Icon Color-->
-        <item name="statsIconColor" >@color/white</item>
+        <item name="statsIconColor" >@color/black</item>
         <!-- action tab end -->
         <!--                -->
+        <!-- maintenance start -->
+        <!--                               -->
+        <item name="zahnradIconColor" >@color/black</item>
+        <item name="mailIconColor" >@color/black</item>
+        <item name="deletelogsIconColor" >@color/black</item>
+        <item name="exportIconColor" >@color/black</item>
+        <item name="importIconColor" >@color/black</item>
+        <item name="resetdbIconColor" >@color/black</item>
+        <!--                              -->
+        <!--  maintenance end -->
+        <!-- dana start -->
+        <!--                               -->
+        <item name="danarprofileIconColor" >@color/black</item>
+        <item name="danarhistoryIconColor" >@color/black</item>
+        <item name="danarstatsIconColor" >@color/black</item>
+        <item name="danaruseroptIconColor" >@color/black</item>
+        <!--                              -->
+        <!--  dana end -->
+
         <item name="exerciseIconColor02" >@color/lightGreen</item>
         <!---User Option Icon Color-->
         <item name="userOptionsIconColor" >@color/calcGreen</item>

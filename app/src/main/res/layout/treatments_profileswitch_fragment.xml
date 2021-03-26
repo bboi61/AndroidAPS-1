@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:drawableStart="@drawable/ic_refresh"
-        android:text="@string/refresheventsfromnightscout"
-        android:textColor="@color/white"/>
+        android:text="@string/refresheventsfromnightscout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

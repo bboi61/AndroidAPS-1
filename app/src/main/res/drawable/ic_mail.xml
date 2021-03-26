@@ -2,8 +2,8 @@
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M9.0082,24.7155l45.9832,0l0,32.2767l-45.9832,0z"
-        android:strokeColor="#ffffff" android:strokeWidth="1.27"/>
+        android:strokeColor="?attr/mailIconColor" android:strokeWidth="1.27"/>
     <path android:fillColor="#00000000"
         android:pathData="M32.0007,50.5833L9.0079,24.7158L54.9917,24.7158L32.0007,50.5833Z"
-        android:strokeColor="#ffffff" android:strokeWidth="0.76"/>
+        android:strokeColor="?attr/mailIconColor" android:strokeWidth="0.76"/>
 </vector>

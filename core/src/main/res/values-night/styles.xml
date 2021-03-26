@@ -143,21 +143,40 @@
         <!-- overviewfragment Button Start -->
         <!--                               -->
         <!---Bolus Icon Color Dark-->
-        <item name="treatmentIconColor" >@color/white</item>
+        <item name="treatmentIconColor" >@color/rig22gray</item>
         <!---Bolus Icon Color Dark-->
-        <item name="bolusIconColor" >@color/rig22Blue</item>
+        <item name="bolusIconColor" >@color/rig22gray</item>
         <!---Carbs Icon Color-->
-        <item name="carbsIconColor" >@color/amber</item>
+        <item name="carbsIconColor" >@color/rig22gray</item>
         <!---Wizard Icon Color-->
-        <item name="wizardIconColor" >@color/smaragdgreen</item>
+        <item name="wizardIconColor" >@color/rig22gray</item>
         <!---Calibration Icon Color-->
-        <item name="calibrationIconColor" >@color/calibrationRed</item>
+        <item name="calibrationIconColor" >@color/rig22gray</item>
         <!---CGM Icon Color-->
-        <item name="cgmIconColor" >@color/darkRed</item>
+        <item name="cgmIconColor" >@color/rig22gray</item>
         <!---QuickWizzard Icon Color-->
-        <item name="quickwizzardIconColor" >@color/rig22Blue</item>
+        <item name="quickwizzardIconColor" >@color/rig22gray</item>
         <!--  overviewfragment Button End -->
         <!--                              -->
+        <!-- maintenance start -->
+        <!--                               -->
+        <item name="zahnradIconColor" >@color/white</item>
+        <item name="mailIconColor" >@color/white</item>
+        <item name="deletelogsIconColor" >@color/white</item>
+        <item name="exportIconColor" >@color/white</item>
+        <item name="importIconColor" >@color/white</item>
+        <item name="resetdbIconColor" >@color/white</item>
+        <!--                              -->
+        <!--  maintenance end -->
+        <!--                              -->
+        <!-- dana start -->
+        <!--                               -->
+        <item name="danarprofileIconColor" >@color/white</item>
+        <item name="danarhistoryIconColor" >@color/white</item>
+        <item name="danarstatsIconColor" >@color/white</item>
+        <item name="danaruseroptIconColor" >@color/white</item>
+        <!--                              -->
+        <!--  dana end -->
         <!-- action tab start -->
         <!--                  -->
         <!---Profile Switch Icon Color-->
