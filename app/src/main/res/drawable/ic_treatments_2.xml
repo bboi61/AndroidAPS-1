@@ -2,8 +2,8 @@
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M10.52,54.72l0,-45.44c0,-3.179 2.581,-5.76 5.76,-5.76l28.616,-0c3.179,-0 5.76,2.581 5.76,5.76l-0,45.44c-0,3.179 -2.581,5.76 -5.76,5.76l-28.616,0c-3.179,0 -5.76,-2.581 -5.76,-5.76Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M34.06,27.517l7.362,0l-0,6.345l-7.361,-0l0.001,7.361l-6.345,0.001l-0.001,-7.362l-7.363,-0l-0,-6.345l7.362,0l-0.001,-7.362l6.345,-0.001l0.001,7.363Z"
-        android:strokeColor="#f7806a" android:strokeWidth="0.75"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.75"/>
 </vector>

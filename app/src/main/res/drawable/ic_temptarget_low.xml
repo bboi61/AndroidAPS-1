@@ -8,5 +8,5 @@
         android:fillColor="?attr/temptargetIconColor"/>
     <path
         android:pathData="M16.797,16.24H7.212c-0.391,0 -0.708,-0.317 -0.708,-0.709l0,-2.822H2.424c-0.392,0 -0.708,-0.317 -0.708,-0.709s0.317,-0.708 0.708,-0.708h4.788c0.391,0 0.708,0.317 0.708,0.708l0,2.822h8.167V12c0,-0.392 0.317,-0.708 0.709,-0.708h4.766c0.392,0 0.709,0.317 0.709,0.708s-0.317,0.709 -0.709,0.709h-4.057v2.822C17.506,15.923 17.188,16.24 16.797,16.24z"
-        android:fillColor="?attr/temptargetIconColor1"/>
+        android:fillColor="?attr/temptargetIconColor"/>
 </vector>

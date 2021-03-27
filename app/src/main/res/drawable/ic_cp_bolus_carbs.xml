@@ -2,23 +2,23 @@
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M49.001,43.743c-4.743,0.951 -9.107,2.699 -13.075,5.282c-3.211,2.853 -4.377,6.617 -3.131,11.455c4.885,-0.779 9.394,-2.26 13.075,-5.281c2.554,-3.307 3.64,-7.111 3.131,-11.456Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M49.001,30.265c-4.743,0.951 -9.107,2.699 -13.075,5.282c-3.211,2.853 -4.377,6.617 -3.131,11.455c4.885,-0.779 9.394,-2.26 13.075,-5.281c2.554,-3.307 3.64,-7.111 3.131,-11.456Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M49.001,16.356c-4.743,0.951 -9.107,2.699 -13.075,5.281c-3.211,2.853 -4.377,6.617 -3.131,11.456c4.885,-0.78 9.394,-2.26 13.075,-5.282c2.554,-3.306 3.64,-7.11 3.131,-11.455Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M12.379,16.867c4.743,0.951 9.107,2.699 13.075,5.282c3.211,2.853 4.377,6.617 3.132,11.455c-4.886,-0.779 -9.395,-2.26 -13.076,-5.281c-2.554,-3.306 -3.639,-7.111 -3.131,-11.456Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M12.379,30.265c4.743,0.951 9.107,2.699 13.075,5.282c3.211,2.853 4.377,6.617 3.132,11.455c-4.886,-0.779 -9.395,-2.26 -13.076,-5.281c-2.554,-3.307 -3.639,-7.111 -3.131,-11.456Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M12.379,43.743c4.743,0.951 9.107,2.699 13.075,5.282c3.211,2.853 4.377,6.617 3.132,11.455c-4.886,-0.779 -9.395,-2.26 -13.076,-5.281c-2.554,-3.307 -3.639,-7.111 -3.131,-11.456Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
         android:pathData="M29.89,23.064c4.603,-0 6.895,-3.286 6.895,-7.386c0,-4.1 -2.641,-9.932 -6.593,-12.158c-2.052,1.769 -4.949,9.133 -5.321,12.159c-0.448,3.648 3.001,6.526 5.019,7.385Z"
-        android:strokeColor="#fff" android:strokeWidth="0.84"/>
+        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
 </vector>

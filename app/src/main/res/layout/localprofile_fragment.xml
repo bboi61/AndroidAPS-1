@@ -262,7 +262,6 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="@string/activate_profile"
-            android:textColor="@color/white"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -285,8 +284,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:textAlignment="center"
-                android:text="@string/reset"
-                android:textColor="@color/white"/>
+                android:text="@string/reset" />
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/save"
@@ -302,8 +300,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:textAlignment="center"
-                android:text="save"
-                android:textColor="@color/white"/>
+                android:text="save" />
         </LinearLayout>
 
     </LinearLayout>

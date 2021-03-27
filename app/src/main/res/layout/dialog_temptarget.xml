@@ -36,7 +36,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/careportal_temporarytarget"
-                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -162,8 +161,7 @@
                 android:paddingEnd="5dp"
                 android:text="@string/cancel"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="11sp"
-                android:textColor="@color/white"/>
+                android:textSize="11sp" />
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/eating_soon"
@@ -177,8 +175,7 @@
                 android:paddingEnd="5dp"
                 android:text="@string/eatingsoon"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="11sp"
-                android:textColor="@color/white"/>
+                android:textSize="11sp" />
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/activity"
@@ -192,8 +189,7 @@
                 android:paddingEnd="5dp"
                 android:text="@string/activity"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="11sp"
-                android:textColor="@color/white"/>
+                android:textSize="11sp" />
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
                 android:id="@+id/hypo"
@@ -206,8 +202,7 @@
                 android:paddingEnd="5dp"
                 android:text="@string/hypo"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="11sp"
-                android:textColor="@color/white"/>
+                android:textSize="11sp" />
 
         </LinearLayout>
 

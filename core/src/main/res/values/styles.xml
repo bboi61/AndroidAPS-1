@@ -102,7 +102,7 @@
         <!-- local profil dialog -->
         <item name="errorBackground" >@color/lightPastelRed</item>
         <item name="okBackground" >@color/transparent</item>
-        <item name="defaultBackground" >@color/darkgrayVariant</item>
+        <item name="defaultBackground" >@color/gray</item>
         <!-- Custom tabs background -->
         <item name="tabBgColorSelected" >@color/kobaltblue</item>
         <!-- Predictions -->
@@ -145,6 +145,8 @@
         <item name="bolusIconColor" >@color/white</item>
         <!---Carbs Icon Color-->
         <item name="carbsIconColor" >@color/white</item>
+        <!---Carbs Icon Color-->
+        <item name="carbsIconColor2" >@color/black</item>
         <!---Wizard Icon Color-->
         <item name="wizardIconColor" >@color/white</item>
         <!---Calibration Icon Color-->
@@ -208,7 +210,6 @@
         <item name="danaruseroptIconColor" >@color/black</item>
         <!--                              -->
         <!--  dana end -->
-
         <item name="exerciseIconColor02" >@color/lightGreen</item>
         <!---User Option Icon Color-->
         <item name="userOptionsIconColor" >@color/calcGreen</item>
@@ -220,6 +221,7 @@
         <item name="targetHypoBgIconColor" >@color/red</item>
         <!---Refresh Icon Color-->
         <item name="refreshIconColor" >@color/black</item>
+        <item name="carbsIconColor3" >@color/white</item>
         <!-- Icon specific colors end -->
         <!---Therapy Event Announcement-->
         <item name="therapyeventAnnouncement" >@color/notificationAnnouncement</item>
@@ -274,7 +276,7 @@
         <item name="profilSwitch" >@color/black</item>
         <item name="automationTitleText" >@color/white</item>
         <item name="automationSelectedItemBackground" >@color/gray</item>
-        <item name="objectivesBackground" >@color/darkgrayVariant</item>
+        <item name="objectivesBackground" >@color/gray</item>
         <item name="extendedBolus" >@color/cyan</item>
         <item name="TitleAndLabelTextColor" >@color/white</item>
         <item name="tddStatsActivityBackgroundColor" >@color/transparent</item>
