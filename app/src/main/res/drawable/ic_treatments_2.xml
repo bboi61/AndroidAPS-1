@@ -1,9 +1,14 @@
 <vector android:height="48dp" android:viewportHeight="64"
     android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
-        android:pathData="M10.52,54.72l0,-45.44c0,-3.179 2.581,-5.76 5.76,-5.76l28.616,-0c3.179,-0 5.76,2.581 5.76,5.76l-0,45.44c-0,3.179 -2.581,5.76 -5.76,5.76l-28.616,0c-3.179,0 -5.76,-2.581 -5.76,-5.76Z"
-        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.84"/>
+        android:pathData="M15.781,51.823l0,-37.292c0,-2.609 2.118,-4.727 4.727,-4.727l23.484,-0c2.609,-0 4.727,2.118 4.727,4.727l0,37.292c0,2.609 -2.118,4.727 -4.727,4.727l-23.484,-0c-2.609,-0 -4.727,-2.118 -4.727,-4.727Z"
+        android:strokeColor="?attr/treatmentIconColor" android:strokeWidth="0.84"/>
     <path android:fillColor="#00000000"
-        android:pathData="M34.06,27.517l7.362,0l-0,6.345l-7.361,-0l0.001,7.361l-6.345,0.001l-0.001,-7.362l-7.363,-0l-0,-6.345l7.362,0l-0.001,-7.362l6.345,-0.001l0.001,7.363Z"
-        android:strokeColor="?attr/zahnradIconColor" android:strokeWidth="0.75"/>
+        android:pathData="M35.1,29.498l6.041,-0l0,5.207l-6.041,-0l0.001,6.041l-5.207,0.001l-0.001,-6.042l-6.043,-0l0,-5.207l6.043,-0l-0.001,-6.042l5.207,-0.001l0.001,6.043Z"
+        android:strokeColor="?attr/treatmentIconColor" android:strokeWidth="0.84"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:pathData="M49.18,24.408h2.905v1.256h-2.905z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:pathData="M49.18,38.581h2.905v1.256h-2.905z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:pathData="M53.87,26.516c0.019,-0.65 -0.192,-1.231 -0.585,-1.614c-0.393,-0.384 -0.937,-0.539 -1.512,-0.432l-0.034,1.226c0.287,-0.054 0.559,0.024 0.755,0.215c0.197,0.192 0.302,0.482 0.293,0.807l1.083,-0.202Z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:pathData="M51.871,39.777c0.557,0.038 1.077,-0.172 1.446,-0.584c0.37,-0.412 0.558,-0.992 0.524,-1.613l-1.049,-0.073c0.017,0.311 -0.077,0.601 -0.262,0.807c-0.185,0.206 -0.445,0.311 -0.723,0.292l0.064,1.171Z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:pathData="M52.769,25.962h1.125v11.882h-1.125z"/>
 </vector>

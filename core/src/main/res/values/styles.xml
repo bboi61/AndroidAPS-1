@@ -102,7 +102,7 @@
         <!-- local profil dialog -->
         <item name="errorBackground" >@color/lightPastelRed</item>
         <item name="okBackground" >@color/transparent</item>
-        <item name="defaultBackground" >@color/gray</item>
+        <item name="defaultBackground" >@color/treatment</item>
         <!-- Custom tabs background -->
         <item name="tabBgColorSelected" >@color/kobaltblue</item>
         <!-- Predictions -->
@@ -138,24 +138,26 @@
         <item name="loopOpened" >@color/blue_default</item>
         <!---Sensitivity Icon Color-->
         <item name="sensitivityIconColor" >@color/sensGreen</item>
+        <!--                              -->
         <!-- overviewfragment Button Start -->
         <!---Bolus Icon Color Dark-->
-        <item name="treatmentIconColor" >@color/white</item>
+        <item name="treatmentIconColor" >@color/black</item>
         <!---Bolus Icon Color Dark-->
-        <item name="bolusIconColor" >@color/white</item>
+        <item name="bolusIconColor" >@color/black</item>
         <!---Carbs Icon Color-->
-        <item name="carbsIconColor" >@color/white</item>
+        <item name="carbsIconColor" >@color/black</item>
         <!---Carbs Icon Color-->
         <item name="carbsIconColor2" >@color/black</item>
         <!---Wizard Icon Color-->
-        <item name="wizardIconColor" >@color/white</item>
+        <item name="wizardIconColor" >@color/black</item>
         <!---Calibration Icon Color-->
-        <item name="calibrationIconColor" >@color/white</item>
+        <item name="calibrationIconColor" >@color/black</item>
         <!---CGM Icon Color-->
-        <item name="cgmIconColor" >@color/white</item>
+        <item name="cgmIconColor" >@color/black</item>
         <!---QuickWizzard Icon Color-->
-        <item name="quickwizzardIconColor" >@color/white</item>
+        <item name="quickwizzardIconColor" >@color/black</item>
         <!--  overviewfragment Button End -->
+        <!--                              -->
         <!-- action tab -->
         <!---Profile Switch Icon Color-->
         <item name="profileswitchIconColor" >@color/black</item>
@@ -259,7 +261,7 @@
         <item name="basebasal" >@color/basebasal</item>
         <item name="lightblue" >@color/lightblue</item>
         <item name="ribbonWarning" >@color/ribbonWarning</item>
-        <item name="ribbonDefault" >@color/ribbonDefault</item>
+        <item name="ribbonDefault" >@color/lightgray</item>
         <item name="tempTargetBackground" >@color/tempTargetBackground</item>
         <item name="defaultTextColor" >@color/defaulttextcolor</item>
         <item name="automationBgUrgent" >@color/red</item>
