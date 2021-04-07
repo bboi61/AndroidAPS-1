@@ -1,7 +1,13 @@
 <vector android:height="30dp" android:viewportHeight="64"
     android:viewportWidth="64" android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#c7c6c6" android:pathData="M30.531,27.862h2.869v15.713h-2.869z"/>
-    <path android:fillColor="#c7c6c6" android:pathData="M31.92,42.248c1.185,-0.109 2.133,0.758 2.122,1.642c-0.012,0.885 -0.879,3.268 -2.063,3.377c-1.185,0.109 -2.239,-2.334 -2.227,-3.219c0.012,-0.884 0.983,-1.691 2.168,-1.8Z"/>
-    <path android:fillColor="#c7c6c6" android:pathData="M42.461,19.514c-0,-0.657 -0.534,-1.191 -1.191,-1.191l-18.54,0c-0.657,0 -1.191,0.534 -1.191,1.191l0,2.383c0,0.658 0.534,1.191 1.191,1.191l18.54,0c0.657,0 1.191,-0.533 1.191,-1.191l-0,-2.383Z"/>
-    <path android:fillColor="#c7c6c6" android:pathData="M57.734,25.478c0,-1.319 -1.07,-2.39 -2.389,-2.39l-46.69,0c-1.319,0 -2.389,1.071 -2.389,2.39c-0,1.319 1.07,2.39 2.389,2.39l46.69,0c1.319,0 2.389,-1.071 2.389,-2.39Z"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M30.531,27.862h2.869v15.713h-2.869z"
+        android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="1"/>
+    <path android:fillColor="?attr/statuslightsIconColor" android:pathData="M31.92,42.248c1.185,-0.109 2.133,0.758 2.122,1.642c-0.012,0.885 -0.879,3.268 -2.063,3.377c-1.185,0.109 -2.239,-2.334 -2.227,-3.219c0.012,-0.884 0.983,-1.691 2.168,-1.8Z"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M42.461,19.514c-0,-0.657 -0.534,-1.191 -1.191,-1.191l-18.54,0c-0.657,0 -1.191,0.534 -1.191,1.191l0,2.383c0,0.658 0.534,1.191 1.191,1.191l18.54,0c0.657,0 1.191,-0.533 1.191,-1.191l-0,-2.383Z"
+        android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="1"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M57.734,25.478c0,-1.319 -1.07,-2.39 -2.389,-2.39l-46.69,0c-1.319,0 -2.389,1.071 -2.389,2.39c-0,1.319 1.07,2.39 2.389,2.39l46.69,0c1.319,0 2.389,-1.071 2.389,-2.39Z"
+        android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="1"/>
 </vector>

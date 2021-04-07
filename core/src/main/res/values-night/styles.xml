@@ -177,7 +177,9 @@
         <item name="danaruseroptIconColor" >@color/white</item>
         <!--                              -->
         <!--  dana end -->
-
+        <!-- statuslights icon color -->
+        <item name="statuslightsIconColor" >@color/white</item>
+        <!-- statuslights icon color -->
         <!-- action tab start -->
         <!--                  -->
         <!---Profile Switch Icon Color-->

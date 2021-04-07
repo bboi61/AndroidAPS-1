@@ -212,6 +212,9 @@
         <item name="danaruseroptIconColor" >@color/black</item>
         <!--                              -->
         <!--  dana end -->
+        <!-- statuslights icon color -->
+        <item name="statuslightsIconColor" >@color/black</item>
+        <!-- statuslights icon color -->
         <item name="exerciseIconColor02" >@color/lightGreen</item>
         <!---User Option Icon Color-->
         <item name="userOptionsIconColor" >@color/calcGreen</item>

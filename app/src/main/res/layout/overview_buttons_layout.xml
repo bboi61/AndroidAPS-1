@@ -33,7 +33,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_treatments_2"
             android:text="@string/overview_treatment_label"
-            android:textColor="@color/white"
             android:textSize="0sp"
             android:visibility="gone"
             tools:ignore="SmallSp" />
@@ -46,7 +45,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_bolus_2"
             android:text="@string/overview_insulin_label"
-            android:textColor="@color/white"
             android:textSize="0sp"
             tools:ignore="SmallSp" />
 
@@ -58,7 +56,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_cp_bolus_carbs_2"
             android:text="carbs"
-            android:textColor="@color/white"
             android:textSize="0sp"
             tools:ignore="SmallSp" />
 
@@ -70,7 +67,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_calculator_2"
             android:text="@string/overview_calculator_label"
-            android:textColor="@color/white"
             android:textSize="0sp"
             tools:ignore="SmallSp" />
 
@@ -82,7 +78,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_cp_bgcheck_2"
             android:text="@string/overview_calibration"
-            android:textColor="@color/white"
             android:textSize="0sp"
             android:visibility="gone"
             tools:ignore="SmallSp" />
@@ -95,7 +90,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_xdrip_2"
             android:text="@string/overview_cgm"
-            android:textColor="@color/white"
             android:textSize="0sp"
             android:visibility="gone"
             tools:ignore="SmallSp" />
@@ -108,7 +102,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_quick_wizard_2"
             android:text="@string/quickwizard"
-            android:textColor="@color/white"
             android:textSize="0sp"
             tools:ignore="SmallSp"/>
 
