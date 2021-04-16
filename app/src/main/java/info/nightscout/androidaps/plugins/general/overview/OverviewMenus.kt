@@ -1,12 +1,10 @@
 package info.nightscout.androidaps.plugins.general.overview
 
 import android.text.SpannableString
-import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
 import android.view.Menu
 import android.view.View
 import android.widget.ImageButton
-import androidx.annotation.AttrRes
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
 import androidx.appcompat.widget.PopupMenu
@@ -47,7 +45,6 @@ class OverviewMenus @Inject constructor(
         DEVSLOPE(R.string.overview_show_deviationslope, R.color.devslopepos, primary = false, secondary = true,shortnameId = R.string.devslope_shortname)
     }
 
-
     companion object {
         const val MAX_GRAPHS = 5 // including main
     }
@@ -66,7 +63,7 @@ class OverviewMenus @Inject constructor(
     private var _setting: MutableList<Array<Boolean>> = ArrayList()
 
     val setting: List<Array<Boolean>>
-     get() = _setting.toMutableList() // implicitly does a list copy
+        get() = _setting.toMutableList() // implicitly does a list copy
 
     private fun storeGraphConfig() {
         val sts = Gson().toJson(_setting)
@@ -118,10 +115,8 @@ class OverviewMenus @Inject constructor(
                     if (insert) {
                         val item = popup.menu.add(Menu.NONE, m.ordinal + 100 * (g + 1), Menu.NONE, resourceHelper.gs(m.nameId))
                         val title = item.title
-                        // we need a liitle bit space left and right of the string for better visualization
-                        val s = SpannableString(" " + title + " ")
-                        s.setSpan(ForegroundColorSpan(resourceHelper.gc(R.color.black)), 0, s.length, 0)
-                        s.setSpan(BackgroundColorSpan(resourceHelper.getAttributeColor(null,m.attrId)), 0, s.length, 0)
+                        val s = SpannableString(title)
+                        s.setSpan(ForegroundColorSpan(resourceHelper.gc(m.colorId)), 0, s.length, 0)
                         item.title = s
                         item.isCheckable = true
                         item.isChecked = settingsCopy[g][m.ordinal]
