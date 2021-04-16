@@ -34,17 +34,17 @@ class OverviewMenus @Inject constructor(
     private val config: Config
 ) {
 
-    enum class CharType(@StringRes val nameId: Int, @AttrRes val attrId: Int, val primary: Boolean, val secondary: Boolean, @StringRes val shortnameId: Int) {
-        PRE(R.string.overview_show_predictions, R.attr.prediction, primary = true, secondary = false, shortnameId = R.string.prediction_shortname),
-        BAS(R.string.overview_show_basals, R.attr.basal, primary = true, secondary = false,shortnameId = R.string.basal_shortname),
-        ABS(R.string.overview_show_absinsulin, R.attr.iobColor, primary = false, secondary = true,shortnameId = R.string.abs_insulin_shortname),
-        IOB(R.string.overview_show_iob, R.attr.iobColor, primary = false, secondary = true,shortnameId = R.string.iob),
-        COB(R.string.overview_show_cob, R.attr.cobColor, primary = false, secondary = true,shortnameId = R.string.cob),
-        DEV(R.string.overview_show_deviations, R.attr.overviewShowDeviations, primary = false, secondary = true,shortnameId = R.string.deviation_shortname),
-        SEN(R.string.overview_show_sensitivity, R.attr.overviewShowSensitivity, primary = false, secondary = true,shortnameId = R.string.sensitivity_shortname),
-        ACT(R.string.overview_show_activity, R.attr.activity, primary = true, secondary = false,shortnameId = R.string.activity_shortname),
-        BGI(R.string.overview_show_bgi, R.attr.bgi, primary = false, secondary = true,shortnameId = R.string.bgi_shortname),
-        DEVSLOPE(R.string.overview_show_deviationslope, R.attr.devslopepos, primary = false, secondary = true,shortnameId = R.string.devslope_shortname)
+    enum class CharType(@StringRes val nameId: Int, @ColorRes val colorId: Int, val primary: Boolean, val secondary: Boolean, @StringRes val shortnameId: Int) {
+        PRE(R.string.overview_show_predictions, R.color.prediction, primary = true, secondary = false, shortnameId = R.string.prediction_shortname),
+        BAS(R.string.overview_show_basals, R.color.basal, primary = true, secondary = false,shortnameId = R.string.basal_shortname),
+        ABS(R.string.overview_show_absinsulin, R.color.iob, primary = false, secondary = true,shortnameId = R.string.abs_insulin_shortname),
+        IOB(R.string.overview_show_iob, R.color.iob, primary = false, secondary = true,shortnameId = R.string.iob),
+        COB(R.string.overview_show_cob, R.color.cob, primary = false, secondary = true,shortnameId = R.string.cob),
+        DEV(R.string.overview_show_deviations, R.color.bgi, primary = false, secondary = true,shortnameId = R.string.deviation_shortname),
+        BGI(R.string.overview_show_bgi, R.color.bgi, primary = false, secondary = true,shortnameId = R.string.bgi_shortname),
+        SEN(R.string.overview_show_sensitivity, R.color.ratio, primary = false, secondary = true,shortnameId = R.string.sensitivity_shortname),
+        ACT(R.string.overview_show_activity, R.color.activity, primary = true, secondary = false,shortnameId = R.string.activity_shortname),
+        DEVSLOPE(R.string.overview_show_deviationslope, R.color.devslopepos, primary = false, secondary = true,shortnameId = R.string.devslope_shortname)
     }
 
 
