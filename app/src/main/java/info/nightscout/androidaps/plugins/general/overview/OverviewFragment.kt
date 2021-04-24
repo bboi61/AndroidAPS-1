@@ -952,6 +952,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
                 //  ------------------ 1st graph
 
+                // **** In range Area ****
+                graphData.addInRangeArea(fromTime, endTime, lowLine, highLine)
 
                 // **** BG ****
                 if (predictionsAvailable && menuChartSettings[0][OverviewMenus.CharType.PRE.ordinal])
@@ -965,6 +967,16 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                 graphData.setNumVerticalLabels()
                 graphData.formatAxis(fromTime, endTime)
 
+
+                if (menuChartSettings[0][OverviewMenus.CharType.ACT.ordinal])
+                    graphData.addActivity(fromTime, endTime, false, 0.8)
+
+                // add basal data
+                if (pump.pumpDescription.isTempBasalCapable && menuChartSettings[0][OverviewMenus.CharType.BAS.ordinal])
+                    graphData.addBasals(fromTime, now, lowLine / graphData.maxY / 1.2)
+
+                // add target line
+                graphData.addTargetLine(fromTime, toTime, profile, loopPlugin.lastRun)
 
                 // **** NOW line ****
                 graphData.addNowLine(now)
