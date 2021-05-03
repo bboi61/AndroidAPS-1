@@ -32,6 +32,7 @@ class OverviewMenus @Inject constructor(
     private val config: Config
 ) {
 
+
     enum class CharType(@StringRes val nameId: Int, @ColorRes val colorId: Int, val primary: Boolean, val secondary: Boolean, @StringRes val shortnameId: Int) {
         PRE(R.string.overview_show_predictions, R.color.prediction, primary = true, secondary = false, shortnameId = R.string.prediction_shortname),
         BAS(R.string.overview_show_basals, R.color.basal, primary = true, secondary = false,shortnameId = R.string.basal_shortname),
@@ -43,6 +44,7 @@ class OverviewMenus @Inject constructor(
         SEN(R.string.overview_show_sensitivity, R.color.ratio, primary = false, secondary = true,shortnameId = R.string.sensitivity_shortname),
         ACT(R.string.overview_show_activity, R.color.activity, primary = true, secondary = false,shortnameId = R.string.activity_shortname),
         DEVSLOPE(R.string.overview_show_deviationslope, R.color.devslopepos, primary = false, secondary = true,shortnameId = R.string.devslope_shortname)
+
     }
 
     companion object {
