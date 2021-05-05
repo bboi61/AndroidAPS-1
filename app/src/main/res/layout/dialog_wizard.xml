@@ -27,6 +27,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/boluswizard"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:layout_marginTop="4dp"
                 app:srcCompat="@drawable/ic_calculator_2" />
 
             <TextView
