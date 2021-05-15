@@ -111,10 +111,6 @@
     <color name="colorLightGray">#d8d8d8</color>
     <color name="plastic">#EBEBEA</color>
 
-    <!-- White colors -->
-    <color name="tempTargetBackground">#FAFAE1</color>
-
-
     <!--    BgReading-->
     <color name="inrange">#00FF00</color>
     <color name="low">#FF0000</color>
@@ -129,14 +125,11 @@
     <color name="deviationgreen">#7200FF00</color>
     <color name="deviationred">#72FF0000</color>
     <color name="deviationblack">#72000000</color>
-    <color name="inrangebackground">#28238af3</color>
     <color name="tempbasal">#2800FF00</color>
     <color name="iobPred">#2800FF00</color>
     <color name="ratio">#2800FF00</color>
 
-
     /* Rig22 colors */
-
     <color name="black">#000000</color>
     <color name="black2">#212121</color>
     <color name="rig22Blue">#238af3</color>

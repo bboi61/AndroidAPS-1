@@ -759,11 +759,11 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             if (targetUsed != 0.0 && abs(profile.targetMgdl - targetUsed) > 0.01) {
                 aapsLogger.debug("Adjusted target. Profile: ${profile.targetMgdl} APS: $targetUsed")
                 val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
-                drawable.setColorFilter(resources.getColor(R.color.smaragdgreen, requireContext().theme), PorterDuff.Mode.SRC_IN)
+                drawable.setColorFilter(resources.getColor(R.color.amber, requireContext().theme), PorterDuff.Mode.SRC_IN)
                 val drawableTop: Array<Drawable?> = binding.loopPumpStatusLayout.tempTarget.compoundDrawables
-                if (drawableTop[0] != null) resourceHelper.gc(R.color.white).let { drawableTop[0]!!.setTint(it) }
+                if (drawableTop[0] != null) resourceHelper.gc(R.color.black).let { drawableTop[0]!!.setTint(it) }
                 binding.loopPumpStatusLayout.tempTarget.text = Profile.toTargetRangeString(targetUsed, targetUsed, Constants.MGDL, units)
-                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.white))
+                binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.gc(R.color.black))
 //                binding.loopPumpStatusLayout.tempTarget?.setBackgroundColor(resourceHelper.gc(R.color.tempTargetBackground))
             } else {
                 val drawable: Drawable = binding.loopPumpStatusLayout.tempTarget.background
