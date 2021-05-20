@@ -9,5 +9,5 @@
     <path android:fillColor="#00000000"
         android:pathData="M10.003,19.143h12.079v19.536h-12.079z"
         android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="0.94"/>
-    <path android:fillColor="#f7806a" android:pathData="M43,38.679h9.916v5.936h-9.916z"/>
+    <path android:fillColor="?attr/statuslightsIconColor" android:pathData="M43,38.679h9.916v5.936h-9.916z"/>
 </vector>
