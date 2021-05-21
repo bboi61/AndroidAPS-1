@@ -1,15 +1,17 @@
 package info.nightscout.androidaps.plugins.general.overview
 
 import android.text.SpannableString
+import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
 import android.view.Menu
 import android.view.View
 import android.widget.ImageButton
+import androidx.annotation.AttrRes
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
 import androidx.appcompat.widget.PopupMenu
 import com.google.gson.Gson
-import info.nightscout.androidaps.Config
+import info.nightscout.androidaps.interfaces.Config
 import info.nightscout.androidaps.R
 import info.nightscout.androidaps.events.EventRefreshOverview
 import info.nightscout.androidaps.logging.AAPSLogger
@@ -32,22 +34,22 @@ class OverviewMenus @Inject constructor(
     private val config: Config
 ) {
 
-
-    enum class CharType(@StringRes val nameId: Int, @ColorRes val colorId: Int, val primary: Boolean, val secondary: Boolean, @StringRes val shortnameId: Int) {
-        PRE(R.string.overview_show_predictions, R.color.prediction, primary = true, secondary = false, shortnameId = R.string.prediction_shortname),
-        BAS(R.string.overview_show_basals, R.color.basal, primary = true, secondary = false,shortnameId = R.string.basal_shortname),
-        ABS(R.string.overview_show_absinsulin, R.color.iob, primary = false, secondary = true,shortnameId = R.string.abs_insulin_shortname),
-        IOB(R.string.overview_show_iob, R.color.iob, primary = false, secondary = true,shortnameId = R.string.iob),
-        COB(R.string.overview_show_cob, R.color.cob, primary = false, secondary = true,shortnameId = R.string.cob),
-        DEV(R.string.overview_show_deviations, R.color.bgi, primary = false, secondary = true,shortnameId = R.string.deviation_shortname),
-        BGI(R.string.overview_show_bgi, R.color.bgi, primary = false, secondary = true,shortnameId = R.string.bgi_shortname),
-        SEN(R.string.overview_show_sensitivity, R.color.ratio, primary = false, secondary = true,shortnameId = R.string.sensitivity_shortname),
-        ACT(R.string.overview_show_activity, R.color.activity, primary = true, secondary = false,shortnameId = R.string.activity_shortname),
-        DEVSLOPE(R.string.overview_show_deviationslope, R.color.devslopepos, primary = false, secondary = true,shortnameId = R.string.devslope_shortname)
-
+    enum class CharType(@StringRes val nameId: Int, @AttrRes val attrId: Int, val primary: Boolean, val secondary: Boolean, @StringRes val shortnameId: Int) {
+        PRE(R.string.overview_show_predictions, R.attr.prediction, primary = true, secondary = false, shortnameId = R.string.prediction_shortname),
+        BAS(R.string.overview_show_basals, R.attr.basal, primary = true, secondary = false,shortnameId = R.string.basal_shortname),
+        ABS(R.string.overview_show_absinsulin, R.attr.iobColor, primary = false, secondary = true,shortnameId = R.string.abs_insulin_shortname),
+        IOB(R.string.overview_show_iob, R.attr.iobColor, primary = false, secondary = true,shortnameId = R.string.iob),
+        COB(R.string.overview_show_cob, R.attr.cobColor, primary = false, secondary = true,shortnameId = R.string.cob),
+        DEV(R.string.overview_show_deviations, R.attr.overviewShowDeviations, primary = false, secondary = true,shortnameId = R.string.deviation_shortname),
+        SEN(R.string.overview_show_sensitivity, R.attr.overviewShowSensitivity, primary = false, secondary = true,shortnameId = R.string.sensitivity_shortname),
+        ACT(R.string.overview_show_activity, R.attr.activity, primary = true, secondary = false,shortnameId = R.string.activity_shortname),
+        BGI(R.string.overview_show_bgi, R.attr.bgi, primary = false, secondary = true,shortnameId = R.string.bgi_shortname),
+        DEVSLOPE(R.string.overview_show_deviationslope, R.attr.devslopepos, primary = false, secondary = true,shortnameId = R.string.devslope_shortname)
     }
 
+
     companion object {
+
         const val MAX_GRAPHS = 5 // including main
     }
 
@@ -60,8 +62,6 @@ class OverviewMenus @Inject constructor(
         return r.toString()
     }
 
-
-
     private var _setting: MutableList<Array<Boolean>> = ArrayList()
 
     val setting: List<Array<Boolean>>
@@ -73,7 +73,7 @@ class OverviewMenus @Inject constructor(
         aapsLogger.debug(sts)
     }
 
-    private fun loadGraphConfig() {
+    fun loadGraphConfig() {
         val sts = sp.getString(R.string.key_graphconfig, "")
         if (sts.isNotEmpty()) {
             _setting = Gson().fromJson(sts, Array<Array<Boolean>>::class.java).toMutableList()
@@ -90,7 +90,6 @@ class OverviewMenus @Inject constructor(
     }
 
     fun setupChartMenu(chartButton: ImageButton) {
-        loadGraphConfig()
         val settingsCopy = setting
         val numOfGraphs = settingsCopy.size // 1 main + x secondary
 
@@ -101,6 +100,8 @@ class OverviewMenus @Inject constructor(
                 else            -> false
             }
             val popup = PopupMenu(v.context, v)
+
+            val used = arrayListOf<Int>()
 
             for (g in 0 until numOfGraphs) {
                 if (g != 0 && g < numOfGraphs) {
@@ -114,14 +115,18 @@ class OverviewMenus @Inject constructor(
                     var insert = true
                     if (m == CharType.PRE) insert = predictionsAvailable
                     if (m == CharType.DEVSLOPE) insert = buildHelper.isDev()
+                    if (used.contains(m.ordinal)) insert = false
                     if (insert) {
                         val item = popup.menu.add(Menu.NONE, m.ordinal + 100 * (g + 1), Menu.NONE, resourceHelper.gs(m.nameId))
                         val title = item.title
-                        val s = SpannableString(title)
-                        s.setSpan(ForegroundColorSpan(resourceHelper.gc(m.colorId)), 0, s.length, 0)
+                        // we need a liitle bit space left and right of the string for better visualization
+                        val s = SpannableString(" " + title + " ")
+                        s.setSpan(ForegroundColorSpan(resourceHelper.gc(R.color.black)), 0, s.length, 0)
+                        s.setSpan(BackgroundColorSpan(resourceHelper.getAttributeColor(null,m.attrId)), 0, s.length, 0)
                         item.title = s
                         item.isCheckable = true
                         item.isChecked = settingsCopy[g][m.ordinal]
+                        if (settingsCopy[g][m.ordinal]) used.add(m.ordinal)
                     }
                 }
             }
@@ -133,16 +138,20 @@ class OverviewMenus @Inject constructor(
 
             popup.setOnMenuItemClickListener {
                 // id < 100 graph header - divider 1, 2, 3 .....
-                if (it.itemId == numOfGraphs) {
-                    // add new empty
-                    _setting.add(Array(CharType.values().size) { false })
-                } else if (it.itemId < 100) {
-                    // remove graph
-                    _setting.removeAt(it.itemId)
-                } else {
-                    val graphNumber = it.itemId / 100 - 1
-                    val item = it.itemId % 100
-                    _setting[graphNumber][item] = !it.isChecked
+                when {
+                    it.itemId == numOfGraphs -> {
+                        // add new empty
+                        _setting.add(Array(CharType.values().size) { false })
+                    }
+                    it.itemId < 100          -> {
+                        // remove graph
+                        _setting.removeAt(it.itemId)
+                    }
+                    else                     -> {
+                        val graphNumber = it.itemId / 100 - 1
+                        val item = it.itemId % 100
+                        _setting[graphNumber][item] = !it.isChecked
+                    }
                 }
                 storeGraphConfig()
                 setupChartMenu(chartButton)
@@ -153,6 +162,13 @@ class OverviewMenus @Inject constructor(
             popup.setOnDismissListener { chartButton.setImageResource(R.drawable.ic_arrow_drop_down_white_24dp) }
             popup.show()
         }
+    }
+
+    fun isEnabledIn(type: CharType): Int {
+        val settingsCopy = setting
+        val numOfGraphs = settingsCopy.size // 1 main + x secondary
+        for (g in 0 until numOfGraphs) if (settingsCopy[g][type.ordinal]) return g
+        return -1
     }
 
 }
