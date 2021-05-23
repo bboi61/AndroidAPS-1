@@ -176,7 +176,7 @@ allprojects {
 }
 
 dependencies {
-//    wearApp project(':wear')
+    wearApp project(':wear')
 
     implementation project(':core')
     implementation project(':automation')
