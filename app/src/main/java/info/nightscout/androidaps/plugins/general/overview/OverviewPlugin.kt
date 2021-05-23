@@ -532,7 +532,7 @@ class OverviewPlugin @Inject constructor(
         // create series
         overviewData.temporaryTargetSeries = LineGraphSeries(Array(targetsSeriesArray.size) { i -> targetsSeriesArray[i] }).also {
             it.isDrawBackground = false
-            it.color = resourceHelper.getAttributeColor(null, R.attr.tempTargetBackground)
+            it.color = resourceHelper.gc(R.color.white)
             it.thickness = 2
         }
 //        profiler.log(LTag.UI, "prepareTemporaryTargetData() $from", start)
