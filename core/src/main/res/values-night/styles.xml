@@ -52,7 +52,7 @@
         <!-- Color of bg value -->
         <item name="bgInRange">@color/rig22Blue</item>
         <item name="bgLow">@color/red</item>
-        <item name="bgHigh">@color/lightyellow</item>
+        <item name="bgHigh">@color/midorange</item>
         <!-- Color of dialog -->
         <item name="colorPrimaryDialog">?attr/colorPrimary</item>
         <item name="colorPrimaryDarkDialog">?attr/colorPrimaryDark</item>
