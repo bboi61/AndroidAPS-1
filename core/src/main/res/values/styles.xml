@@ -106,7 +106,7 @@
         <item name="okBackground" >@color/transparent</item>
         <item name="defaultBackground" >@color/treatment</item>
         <!-- Custom tabs background -->
-        <item name="tabBgColorSelected" >@color/kobaltblue</item>
+        <item name="tabBgColorSelected" >@color/rig22gray</item>
         <!-- Predictions -->
         <item name="iobPred" >@color/cyan</item>
         <!---Deviation in Graph -->

@@ -25,7 +25,9 @@
             android:paddingEnd="1dp"
             android:layout_weight="1"
             android:contentDescription="@string/bolus"
-            app:srcCompat="@drawable/ic_cp_bolus_carbs" />
+            app:srcCompat="@drawable/ic_cp_bolus_carbs"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
         <ImageView
             android:id="@+id/extended_boluses"
@@ -35,7 +37,9 @@
             android:contentDescription="@string/extended_bolus"
             android:paddingStart="1dp"
             android:paddingEnd="1dp"
-            app:srcCompat="@drawable/ic_actions_startextbolus" />
+            app:srcCompat="@drawable/ic_actions_startextbolus"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
         <ImageView
             android:id="@+id/temp_basals"
@@ -45,7 +49,9 @@
             android:paddingEnd="1dp"
             android:layout_weight="1"
             android:contentDescription="@string/tempbasal_label"
-            app:srcCompat="@drawable/ic_actions_starttempbasal" />
+            app:srcCompat="@drawable/ic_actions_starttempbasal"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
         <ImageView
             android:id="@+id/temp_targets"
@@ -55,7 +61,9 @@
             android:paddingEnd="1dp"
             android:layout_weight="1"
             android:contentDescription="@string/careportal_temporarytarget"
-            app:srcCompat="@drawable/ic_temptarget_high" />
+            app:srcCompat="@drawable/ic_temptarget_high"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
         <ImageView
             android:id="@+id/profile_switches"
@@ -65,7 +73,9 @@
             android:paddingEnd="1dp"
             android:layout_weight="1"
             android:contentDescription="@string/careportal_profileswitch"
-            app:srcCompat="@drawable/ic_actions_profileswitch" />
+            app:srcCompat="@drawable/ic_actions_profileswitch"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
         <ImageView
             android:id="@+id/careportal"
@@ -75,7 +85,9 @@
             android:paddingEnd="1dp"
             android:layout_weight="1"
             android:contentDescription="@string/careportal"
-            app:srcCompat="@drawable/ic_cp_note" />
+            app:srcCompat="@drawable/ic_cp_note"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
         <ImageView
             android:id="@+id/userentry"
@@ -85,7 +97,9 @@
             android:contentDescription="@string/userentry"
             android:paddingStart="1dp"
             android:paddingEnd="1dp"
-            app:srcCompat="@drawable/ic_danar_useropt" />
+            app:srcCompat="@drawable/ic_danar_useropt"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
     </com.google.android.flexbox.FlexboxLayout>
 

@@ -202,4 +202,7 @@
     <color name="loopSuspended">#FFFF13</color>
     <color name="loopOpened">#4983D7</color>
     <color name="loopDisabled">#FF1313</color>
+
+    <color name="defaultbackground">#BBBBBB</color>
+    <color name="tabBgColorSelected">#238af3</color>
 </resources>
