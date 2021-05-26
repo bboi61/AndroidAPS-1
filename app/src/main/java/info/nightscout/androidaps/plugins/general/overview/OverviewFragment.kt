@@ -39,6 +39,7 @@ import info.nightscout.androidaps.events.EventPreferenceChange
 import info.nightscout.androidaps.events.EventPumpStatusChanged
 import info.nightscout.androidaps.events.EventRefreshOverview
 import info.nightscout.androidaps.extensions.directionToIcon
+import info.nightscout.androidaps.extensions.isInProgress
 import info.nightscout.androidaps.extensions.toVisibility
 import info.nightscout.androidaps.extensions.valueToUnitsString
 import info.nightscout.androidaps.interfaces.*
@@ -58,7 +59,6 @@ import info.nightscout.androidaps.plugins.iob.iobCobCalculator.GlucoseStatusProv
 import info.nightscout.androidaps.plugins.pump.common.defs.PumpType
 import info.nightscout.androidaps.plugins.source.DexcomPlugin
 import info.nightscout.androidaps.plugins.source.XdripPlugin
-import info.nightscout.androidaps.plugins.treatments.TreatmentsPlugin
 import info.nightscout.androidaps.queue.CommandQueue
 import info.nightscout.androidaps.skins.SkinProvider
 import info.nightscout.androidaps.utils.*
@@ -93,7 +93,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @Inject lateinit var nsDeviceStatus: NSDeviceStatus
     @Inject lateinit var loopPlugin: LoopPlugin
     @Inject lateinit var activePlugin: ActivePlugin
-    @Inject lateinit var treatmentsPlugin: TreatmentsPlugin
     @Inject lateinit var iobCobCalculator: IobCobCalculator
     @Inject lateinit var dexcomPlugin: DexcomPlugin
     @Inject lateinit var dexcomMediator: DexcomPlugin.DexcomMediator
@@ -109,7 +108,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @Inject lateinit var trendCalculator: TrendCalculator
     @Inject lateinit var config: Config
     @Inject lateinit var dateUtil: DateUtil
-    @Inject lateinit var databaseHelper: DatabaseHelperInterface
     @Inject lateinit var uel: UserEntryLogger
     @Inject lateinit var repository: AppRepository
     @Inject lateinit var glucoseStatusProvider: GlucoseStatusProvider
@@ -628,7 +626,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     binding.infoLayout.avgDelta.text = Profile.toSignedUnitsString(glucoseStatus.shortAvgDelta, glucoseStatus.shortAvgDelta * Constants.MGDL_TO_MMOLL, units)
                     binding.infoLayout.longAvgDelta.text = Profile.toSignedUnitsString(glucoseStatus.longAvgDelta, glucoseStatus.longAvgDelta * Constants.MGDL_TO_MMOLL, units)
                 } else {
-                    binding.infoLayout.deltaLarge.text = "Δ " + resourceHelper.gs(R.string.notavailable)
+                    binding.infoLayout.deltaLarge.text = ""
                     binding.infoLayout.delta.text = "Δ " + resourceHelper.gs(R.string.notavailable)
                     binding.infoLayout.avgDelta.text = ""
                     binding.infoLayout.longAvgDelta.text = ""
@@ -718,7 +716,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
             OverviewData.Property.TEMPORARY_TARGET -> {
                 // temp target
-                val tempTarget = overviewData.temporarytarget
+                if (overviewData.temporaryTarget?.isInProgress(dateUtil) == false) overviewData.temporaryTarget = null
+                val tempTarget = overviewData.temporaryTarget
                 if (tempTarget != null) {
                     binding.loopPumpStatusLayout.tempTarget.setTextColor(resourceHelper.getAttributeColor(context, R.attr.ribbonTextWarning))
 //                    binding.loopPumpStatusLayout.tempTarget.setBackgroundColor(resourceHelper.getAttributeColor(context, R.attr.ribbonWarning))
@@ -755,7 +754,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             }
 
             OverviewData.Property.GRAPH            -> {
-                val graphData = GraphData(injector, binding.graphsLayout.bgGraph)
+                val graphData = GraphData(injector, binding.graphsLayout.bgGraph, overviewData)
                 val menuChartSettings = overviewMenus.setting
                 this.context?.let {
                     graphData.addInRangeArea(overviewData.fromTime, overviewData.endTime, defaultValueHelper.determineLowLine(), defaultValueHelper.determineHighLine(),
@@ -784,7 +783,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
                 val now = System.currentTimeMillis()
                 for (g in 0 until min(secondaryGraphs.size, menuChartSettings.size + 1)) {
-                    val secondGraphData = GraphData(injector, secondaryGraphs[g])
+                    val secondGraphData = GraphData(injector, secondaryGraphs[g], overviewData)
                     var useABSForScale = false
                     var useIobForScale = false
                     var useCobForScale = false
