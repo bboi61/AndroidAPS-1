@@ -26,8 +26,8 @@
             android:layout_weight="1"
             android:contentDescription="@string/bolus"
             app:srcCompat="@drawable/ic_cp_bolus_carbs"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
         <ImageView
             android:id="@+id/extended_boluses"
@@ -38,8 +38,8 @@
             android:paddingStart="1dp"
             android:paddingEnd="1dp"
             app:srcCompat="@drawable/ic_actions_startextbolus"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
         <ImageView
             android:id="@+id/temp_basals"
@@ -50,8 +50,8 @@
             android:layout_weight="1"
             android:contentDescription="@string/tempbasal_label"
             app:srcCompat="@drawable/ic_actions_starttempbasal"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
         <ImageView
             android:id="@+id/temp_targets"
@@ -62,8 +62,8 @@
             android:layout_weight="1"
             android:contentDescription="@string/careportal_temporarytarget"
             app:srcCompat="@drawable/ic_temptarget_high"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
         <ImageView
             android:id="@+id/profile_switches"
@@ -74,8 +74,8 @@
             android:layout_weight="1"
             android:contentDescription="@string/careportal_profileswitch"
             app:srcCompat="@drawable/ic_actions_profileswitch"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
         <ImageView
             android:id="@+id/careportal"
@@ -86,8 +86,8 @@
             android:layout_weight="1"
             android:contentDescription="@string/careportal"
             app:srcCompat="@drawable/ic_cp_note"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
         <ImageView
             android:id="@+id/userentry"
@@ -98,8 +98,8 @@
             android:paddingStart="1dp"
             android:paddingEnd="1dp"
             app:srcCompat="@drawable/ic_danar_useropt"
-            android:scaleX="0.7"
-            android:scaleY="0.7"/>
+            android:scaleX="0.8"
+            android:scaleY="0.8"/>
 
     </com.google.android.flexbox.FlexboxLayout>
 

@@ -145,7 +145,7 @@
     <color name="colorLightGray">#d8d8d8</color>
     <color name="plastic">#EBEBEA</color>
 
-    <color name="tempTargetBackground">#BBBBBB</color>
+    <color name="tempTargetBackground">#FFFFFF</color>
 
     <!--    BgReading-->
     <color name="low">#FF0000</color>
@@ -161,7 +161,6 @@
     <color name="deviationred">#72FF0000</color>
     <color name="deviationblack">#72000000</color>
     <color name="inrangebackground">#28777777</color>
-    <color name="tempbasal">#2800FF00</color>
     <color name="iobPred">#2800FF00</color>
     <color name="ratio">#2800FF00</color>
 

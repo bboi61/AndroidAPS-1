@@ -227,4 +227,3 @@ class GraphData(
         graph.onDataChanged(false, false)
     }
 }
-
