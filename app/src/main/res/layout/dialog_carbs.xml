@@ -220,6 +220,7 @@
                 android:id="@+id/plus1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
                 android:layout_weight="1"
                 android:text="+5" />
 
@@ -228,6 +229,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginRight="2dp"
                 android:text="+10" />
 
             <Button
