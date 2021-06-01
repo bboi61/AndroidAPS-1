@@ -4,9 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.android.HasAndroidInjector
 import info.nightscout.androidaps.data.DetailedBolusInfo
-import info.nightscout.androidaps.db.*
 import info.nightscout.androidaps.interfaces.ActivePlugin
-import info.nightscout.androidaps.interfaces.DatabaseHelperInterface
 import info.nightscout.androidaps.interfaces.PumpSync
 import info.nightscout.androidaps.logging.AAPSLogger
 import info.nightscout.androidaps.logging.LTag
@@ -49,7 +47,6 @@ class MedtronicHistoryData @Inject constructor(
     val medtronicUtil: MedtronicUtil,
     val medtronicPumpHistoryDecoder: MedtronicPumpHistoryDecoder,
     val medtronicPumpStatus: MedtronicPumpStatus,
-    val databaseHelper: DatabaseHelperInterface,
     val pumpSync: PumpSync,
     val pumpSyncStorage: info.nightscout.androidaps.plugins.pump.common.sync.PumpSyncStorage
 ) {
@@ -81,7 +78,7 @@ class MedtronicHistoryData @Inject constructor(
                 if (entryByPumpId != null && entryByPumpId.hasBolusChanged(validEntry)) {
                     newEntries.add(validEntry)
                     allHistory.remove(entryByPumpId)
-                    allPumpIds.remove(validEntry.pumpId);
+                    allPumpIds.remove(validEntry.pumpId)
                 }
             }
         }
@@ -479,11 +476,11 @@ class MedtronicHistoryData @Inject constructor(
 
             if (bolusDTO.bolusType == PumpBolusType.Extended) {
                 addExtendedBolus(bolus, bolusDTO, multiwave)
-                continue;
+                continue
             } else if (bolusDTO.bolusType == PumpBolusType.Multiwave) {
                 multiwave = true
                 aapsLogger.debug(LTag.PUMP, String.format(Locale.ENGLISH, "Multiwave bolus from pump, extended bolus and normal bolus will be added."))
-                addExtendedBolus(bolus, bolusDTO, multiwave);
+                addExtendedBolus(bolus, bolusDTO, multiwave)
             }
 
             val deliveredAmount: Double = if (multiwave) bolusDTO.immediateAmount!! else bolusDTO.deliveredAmount
@@ -603,7 +600,9 @@ class MedtronicHistoryData @Inject constructor(
                 }
                 processDTO = TempBasalProcessDTO(
                     itemOne = treatment,
-                    processOperation = TempBasalProcessDTO.Operation.Add)
+                    processOperation = TempBasalProcessDTO.Operation.Add,
+                    aapsLogger = aapsLogger
+                )
             }
         }
         if (processDTO != null) {
@@ -844,7 +843,8 @@ class MedtronicHistoryData @Inject constructor(
                     outList.add(TempBasalProcessDTO(
                         itemOne = filtered2Items[i],
                         itemTwo = filtered2Items[i + 1],
-                        processOperation = TempBasalProcessDTO.Operation.Add))
+                        processOperation = TempBasalProcessDTO.Operation.Add,
+                        aapsLogger = aapsLogger))
 
                     i += 2
                 }
@@ -909,14 +909,16 @@ class MedtronicHistoryData @Inject constructor(
             outList.add(TempBasalProcessDTO(
                 itemOne = items[items.size - 1],
                 itemTwo = itemTwo,
-                processOperation = TempBasalProcessDTO.Operation.Add))
+                processOperation = TempBasalProcessDTO.Operation.Add,
+                aapsLogger = aapsLogger))
             return outList
         }
         items = getFilteredItems(tempData, PumpHistoryEntryType.Rewind)
         if (items.size > 0) {
             outList.add(TempBasalProcessDTO(
                 itemOne = items[0],
-                processOperation = TempBasalProcessDTO.Operation.Add))
+                processOperation = TempBasalProcessDTO.Operation.Add,
+                aapsLogger = aapsLogger))
             return outList
         }
         return outList
