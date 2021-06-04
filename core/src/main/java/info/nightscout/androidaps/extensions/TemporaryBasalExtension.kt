@@ -62,11 +62,12 @@ fun TemporaryBasal.toStringFull(profile: Profile, dateUtil: DateUtil): String {
     }
 }
 
-fun TemporaryBasal.toJson(profile: Profile, dateUtil: DateUtil, useAbsolute: Boolean): JSONObject =
+fun TemporaryBasal.toJson(isAdd: Boolean, profile: Profile, dateUtil: DateUtil, useAbsolute: Boolean): JSONObject =
     JSONObject()
         .put("created_at", dateUtil.toISOString(timestamp))
         .put("enteredBy", "openaps://" + "AndroidAPS")
         .put("eventType", TherapyEvent.Type.TEMPORARY_BASAL.text)
+        .put("isValid", isValid)
         .put("duration", T.msecs(duration).mins())
         .put("rate", rate)
         .put("type", type.name)
@@ -77,7 +78,7 @@ fun TemporaryBasal.toJson(profile: Profile, dateUtil: DateUtil, useAbsolute: Boo
             if (interfaceIDs.endId != null) it.put("endId", interfaceIDs.endId)
             if (interfaceIDs.pumpType != null) it.put("pumpType", interfaceIDs.pumpType!!.name)
             if (interfaceIDs.pumpSerial != null) it.put("pumpSerial", interfaceIDs.pumpSerial)
-            if (interfaceIDs.nightscoutId != null) it.put("_id", interfaceIDs.nightscoutId)
+            if (isAdd && interfaceIDs.nightscoutId != null) it.put("_id", interfaceIDs.nightscoutId)
         }
 
 /*
