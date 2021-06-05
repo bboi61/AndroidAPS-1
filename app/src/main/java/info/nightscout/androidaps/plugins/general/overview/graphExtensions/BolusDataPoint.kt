@@ -31,7 +31,7 @@ class BolusDataPoint @Inject constructor(
 
     override fun getColor(context: Context): Int =
         if (data.type == Bolus.Type.SMB) resourceHelper.getAttributeColor(context, R.attr.smbColor)
-        else if (data.isValid) Color.CYAN
+        else if (data.isValid) resourceHelper.getAttributeColor(context, R.attr.colorAccent)
         else resourceHelper.getAttributeColor(null, R.attr.statuslightAlarm)
 
     override fun setY(y: Double) {
