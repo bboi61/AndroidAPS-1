@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="defaulttextcolor">#000000</color>
+
     <color name="daySelected">#D000FF00</color>
     <color name="weekdayOutline">#1ea3e5</color>
     <color name="weekendOutline">#1e88e5</color>
@@ -164,7 +164,36 @@
     <color name="iobPred">#2800FF00</color>
     <color name="ratio">#2800FF00</color>
 
-    /* Rig22 colors */
+    <!--    Fragments-->
+    <color name="colorInitializingBorder">#00695c</color>
+
+    <!--    Dialogs-->
+    <color name="dialog_title_background">#303030</color>
+    <color name="activity_title_background">#121212</color>
+    <color name="dialog_title_color">#FFFFFF</color>
+    <color name="dialog_title_icon_tint">#FFFFFF</color>
+    <color name="warningAlertHeaderText">#FF000000</color>
+    <color name="errorAlertHeaderText">#FF000000</color>
+    <color name="examinedProfile">#FFFF5555</color>
+    <color name="defaulttext">#000000</color>
+
+    <!--    Treatment-->
+    <color name="list_delimiter">#505050</color>
+
+    <!--    Loop     -->
+    <color name="loopDisconnected">#939393</color>
+    <color name="loopClosed">#00C03E</color>
+    <color name="loopSuspended">#FFFF13</color>
+    <color name="loopOpened">#4983D7</color>
+    <color name="loopDisabled">#FF1313</color>
+
+    <color name="defaultbackground">#BBBBBB</color>
+    <color name="tabBgColorSelected">#238af3</color>
+    <color name="defaulttextcolor">#000000</color>
+
+    <!-- Custom Theme Colors -->
+
+    <!-- Rig22 colors -->
     <color name="black2">#212121</color>
     <color name="rig22Blue">#238af3</color>
     <color name="rig22rose">#F7806A</color>
@@ -177,32 +206,4 @@
     <color name="smaragdgreen">#01C03E</color>
     <color name="r22lila">#9C27B0</color>
 
-    <!-- Custom Theme Colors -->
-
-    <!--    Fragments-->
-    <color name="colorInitializingBorder">#00695c</color>
-
-    <!--    Dialogs-->
-    <color name="dialog_title_background">#303030</color>
-    <color name="activity_title_background">#121212</color>
-    <color name="dialog_title_color">#FFFFFF</color>
-    <color name="dialog_title_icon_tint">#FFFFFF</color>
-    <color name="warningAlertHeaderText">#FF000000</color>
-    <color name="errorAlertHeaderText">#FF000000</color>
-    <color name="examinedProfile">#FFFF5555</color>
-    <color name="defaulttext">#BBBBBB</color>
-
-    <!--    Treatment-->
-    <color name="list_delimiter">#505050</color>
-
-
-    <!--    Loop     -->
-    <color name="loopDisconnected">#939393</color>
-    <color name="loopClosed">#00C03E</color>
-    <color name="loopSuspended">#FFFF13</color>
-    <color name="loopOpened">#4983D7</color>
-    <color name="loopDisabled">#FF1313</color>
-
-    <color name="defaultbackground">#BBBBBB</color>
-    <color name="tabBgColorSelected">#238af3</color>
 </resources>

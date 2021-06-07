@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="defaulttextcolor">#FFFFFF</color>
 
     <!---Theme based colors-->
     <color name="iconColorbottomAppbar">#FFFFFF</color>
-
     <!-- TDD Stats   -->
     <color name="background_stats_color">#666666</color>
-
     <!---Android Dark and Light Theme Base colors-->
     <color name="background_dark">#262626</color>
     <color name="background_light">#FFFFFF</color>
     <color name="splashBackground">#000000</color>
-
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="primaryColorDefault">#222222</color>
@@ -25,7 +21,7 @@
     <color name="secondaryTextColorDefault">#000000</color>
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
-
+    <color name="defaulttext">#FFFFFF</color>
     <!-- Pink Colors -->
     <color name="prediction">#ff00ff</color>
     <color name="devslopeneg">#FFFF00FF</color>
@@ -39,13 +35,11 @@
     <color name="notificationNormal">#ff5e55</color>
     <color name="notificationLow">#ff827c</color>
     <color name="metadataTextError">#FF5555</color>
-
     <!-- Yellow Colors -->
     <color name="lightyellow">#FFFF00</color>
     <color name="midyellow">#EBEB00</color>
     <color name="devslopepos">#FFFFFF00</color>
     <color name="ribbonWarning">#f4d700</color>
-
     <!-- Orange Colors -->
     <color name="squash">#de7550</color>
     <color name="warningAccentText">#FFFB8C00</color>
@@ -142,4 +136,5 @@
     <color name="white3">#30FFFFFF</color>
     <color name="smaragdgreen">#01C03E</color>
     <!-- Custom Theme Colors -->
+    <color name="defaulttextcolor">#FFFFFF</color>
 </resources>
