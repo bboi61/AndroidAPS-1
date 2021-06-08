@@ -653,7 +653,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
             OverviewData.Property.TEMPORARY_BASAL  -> {
                 binding.infoLayout.baseBasal.text = overviewData.temporaryBasalText
-                binding.infoLayout.baseBasal.setTextColor(overviewData.temporaryBasalColor)
+                binding.infoLayout.baseBasal.setTextColor(resourceHelper.getAttributeColor(context, R.attr.defaultTextColor))
                 binding.infoLayout.baseBasalIcon.setImageResource(overviewData.temporaryBasalIcon)
                 binding.infoLayout.basalLayout.setOnClickListener {
                     activity?.let { OKDialog.show(it, resourceHelper.gs(R.string.basal), overviewData.temporaryBasalDialogText) }
