@@ -66,7 +66,7 @@
         <item name="fragmentbackground">@color/transparent</item>
         <!-- Color of graph background -->
         <item name="colorGraphBackground">@color/black_alpha_20</item>
-        <item name="inrangeBackground">@color/white_alpha_08</item>
+        <item name="inrangeBackground">@color/white_alpha_20</item>
         <!-- Graph specific colors  -->
         <item name="graphHorizontalLabelText">@color/white</item>
         <item name="graphVerticalLabelText">@color/white</item>
