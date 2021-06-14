@@ -1,0 +1,10 @@
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 473>" android:pathData="m49.67 45.52c-4.45 0.88 -8.54 2.5 -12.26 4.9c-3.01 2.65 -4.1 6.14 -2.94 10.63c4.58 -0.72 8.81 -2.1 12.26 -4.9c2.4 -3.07 3.41 -6.6 2.94 -10.63z"/>
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 472>" android:pathData="m49.67 33.01c-4.45 0.88 -8.54 2.5 -12.26 4.9c-3.01 2.65 -4.1 6.14 -2.94 10.63c4.58 -0.72 8.81 -2.1 12.26 -4.9c2.4 -3.07 3.41 -6.6 2.94 -10.63z"/>
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 471>" android:pathData="m49.67 20.11c-4.45 0.88 -8.54 2.5 -12.26 4.9c-3.01 2.65 -4.1 6.14 -2.94 10.63c4.58 -0.72 8.81 -2.1 12.26 -4.9c2.4 -3.07 3.41 -6.6 2.94 -10.63z"/>
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 470>" android:pathData="m15.33 20.58c4.45 0.88 8.54 2.5 12.26 4.9c3.01 2.65 4.1 6.14 2.94 10.63c-4.58 -0.72 -8.81 -2.1 -12.26 -4.9c-2.4 -3.07 -3.41 -6.6 -2.94 -10.63z"/>
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 469>" android:pathData="m15.33 33.01c4.45 0.88 8.54 2.5 12.26 4.9c3.01 2.65 4.1 6.14 2.94 10.63c-4.58 -0.72 -8.81 -2.1 -12.26 -4.9c-2.4 -3.07 -3.41 -6.6 -2.94 -10.63z"/>
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 468>" android:pathData="m15.33 45.52c4.45 0.88 8.54 2.5 12.26 4.9c3.01 2.65 4.1 6.14 2.94 10.63c-4.58 -0.72 -8.81 -2.1 -12.26 -4.9c-2.4 -3.07 -3.41 -6.6 -2.94 -10.63z"/>
+    <path android:fillColor="?attr/carbsIconColor" android:name="&lt;Shape 467>" android:pathData="m31.75 26.33c4.32 0 6.47 -3.05 6.47 -6.85c0 -3.8 -2.48 -9.21 -6.18 -11.28c-1.92 1.64 -4.64 8.47 -4.99 11.28c-0.42 3.38 2.81 6.05 4.71 6.85z"/>
+</vector>

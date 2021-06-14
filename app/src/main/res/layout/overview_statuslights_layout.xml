@@ -4,12 +4,10 @@
     android:id="@+id/status_lights"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="3dp"
+    android:layout_marginTop="6dp"
     android:layout_marginBottom="3dp"
-    android:background="?attr/colorControlHighlight"
     android:orientation="horizontal"
-    android:paddingTop="4dp"
-    android:paddingBottom="4dp">
+    android:paddingTop="2dp">
 
     <ImageView
         android:layout_width="40dp"
@@ -17,10 +15,9 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:scaleType="centerInside"
-        android:scaleX="2"
-        android:scaleY="2"
-        app:srcCompat="@drawable/ic_cp_age_cannula"
-        android:contentDescription="@string/cannula" />
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        app:srcCompat="@drawable/ic_cp_age_cannula" />
 
     <TextView
         android:id="@+id/cannula_age"
@@ -49,7 +46,7 @@
         android:gravity="center_vertical"
         android:paddingStart="1dp"
         android:paddingEnd="2dp"
-        android:textSize="14sp" />
+        android:textSize="0sp" />
 
     <TextView
         android:id="@+id/reservoir_level"
@@ -64,10 +61,9 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:scaleType="centerInside"
-        android:scaleX="2"
-        android:scaleY="2"
-        app:srcCompat="@drawable/ic_cp_age_sensor"
-        android:contentDescription="@string/careportal_sensor_label" />
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        app:srcCompat="@drawable/ic_cp_age_sensor" />
 
     <TextView
         android:id="@+id/sensor_age"
@@ -84,10 +80,9 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:scaleType="centerInside"
-        android:scaleX="2"
-        android:scaleY="2"
-        app:srcCompat="@drawable/ic_cp_age_battery"
-        android:contentDescription="@string/battery_label" />
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        app:srcCompat="@drawable/ic_cp_age_battery" />
 
     <TextView
         android:id="@+id/pb_age"

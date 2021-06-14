@@ -1,12 +1,15 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="48dp"
-    android:height="48dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
-  <path
-      android:pathData="M20.234,10.422c-0.362,0 -0.656,0.294 -0.656,0.656v0.297h-0.469V9.031c0,-0.87 -0.708,-1.578 -1.578,-1.578H4.188c-0.87,0 -1.578,0.708 -1.578,1.578v5.938c0,0.87 0.708,1.578 1.578,1.578h13.344c0.72,0 1.323,-0.488 1.511,-1.149c0.01,0.001 0.018,0.006 0.028,0.006c0.332,0 0.602,-0.297 0.602,-0.664c0,-0.351 -0.25,-0.632 -0.563,-0.655v-1.46h0.469v0.297c0,0.362 0.294,0.656 0.656,0.656s0.656,-0.294 0.656,-0.656v-1.844C20.891,10.716 20.597,10.422 20.234,10.422zM18.109,14.969c0,0.318 -0.26,0.578 -0.578,0.578H4.188c-0.319,0 -0.578,-0.26 -0.578,-0.578V9.031c0,-0.319 0.259,-0.578 0.578,-0.578h13.344c0.318,0 0.578,0.259 0.578,0.578V14.969z"
-      android:fillColor="#36FF00"/>
-  <path
-      android:pathData="M9.703,10.273l-3.937,2.922l3.453,-1.218l1.781,1.765l4.438,-3.484l-4.297,1.687z"
-      android:fillColor="#36FF00"/>
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00000000"
+        android:pathData="M38.199,1.819l-11.901,-0.003l-0.001,3.893l11.901,0.003l0.001,-3.893Z"
+        android:strokeColor="?attr/pumpBatteryIconColor" android:strokeWidth="1"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M21.3,6.952c-1.704,-0 -3.088,1.382 -3.089,3.086l-0.029,48.681c-0.001,1.704 1.381,3.088 3.085,3.089l21.892,0.011c1.703,0.001 3.088,-1.382 3.089,-3.085l0.029,-48.681c0.001,-1.704 -1.382,-3.088 -3.085,-3.089l-21.892,-0.012Z"
+        android:strokeColor="?attr/pumpBatteryIconColor" android:strokeLineJoin="miter" android:strokeWidth="0.75"/>
+    <path android:fillColor="?attr/pumpBatteryIconColor" android:pathData="M35.621,30.632l-1.193,1.187l0.054,15.25l1.267,-0.004l-0.128,-16.433Z"/>
+    <path android:fillColor="?attr/pumpBatteryIconColor" android:pathData="M33.241,43.203l-1.001,0.706l2.21,3.129l1,-0.707l-2.209,-3.128Z"/>
+    <path android:fillColor="?attr/pumpBatteryIconColor" android:pathData="M37.91,43.941l-1.006,-0.698l-2.184,3.146l1.007,0.698l2.183,-3.146Z"/>
+    <path android:fillColor="?attr/pumpBatteryIconColor" android:pathData="M29.193,21.167l-1.225,0.004l0.052,15.25l1.224,-1.233l-0.051,-14.021Z"/>
+    <path android:fillColor="?attr/pumpBatteryIconColor" android:pathData="M35.551,28.827l-7.531,7.594l-0.065,1.925l7.678,-7.694l-0.082,-1.825Z"/>
+    <path android:fillColor="?attr/pumpBatteryIconColor" android:pathData="M34.944,47.963l-0.611,-0.901l1.269,0.033l-0.658,0.868Z"/>
 </vector>

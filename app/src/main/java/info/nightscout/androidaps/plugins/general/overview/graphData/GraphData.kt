@@ -1,8 +1,10 @@
 package info.nightscout.androidaps.plugins.general.overview.graphData
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.DashPathEffect
 import android.graphics.Paint
+import android.view.ContextThemeWrapper
 import com.jjoe64.graphview.GraphView
 import com.jjoe64.graphview.series.DataPoint
 import com.jjoe64.graphview.series.LineGraphSeries
@@ -58,7 +60,8 @@ class GraphData(
         if (addPredictions) addSeries(overviewData.predictionsGraphSeries)
     }
 
-    fun addInRangeArea(fromTime: Long, toTime: Long, lowLine: Double, highLine: Double) {
+    fun addInRangeArea(fromTime: Long, toTime: Long, lowLine: Double, highLine: Double,context: Context) {
+        val inRangeAreaSeries: AreaGraphSeries<DoubleDataPoint>
         val inRangeAreaDataPoints = arrayOf(
             DoubleDataPoint(fromTime.toDouble(), lowLine, highLine),
             DoubleDataPoint(toTime.toDouble(), lowLine, highLine)
@@ -66,7 +69,7 @@ class GraphData(
         addSeries(AreaGraphSeries(inRangeAreaDataPoints).also {
             it.color = 0
             it.isDrawBackground = true
-            it.backgroundColor = resourceHelper.gc(R.color.inrangebackground)
+            it.backgroundColor = resourceHelper.getAttributeColor(context, R.attr.inrangeBackground)
         })
     }
 
@@ -236,4 +239,3 @@ class GraphData(
         graph.onDataChanged(false, false)
     }
 }
-

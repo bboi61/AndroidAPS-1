@@ -1,0 +1,5 @@
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?attr/deletelogsIconColor" android:pathData="M15.3829,26.6348l33.9409,33.9409l-0.707,0.707l-33.9409,-33.9409z"/>
+    <path android:fillColor="?attr/deletelogsIconColor" android:pathData="M14.6758,60.5761l33.9409,-33.9409l0.707,0.707l-33.9409,33.9409z"/>
+</vector>

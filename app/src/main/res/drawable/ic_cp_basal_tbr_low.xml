@@ -1,9 +1,13 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="48dp"
-    android:height="48dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
-  <path
-      android:pathData="M11.871,18.026l0,-11.042l-8.354,0l0,-1.009l9.363,0l0,11.041l3.698,0l0,-11.041l2.655,0l0,1.009l-1.645,0l0,11.042z"
-      android:fillColor="#CF8BFE"/>
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00000000"
+        android:pathData="M41.918,19.143h12.079v26.593h-12.079z"
+        android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="0.94"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M26.299,19.143h12.079v19.536h-12.079z"
+        android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="0.94"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M10.003,19.143h12.079v19.536h-12.079z"
+        android:strokeColor="?attr/statuslightsIconColor" android:strokeWidth="0.94"/>
+    <path android:fillColor="?attr/statuslightsIconColor" android:pathData="M43,38.679h9.916v5.936h-9.916z"/>
 </vector>

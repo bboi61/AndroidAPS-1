@@ -7,6 +7,7 @@
     android:focusableInTouchMode="true"
     android:minWidth="300dp"
     android:orientation="vertical"
+    android:background="?attr/windowBackground"
     tools:context=".dialogs.LoopDialog">
 
     <LinearLayout
@@ -18,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/dialog_title_background"
+            android:background="?attr/dialogTitleBackground"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/loop_icon"
@@ -64,6 +65,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/loop"
+                android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <LinearLayout
@@ -81,8 +83,8 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:drawableTop="@drawable/ic_loop_closed"
                     android:text="@string/closedloop"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -97,8 +99,8 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:drawableTop="@drawable/ic_loop_lgs"
                     android:text="@string/lowglucosesuspend"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -113,8 +115,8 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:drawableTop="@drawable/ic_loop_open"
                     android:text="@string/openloop"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -129,8 +131,8 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:drawableTop="@drawable/ic_loop_resume"
                     android:text="@string/enableloop"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -143,10 +145,10 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_gravity="center"
-                    android:layout_marginEnd="-4dp"
+                    android:layout_marginEnd="0dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:drawableTop="@drawable/ic_loop_disabled"
                     android:text="@string/disableloop"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -160,7 +162,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
         </LinearLayout>
 
@@ -178,6 +180,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/suspendloop"
+                android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -190,8 +193,8 @@
                 android:layout_marginEnd="-4dp"
                 android:layout_weight="0.5"
                 android:drawableTop="@drawable/ic_loop_resume"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:text="@string/resumeloop"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="11sp"
@@ -211,8 +214,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration1h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -225,8 +228,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration2h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -240,8 +243,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration3h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -253,10 +256,10 @@
                     style="?android:attr/buttonStyle"
                     android:layout_width="0px"
                     android:layout_height="fill_parent"
-                    android:layout_marginEnd="-4dp"
+                    android:layout_marginEnd="0dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_paused"
                     android:text="@string/duration10h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -270,7 +273,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/list_delimiter" />
+                android:background="?android:attr/dividerHorizontal" />
 
         </LinearLayout>
 
@@ -287,6 +290,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/disconnectpump"
+                android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <info.nightscout.androidaps.utils.ui.SingleClickButton
@@ -298,8 +302,8 @@
                 android:layout_marginEnd="-4dp"
                 android:layout_weight="0.5"
                 android:drawableTop="@drawable/ic_loop_reconnect"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:text="@string/reconnect"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="11sp"
@@ -319,8 +323,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration15m"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -333,8 +337,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration30m"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -347,8 +351,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration1h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -361,8 +365,8 @@
                     android:layout_height="fill_parent"
                     android:layout_marginEnd="-4dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration2h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -373,10 +377,10 @@
                     style="?android:attr/buttonStyle"
                     android:layout_width="0px"
                     android:layout_height="fill_parent"
-                    android:layout_marginEnd="-4dp"
+                    android:layout_marginEnd="0dp"
                     android:layout_weight="0.5"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:drawableTop="@drawable/ic_loop_disconnected"
                     android:text="@string/duration3h"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -392,7 +396,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:background="@color/list_delimiter" />
+            android:background="?android:attr/dividerHorizontal" />
 
         <Button
             android:id="@+id/cancel"

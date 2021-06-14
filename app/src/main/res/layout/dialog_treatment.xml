@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/dialog_title_background"
+            android:background="?attr/dialogTitleBackground"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -26,7 +26,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/overview_treatment_label"
-                app:srcCompat="@drawable/ic_bolus" />
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:layout_marginTop="4dp"
+                app:srcCompat="@drawable/ic_treatments_2" />
 
             <TextView
                 android:layout_width="match_parent"

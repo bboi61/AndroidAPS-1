@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginLeft="16dp"
     android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"
-    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardBackgroundColor="?attr/colorPrimary"
+    app:strokeWidth="2dp"
     app:cardCornerRadius="2dp"
     app:cardUseCompatPadding="true"
-    app:contentPadding="16dp">
+    app:contentPadding="16dp"
+    app:cardElevation="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:textColor="#FFFFFF"
             android:textSize="20sp"
             tools:text="1. Title" />
 
@@ -32,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="#FFFFFF"
             tools:text="Objective" />
 
         <TextView
@@ -40,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="#FFFFFF"
             android:textStyle="bold"
             tools:text="Gate" />
 
@@ -58,28 +58,32 @@
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/objectives_button_verify" />
+            android:text="@string/objectives_button_verify"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/start"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/objectives_button_start" />
+            android:text="@string/objectives_button_start"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/unfinish"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/objectives_button_unfinish" />
+            android:text="@string/objectives_button_unfinish"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/unstart"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/objectives_button_unstart" />
+            android:text="@string/objectives_button_unstart"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/inputhint"
@@ -112,7 +116,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/objectives_button_enter" />
+                android:text="@string/objectives_button_enter"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
@@ -121,9 +126,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="#FFFFFF"
             tools:text="Accomplished" />
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

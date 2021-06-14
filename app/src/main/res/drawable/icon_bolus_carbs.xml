@@ -1,0 +1,9 @@
+<vector android:height="48dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?attr/treatmentIconColor" android:name="&lt;Shape 284>" android:pathData="m35 24.53 0 7.11h7.1v6.12h-7.1l0 7.1l-6.12 0l-0 -7.1h-7.11v-6.12h7.11l-0 -7.11l6.12 -0zm-17.16 -16.05c-3.07 0 -5.56 2.49 -5.56 5.56v43.85c0 3.07 2.49 5.56 5.56 5.56h27.62c3.07 0 5.56 -2.49 5.56 -5.56v-43.85c0 -3.07 -2.49 -5.56 -5.56 -5.56z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:name="&lt;Shape 283>" android:pathData="m54.57 26.89h-3.42v1.48h3.42v-1.48z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:name="&lt;Shape 282>" android:pathData="m54.57 43.56h-3.42v1.48h3.42v-1.48z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:name="&lt;Shape 281>" android:pathData="m56.67 29.37c0.02 -0.76 -0.23 -1.45 -0.69 -1.9c-0.46 -0.45 -1.1 -0.63 -1.78 -0.51l-0.04 1.44c0.34 -0.06 0.66 0.03 0.89 0.25c0.23 0.23 0.36 0.57 0.34 0.95l1.27 -0.24z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:name="&lt;Shape 280>" android:pathData="m54.32 44.96c0.65 0.04 1.27 -0.2 1.7 -0.69c0.43 -0.48 0.66 -1.17 0.62 -1.9l-1.23 -0.08c0.02 0.37 -0.09 0.71 -0.31 0.95c-0.22 0.24 -0.52 0.37 -0.85 0.34l0.08 1.38z"/>
+    <path android:fillColor="?attr/treatmentIconColor" android:name="&lt;Shape 279>" android:pathData="m56.69 28.72h-1.32v13.97h1.32v-13.97z"/>
+</vector>

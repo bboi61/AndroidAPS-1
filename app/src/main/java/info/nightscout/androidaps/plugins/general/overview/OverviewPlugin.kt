@@ -35,34 +35,34 @@ import javax.inject.Singleton
 
 @Singleton
 class OverviewPlugin @Inject constructor(
-        injector: HasAndroidInjector,
-        private val notificationStore: NotificationStore,
-        private val fabricPrivacy: FabricPrivacy,
-        private val rxBus: RxBusWrapper,
-        private val sp: SP,
-        aapsLogger: AAPSLogger,
-        private val aapsSchedulers: AapsSchedulers,
-        resourceHelper: ResourceHelper,
-        private val config: Config,
-        private val dateUtil: DateUtil,
-        private val translator: Translator,
+    injector: HasAndroidInjector,
+    private val notificationStore: NotificationStore,
+    private val fabricPrivacy: FabricPrivacy,
+    private val rxBus: RxBusWrapper,
+    private val sp: SP,
+    aapsLogger: AAPSLogger,
+    private val aapsSchedulers: AapsSchedulers,
+    resourceHelper: ResourceHelper,
+    private val config: Config,
+    private val dateUtil: DateUtil,
+    private val translator: Translator,
 //    private val profiler: Profiler,
-        private val profileFunction: ProfileFunction,
-        private val iobCobCalculator: IobCobCalculator,
-        private val repository: AppRepository,
-        private val overviewData: OverviewData,
-        private val overviewMenus: OverviewMenus
+    private val profileFunction: ProfileFunction,
+    private val iobCobCalculator: IobCobCalculator,
+    private val repository: AppRepository,
+    private val overviewData: OverviewData,
+    private val overviewMenus: OverviewMenus
 ) : PluginBase(PluginDescription()
-        .mainType(PluginType.GENERAL)
-        .fragmentClass(OverviewFragment::class.qualifiedName)
-        .alwaysVisible(true)
-        .alwaysEnabled(true)
-        .pluginIcon(R.drawable.ic_home)
-        .pluginName(R.string.overview)
-        .shortName(R.string.overview_shortname)
-        .preferencesId(R.xml.pref_overview)
-        .description(R.string.description_overview),
-        aapsLogger, resourceHelper, injector
+    .mainType(PluginType.GENERAL)
+    .fragmentClass(OverviewFragment::class.qualifiedName)
+    .alwaysVisible(true)
+    .alwaysEnabled(true)
+    .pluginIcon(R.drawable.ic_home)
+    .pluginName(R.string.overview)
+    .shortName(R.string.overview_shortname)
+    .preferencesId(R.xml.pref_overview)
+    .description(R.string.description_overview),
+    aapsLogger, resourceHelper, injector
 ), Overview {
 
     private var disposable: CompositeDisposable = CompositeDisposable()
@@ -78,76 +78,76 @@ class OverviewPlugin @Inject constructor(
 
         notificationStore.createNotificationChannel()
         disposable += rxBus
-                .toObservable(EventNewNotification::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ n ->
-                    if (notificationStore.add(n.notification))
-                        rxBus.send(EventRefreshOverview("EventNewNotification"))
-                }, fabricPrivacy::logException)
+            .toObservable(EventNewNotification::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ n ->
+                if (notificationStore.add(n.notification))
+                    rxBus.send(EventRefreshOverview("EventNewNotification"))
+            }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventDismissNotification::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ n ->
-                    if (notificationStore.remove(n.id))
-                        rxBus.send(EventRefreshOverview("EventDismissNotification"))
-                }, fabricPrivacy::logException)
+            .toObservable(EventDismissNotification::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ n ->
+                if (notificationStore.remove(n.id))
+                    rxBus.send(EventRefreshOverview("EventDismissNotification"))
+            }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventIobCalculationProgress::class.java)
-                .observeOn(aapsSchedulers.main)
-                .subscribe({ overviewData.calcProgress = it.progress; overviewBus.send(EventUpdateOverview("EventIobCalculationProgress", OverviewData.Property.CALC_PROGRESS)) }, fabricPrivacy::logException)
+            .toObservable(EventIobCalculationProgress::class.java)
+            .observeOn(aapsSchedulers.main)
+            .subscribe({ overviewData.calcProgress = it.progress; overviewBus.send(EventUpdateOverview("EventIobCalculationProgress", OverviewData.Property.CALC_PROGRESS)) }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventTempBasalChange::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ loadTemporaryBasal("EventTempBasalChange") }, fabricPrivacy::logException)
+            .toObservable(EventTempBasalChange::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ loadTemporaryBasal("EventTempBasalChange") }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventExtendedBolusChange::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ loadExtendedBolus("EventExtendedBolusChange") }, fabricPrivacy::logException)
+            .toObservable(EventExtendedBolusChange::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ loadExtendedBolus("EventExtendedBolusChange") }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventNewBG::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ loadBg("EventNewBG") }, fabricPrivacy::logException)
+            .toObservable(EventNewBG::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ loadBg("EventNewBG") }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventTempTargetChange::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ loadTemporaryTarget("EventTempTargetChange") }, fabricPrivacy::logException)
+            .toObservable(EventTempTargetChange::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ loadTemporaryTarget("EventTempTargetChange") }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventTreatmentChange::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({
-                    loadIobCobResults("EventTreatmentChange")
-                    overviewData.prepareTreatmentsData("EventTreatmentChange")
-                    overviewBus.send(EventUpdateOverview("EventTreatmentChange", OverviewData.Property.GRAPH))
-                }, fabricPrivacy::logException)
+            .toObservable(EventTreatmentChange::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({
+                loadIobCobResults("EventTreatmentChange")
+                overviewData.prepareTreatmentsData("EventTreatmentChange")
+                overviewBus.send(EventUpdateOverview("EventTreatmentChange", OverviewData.Property.GRAPH))
+            }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventTherapyEventChange::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({
-                    overviewData.prepareTreatmentsData("EventTherapyEventChange")
-                    overviewBus.send(EventUpdateOverview("EventTherapyEventChange", OverviewData.Property.GRAPH))
-                }, fabricPrivacy::logException)
+            .toObservable(EventTherapyEventChange::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({
+                overviewData.prepareTreatmentsData("EventTherapyEventChange")
+                overviewBus.send(EventUpdateOverview("EventTherapyEventChange", OverviewData.Property.GRAPH))
+            }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventBucketedDataCreated::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({
-                    overviewData.prepareBucketedData("EventBucketedDataCreated")
-                    overviewData.prepareBgData("EventBucketedDataCreated")
-                    overviewBus.send(EventUpdateOverview("EventBucketedDataCreated", OverviewData.Property.GRAPH))
-                }, fabricPrivacy::logException)
+            .toObservable(EventBucketedDataCreated::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({
+                overviewData.prepareBucketedData("EventBucketedDataCreated")
+                overviewData.prepareBgData("EventBucketedDataCreated")
+                overviewBus.send(EventUpdateOverview("EventBucketedDataCreated", OverviewData.Property.GRAPH))
+            }, fabricPrivacy::logException)
         disposable += rxBus
-                .toObservable(EventLoopInvoked::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({ overviewData.preparePredictions("EventLoopInvoked") }, fabricPrivacy::logException)
+            .toObservable(EventLoopInvoked::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({ overviewData.preparePredictions("EventLoopInvoked") }, fabricPrivacy::logException)
         disposable.add(rxBus
                 .toObservable(EventNewBasalProfile::class.java)
                 .observeOn(aapsSchedulers.io)
                 .subscribe({ loadProfile("EventNewBasalProfile") }, fabricPrivacy::logException))
         disposable.add(rxBus
-                .toObservable(EventAutosensCalculationFinished::class.java)
-                .observeOn(aapsSchedulers.io)
-                .subscribe({
-                    if (it.cause !is EventCustomCalculationFinished) refreshLoop("EventAutosensCalculationFinished")
-                }, fabricPrivacy::logException))
+            .toObservable(EventAutosensCalculationFinished::class.java)
+            .observeOn(aapsSchedulers.io)
+            .subscribe({
+                if (it.cause !is EventCustomCalculationFinished) refreshLoop("EventAutosensCalculationFinished")
+            }, fabricPrivacy::logException))
 
         Thread { loadAll("onResume") }.start()
     }
@@ -172,56 +172,56 @@ class OverviewPlugin @Inject constructor(
     }
 
     override fun configuration(): JSONObject =
-            JSONObject()
-                    .putString(R.string.key_quickwizard, sp, resourceHelper)
-                    .putInt(R.string.key_eatingsoon_duration, sp, resourceHelper)
-                    .putDouble(R.string.key_eatingsoon_target, sp, resourceHelper)
-                    .putInt(R.string.key_activity_duration, sp, resourceHelper)
-                    .putDouble(R.string.key_activity_target, sp, resourceHelper)
-                    .putInt(R.string.key_hypo_duration, sp, resourceHelper)
-                    .putDouble(R.string.key_hypo_target, sp, resourceHelper)
-                    .putDouble(R.string.key_low_mark, sp, resourceHelper)
-                    .putDouble(R.string.key_high_mark, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_cage_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_cage_critical, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_iage_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_iage_critical, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_sage_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_sage_critical, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_sbat_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_sbat_critical, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_bage_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_bage_critical, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_res_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_res_critical, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_bat_warning, sp, resourceHelper)
-                    .putDouble(R.string.key_statuslights_bat_critical, sp, resourceHelper)
+        JSONObject()
+            .putString(R.string.key_quickwizard, sp, resourceHelper)
+            .putInt(R.string.key_eatingsoon_duration, sp, resourceHelper)
+            .putDouble(R.string.key_eatingsoon_target, sp, resourceHelper)
+            .putInt(R.string.key_activity_duration, sp, resourceHelper)
+            .putDouble(R.string.key_activity_target, sp, resourceHelper)
+            .putInt(R.string.key_hypo_duration, sp, resourceHelper)
+            .putDouble(R.string.key_hypo_target, sp, resourceHelper)
+            .putDouble(R.string.key_low_mark, sp, resourceHelper)
+            .putDouble(R.string.key_high_mark, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_cage_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_cage_critical, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_iage_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_iage_critical, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_sage_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_sage_critical, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_sbat_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_sbat_critical, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_bage_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_bage_critical, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_res_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_res_critical, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_bat_warning, sp, resourceHelper)
+            .putDouble(R.string.key_statuslights_bat_critical, sp, resourceHelper)
 
     override fun applyConfiguration(configuration: JSONObject) {
         configuration
-                .storeString(R.string.key_quickwizard, sp, resourceHelper)
-                .storeInt(R.string.key_eatingsoon_duration, sp, resourceHelper)
-                .storeDouble(R.string.key_eatingsoon_target, sp, resourceHelper)
-                .storeInt(R.string.key_activity_duration, sp, resourceHelper)
-                .storeDouble(R.string.key_activity_target, sp, resourceHelper)
-                .storeInt(R.string.key_hypo_duration, sp, resourceHelper)
-                .storeDouble(R.string.key_hypo_target, sp, resourceHelper)
-                .storeDouble(R.string.key_low_mark, sp, resourceHelper)
-                .storeDouble(R.string.key_high_mark, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_cage_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_cage_critical, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_iage_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_iage_critical, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_sage_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_sage_critical, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_sbat_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_sbat_critical, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_bage_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_bage_critical, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_res_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_res_critical, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_bat_warning, sp, resourceHelper)
-                .storeDouble(R.string.key_statuslights_bat_critical, sp, resourceHelper)
+            .storeString(R.string.key_quickwizard, sp, resourceHelper)
+            .storeInt(R.string.key_eatingsoon_duration, sp, resourceHelper)
+            .storeDouble(R.string.key_eatingsoon_target, sp, resourceHelper)
+            .storeInt(R.string.key_activity_duration, sp, resourceHelper)
+            .storeDouble(R.string.key_activity_target, sp, resourceHelper)
+            .storeInt(R.string.key_hypo_duration, sp, resourceHelper)
+            .storeDouble(R.string.key_hypo_target, sp, resourceHelper)
+            .storeDouble(R.string.key_low_mark, sp, resourceHelper)
+            .storeDouble(R.string.key_high_mark, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_cage_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_cage_critical, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_iage_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_iage_critical, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_sage_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_sage_critical, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_sbat_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_sbat_critical, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_bage_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_bage_critical, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_res_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_res_critical, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_bat_warning, sp, resourceHelper)
+            .storeDouble(R.string.key_statuslights_bat_critical, sp, resourceHelper)
     }
 
     @Volatile
@@ -311,5 +311,4 @@ class OverviewPlugin @Inject constructor(
 
         overviewBus.send(EventUpdateOverview(from, OverviewData.Property.IOB_COB))
     }
-
 }
